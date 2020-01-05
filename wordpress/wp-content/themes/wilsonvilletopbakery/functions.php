@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support('post-thumbnails'); //Allow image thumbnails in pages and posts.
+
 add_action('wp_enqueue_scripts', function() {
 
     wp_register_script('toggle-blog-settings-javascript', get_template_directory_uri() . '/assets/javascript/javascript-functions.js');
