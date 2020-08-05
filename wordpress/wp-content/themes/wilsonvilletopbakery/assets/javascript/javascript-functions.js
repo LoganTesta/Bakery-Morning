@@ -8,10 +8,10 @@ function setCurrentPage(linkNumber) {
     navBarDesktopItems[linkNumber].className += " current-page";
 }
 
-//
-//var dropdownButton=document.getElementById("dropdownButton");
-//dropdownButton.addEventListener("click", toggleHamburgerMenu, "false");
-//
-//function toggleHamburgerMenu (){
-//    document.getElementById("dropdownContent").classList.toggle("show");
-//}
+
+var dropdownButton=document.getElementById("dropdownButton");
+dropdownButton.addEventListener("click", toggleHamburgerMenu, "false");
+
+function toggleHamburgerMenu (){
+    document.getElementById("dropdownContent").classList.toggle("show");
+}
