@@ -36,27 +36,17 @@
             </header>
             <nav class="nav desktop-nav" id="desktop-nav">
                 <div class="inner-wrapper">
-                    <ul>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="index">Home</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="about">About</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="products">Products</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="careers">Careers</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="blog">Blog</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="contact-us">Contact Us</a></li>
-                    </ul>
+                    <?php
+                        wp_nav_menu();
+                    ?>
                 </div>
             </nav>
             <nav class="nav mobile-nav">
                 <div id="dropdownButton"></div>
                 <div id="dropdownContent">
-                    <ul>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="index">Home</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="about">About</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="products">Products</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="careers">Careers</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="blog">Blog</a></li>
-                        <li class="nav__nav-item"><a class="nav__nav-link" href="contact-us">Contact Us</a></li>
-                    </ul>
+                    <?php
+                        wp_nav_menu();
+                    ?>
                 </div>
             </nav>
             <div class="content">
