@@ -18,9 +18,6 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"> 
 
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>  <!--Vuejs -->
-        <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script> <!-- Vue.js router capabilities. -->
-
         <?php
         wp_head();
         ?>
@@ -39,6 +36,7 @@
         <nav class="nav desktop-nav" id="desktop-nav">
             <div class="inner-wrapper">
                 <ul>
+                    <li class="nav__nav-item"><a class="nav__nav-link" href="index">Home</a></li>
                     <li class="nav__nav-item"><a class="nav__nav-link" href="about">About</a></li>
                     <li class="nav__nav-item"><a class="nav__nav-link" href="products">Products</a></li>
                     <li class="nav__nav-item"><a class="nav__nav-link" href="careers">Careers</a></li>
@@ -51,6 +49,7 @@
             <div id="dropdownButton"></div>
             <div id="dropdownContent">
                 <ul>
+                    <li class="nav__nav-item"><a class="nav__nav-link" href="index">Home</a></li>
                     <li class="nav__nav-item"><a class="nav__nav-link" href="about">About</a></li>
                     <li class="nav__nav-item"><a class="nav__nav-link" href="products">Products</a></li>
                     <li class="nav__nav-item"><a class="nav__nav-link" href="careers">Careers</a></li>
