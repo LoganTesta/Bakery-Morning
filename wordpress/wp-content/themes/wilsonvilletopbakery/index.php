@@ -26,9 +26,15 @@
     <body>
         <div class="body-wrapper">
             <header>
-                <div class="inner-wrapper">
+                <div class="inner-wrapper">                  
                     <div class="logo">
-                        <a href="index"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Wilsonville Top Bakery Logo."></a>
+                        <a href="index">
+                            <?php
+                                $logo_id = get_theme_mod( 'custom_logo' );
+                                $logo = wp_get_attachment_image_src( $logo_id, 'full' );
+                            ?>
+                            <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo( 'name' ); ?> logo">
+                        </a>
                     </div>
                     <h1 class="main-title"><a class="main-title__title" href="index">Wilsonville Top Bakery</a></h1>
                     <h2 class="header__subtitle"><?php the_title(); ?></h2>

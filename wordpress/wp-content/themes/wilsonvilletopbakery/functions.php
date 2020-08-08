@@ -13,7 +13,9 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 
 add_theme_support( "post-thumbnails" ); //Allow image thumbnails in pages and posts.
-//
+add_theme_support( 'custom-logo' );   //Let user upload the logo.
+
+
 //Allow cropping for medium thumbnail images.
 if(false === get_option( "medium_crop" )) {
     add_option( "medium_crop", "1" );
