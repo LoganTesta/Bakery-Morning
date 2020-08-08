@@ -72,12 +72,12 @@
                     </div>
                 </div>
             </div>
-            <div class="message" v-on:mouseover="changeText" v-on:mouseout="changeText" v-bind:style="message"></div>
+            <div class="message"></div>
             <footer>
                 <div class="content-wrapper inner-wrapper">     
                     <div class="content-row">
                         <div class="footer__copyright">
-                            <p>&copy; <?php echo date("Y"); ?> Wilsonville Top Bakery. All Rights Reserved.</p>
+                            <p>&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</p>
                         </div>
                         <div class="footer__social col-sma-4">
                             <h4 class="footer__subheader">Social</h4>
