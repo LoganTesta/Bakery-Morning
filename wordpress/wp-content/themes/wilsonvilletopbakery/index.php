@@ -55,18 +55,21 @@
                     ?>
                 </div>
             </nav>
-            <div class="content">
-                <div class="inner-wrapper">
-                    <?php
-                    while (have_posts()) : the_post(); //You need a while loop to call the_content(). 
-                        ?>
-
-                        <?php the_content(); ?>
-
-                        <?php
-                    endwhile;
-                    wp_reset_query(); //Reset the page query
-                    ?>
+            <div class="inner-wrapper">
+                <div class="content page-content">
+                    <div class="content-row">
+                        <div class="content__body">
+                            <?php
+                            while (have_posts()) : the_post(); //You need a while loop to call the_content(). 
+                                ?>
+                                <?php the_content(); ?>
+                                <?php
+                            endwhile;
+                            wp_reset_query(); //Reset the page query
+                            ?>
+                        </div>
+                        <div class="content__featured-image" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
+                    </div>
                 </div>
             </div>
             <div class="message" v-on:mouseover="changeText" v-on:mouseout="changeText" v-bind:style="message"></div>
