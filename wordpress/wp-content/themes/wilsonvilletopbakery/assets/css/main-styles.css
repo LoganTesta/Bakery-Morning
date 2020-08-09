@@ -168,6 +168,7 @@ Monochromatic color scheme.
 3:     #fbe3b7;  light brown       (251, 227, 183)
 */
 
+
 html, body, div, span, p, img, a, br, ul, li, ol, header, nav, footer, table, button, label, input, textarea, tr, td, th, h1, h2, h3, h4, h5, h6 {
    font-family: 'Lato', sans-serif; 
 }
@@ -182,12 +183,14 @@ h4 { padding: 0 0 12px 0; color: #64460e; }
 input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s;}
 input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 
+
 /* Header styles */
 header { min-height: 200px; background: linear-gradient(#fbe3b7, #f3f3f3); }
 .main-title { padding-top: 20px; text-align: center; }
 .main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
 .header__subtitle { text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }
 .logo { position: relative; width: 40px; top: 20px; left: 15px; }
+
 
 /* Nav styles */
 .mobile-nav { display: block; }
@@ -347,7 +350,6 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .estimate-table__item-five .estimate-table__item-image__photo { background: url('../images/products/blueberry-muffin.jpg') 0% 0%/cover no-repeat; }
 
 
-
 /*Recipes*/
 .recipies-header { padding-bottom: 20px; }
 .recipe-container { margin-bottom: 40px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0, 0.6);}
@@ -468,8 +470,10 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     /*Index*/
     .item-container__background { height: 300px; }
     
+    
     /*About*/
     .about-us-container__background { height: 320px; }
+    
     
     /*Products*/
     .products-header { padding-bottom: 10px; }
@@ -477,20 +481,25 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     
     .product-container.four, .product-container.five { margin-bottom: 0; }    
     
+    
     /*Recipes*/
     .recipies-header { padding-bottom: 10px; }
     .recipe__background { height: 280px; }
     
     .recipe-container.three, .recipe-container.four { margin-bottom: 0; }
     
+    
     /*News/Events*/
     .event-container__title, .event-container__date { text-align: left; }
+    
     
     /*Careers*/
     .careers-container__posititon__title { text-align: left; }
     
+    
     /*Blog*/
     .blog-posts-container { padding-bottom: 0px; }
+    
     
     /*Contact*/
     .contact-us-container__background { height: 300px; }
@@ -522,11 +531,14 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     /*Index*/
     .item-container__background { height: 360px; }
     
+    
     /*About*/
+    
     
     /*Location*/
     .location-container__background { height: 400px; }
 
+    
     /*Products*/
     .products-header { padding-bottom: 0px; }
     .product-container { margin-bottom: 60px; }
@@ -552,12 +564,15 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .cart-total { padding-top: 10px; padding-bottom: 0; text-align: left; }
     .reset-cart {}
     
+    
     /*Recipes*/
     .recipies-header { padding-bottom: 0px; }
+    
     
     /* News/Events */
     .event-container__title { font-size: 22px; }
     .event-container__date { font-size: 17px; }
+    
     
     /*Contact Us*/
     .contact-us-container__background { height: 400px; }
