@@ -99,22 +99,6 @@
                     </div>
                 </div>
             </footer>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    let pageNumber = <?php echo get_the_ID(); ?>;
-                    if (pageNumber === 11) {
-                        setCurrentPage(0);
-                    } else if (pageNumber === 46) {
-                        setCurrentPage(1);
-                    } else if (pageNumber === 50) {
-                        setCurrentPage(2);
-                    } else if (pageNumber === 14) {
-                        setCurrentPage(3);
-                    } else if (pageNumber === 44) {
-                        setCurrentPage(4);
-                    }
-                });
-            </script> 
         </div>
     </body>
     <?php wp_footer(); ?>

@@ -272,7 +272,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 /*General site-specific classes*/
 .item-container__background { height: 240px; }
 .no-padding-bottom { padding-bottom: 0; } /* Put on the last of a group of paragraphs where no padding bottom is desired. */
-.current-page { text-decoration: underline; }
+.current_page_item a { text-decoration: underline; }
 
 
 /*General styles*/
