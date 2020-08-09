@@ -1,27 +1,22 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Delicius baked goods featured including bread, cookies, pastries, pies, cakes, and more." />
+        <meta name="description" content="Delicius baked goods baked fresh daily." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="bakery, bread, whole wheat, cookies, scones, pastries, cupcakes, cakes, pies, Oregon" />
-        <title>Wilsonville Top Bakery</title>
+        <meta name="keywords" content="bakery, baked goods, fresh" />
+        <title><?php echo get_bloginfo( 'name' ); ?></title>
         <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<![endif]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <![endif]-->
         <link rel="icon" type="image/png" href="<?php echo "" . get_template_directory_uri(); ?>/assets/images/favicon.png" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"> 
-
-        <?php
-        wp_head();
-        ?>
-
+        <?php wp_head(); ?>
     </head>
     <body>
         <div class="body-wrapper">
@@ -123,7 +118,5 @@
             </script> 
         </div>
     </body>
-    <?php
-    wp_footer();
-    ?>
+    <?php wp_footer(); ?>
 </html>
