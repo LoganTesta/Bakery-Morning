@@ -68,7 +68,7 @@
                             wp_reset_query(); //Reset the page query
                             ?>
                         </div>
-                        <div class="content__featured-image" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
+                        <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
                     </div>
                 </div>
             </div>
