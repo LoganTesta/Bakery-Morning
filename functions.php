@@ -12,8 +12,11 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 });
 
 
+
+//Theme support.
 add_theme_support( "post-thumbnails" ); //Allow image thumbnails in pages and posts.
 add_theme_support( 'custom-logo' );   //Let user upload the logo.
+
 
 
 //Allow cropping for medium thumbnail images.
@@ -24,10 +27,35 @@ if(false === get_option( "medium_crop" )) {
 }
 
 add_action('wp_enqueue_scripts', function() {
-
     wp_register_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );
     wp_enqueue_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );  
     wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/main-styles.css?mod=08082020' );
-    wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/print-styles.css?mod=12202019' );
-    
+    wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/print-styles.css?mod=12202019' );   
 });
+
+
+
+//Add Theme Appearance Customization controls.
+function bakery_theme_customize_register( $wp_customize ){
+    $wp_customize->add_section( "MetaSettings", array(
+        "title" => __("Meta Settings", "meta_settings_sections"),
+        "priority" => 30,
+    ));
+    
+    $wp_customize->add_setting("meta_settings_code", array(
+        "default" => "",
+        "transport" => "refresh",
+    ));
+    
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "meta_settings_code",
+        array(
+            "label" =>__( "Meta Description (Sitewide)", "meta_settings_label" ),
+            "section" => "MetaSettings",
+            "settings" => "meta_settings_code",
+            "type" => "textarea",
+        )
+    ));   
+}
+add_action( 'customize_register', 'bakery_theme_customize_register' );

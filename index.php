@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Delicius baked goods baked fresh daily." />
+        <meta name="description" content="<?php echo get_theme_mod("meta_settings_code"); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="bakery, baked goods, fresh" />
         <title><?php if( get_the_title() !== "Index" && get_the_title() !== "Home" ) { echo get_the_title() . " | "; } ?><?php echo get_bloginfo( 'name' ); ?></title>
