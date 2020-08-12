@@ -74,6 +74,7 @@ columns display at their designated widths at all device sizes, small (sma) abov
 }
 
 @media only screen and (min-width: 1200px){
+    .content { padding: 20px 0 20px 0; }
     .content-row { padding: 25px 0 25px 0; }
     .content-row:first-of-type { padding-top: 0; }
     .content-row:last-of-type { padding-bottom: 0; }
@@ -519,6 +520,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .desktop-nav { display: block; }
 
     .nav li { display: inline-block; padding: 15px 32px 15px 15px; text-align: left; }
+    .nav li:first-of-type { padding-left: 0; }
 
     .main-title { padding-top: 50px; text-align: left; margin-left: 180px; }
     .header__subtitle { text-align: left; margin-left: 220px; }
