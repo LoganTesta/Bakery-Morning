@@ -53,6 +53,7 @@
                 <div class="content page-content">
                     <div class="content-row">
                         <div class="content__body">
+                            <?php if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; }  ?>
                             <?php
                             while (have_posts()) : the_post(); //You need a while loop to call the_content(). 
                                 ?>
