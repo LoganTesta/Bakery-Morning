@@ -196,6 +196,7 @@ header { min-height: 200px; background: linear-gradient(#fbe3b7, #f3f3f3); }
 .mobile-nav { display: block; }
 .desktop-nav { display: none; }
 .nav { background-color: #64460e; }
+.nav ul { font-size: 0; }
 .nav li { display: block; text-align: center; }
 .nav a { color: #f9f9f9; }
 .nav a:hover { color: #fbe3b7; }
@@ -517,7 +518,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .mobile-nav { display: none; }
     .desktop-nav { display: block; }
 
-    .nav li { display: inline-block; padding: 15px 30px 15px 15px; text-align: left; }
+    .nav li { display: inline-block; padding: 15px 32px 15px 15px; text-align: left; }
 
     .main-title { padding-top: 50px; text-align: left; margin-left: 180px; }
     .header__subtitle { text-align: left; margin-left: 220px; }
