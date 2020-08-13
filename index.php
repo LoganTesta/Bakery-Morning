@@ -84,6 +84,47 @@
                                 }
                             endwhile;
                             wp_reset_query(); //Reset the page query
+
+                            //Show top blog posts on index page only.
+                            if ( is_front_page() ) {
+                                global $post;
+                                $args = array( 'posts_per_page' => 4 );
+                                $postsToDisplay = get_posts( $args );
+                                foreach ( $postsToDisplay as $post ) : setup_postdata( $post );
+                                    ?>      
+                                    <div class="col-sma-3">
+                                        <div class="blog-post">
+                                            <h4 class="blog-post__title"><a href="blog#<?php the_title(); ?>" class="blog-post__title__link"><?php the_title(); ?></a></h4>
+                                            <div class="blog__categories"><?php
+                                                $categories = get_the_category();
+                                                $h = 0;
+                                                foreach ($categories as $category) {
+                                                    $h++;
+                                                }
+                                                $h = $h - 1;
+                                                $i = 0;
+                                                foreach ($categories as $category) {
+                                                    $result = "";
+                                                    if ($i < $h) {
+                                                        $result .= $category->name . ", ";
+                                                    } else {
+                                                        $result .= $category->name;
+                                                    }
+                                                    echo $result;
+                                                    $i++;
+                                                }
+                                                ?>
+                                            </div>
+                                            <div class="blog__date"><?php the_date(); ?></div>
+                                            <div class="blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
+                                                <div class="clear-both"></div>
+                                            </div>
+                                            <div class="blog__content"><?php the_excerpt(); ?></div>
+                                            <div class="clear-both"></div>
+                                        </div>
+                                    </div>
+                                <?php endforeach;
+                            }
                             ?>
                         </div>    
                     </div>
