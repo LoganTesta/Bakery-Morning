@@ -74,7 +74,7 @@
                                     the_content(); 
                                 } else {
                                     echo "<div class='blog-post'>" . the_content() . "</div>";
-                                    echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>";
+                                    if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; }
                                 }
                             endwhile;
                             wp_reset_query(); //Reset the page query
