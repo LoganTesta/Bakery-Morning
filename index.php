@@ -66,12 +66,10 @@
                                     rewind_posts();
                                 }
                             }
-                            ?>
-                            <?php
+
+                            //Show all pages' (besides the posts page) content, and on every page including the posts page, show any posts on that page.
                             while (have_posts()) : the_post(); //You need a while loop to call the_content(). 
-                                ?>
-                                <?php the_content(); ?>
-                                <?php
+                                the_content(); 
                             endwhile;
                             wp_reset_query(); //Reset the page query
                             ?>
