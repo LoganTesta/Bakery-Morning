@@ -73,8 +73,14 @@
                                 if( is_home() === false ){
                                     the_content(); 
                                 } else {
-                                    echo "<div class='blog-post'>" . the_content() . "</div>";
-                                    if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; }
+                                    ?>
+                                    <div class="blog-post">
+                                        <div class="blog__title"> <?php the_title(); ?></div>
+                                        <div class="blog__date"> <?php the_date(); ?></div>
+                                        <div class="blog__content"> <?php the_content(); ?></div>
+                                        <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
+                                   </div>
+                                   <?php
                                 }
                             endwhile;
                             wp_reset_query(); //Reset the page query

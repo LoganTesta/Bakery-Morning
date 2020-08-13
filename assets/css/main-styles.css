@@ -576,6 +576,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     
     
     /*Blog*/
+    .blog__date { float: none; width: 100%; }
     .blog__image { width: 500px; height: 350px; }
     
     
