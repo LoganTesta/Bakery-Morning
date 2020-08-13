@@ -463,7 +463,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     
     
      /*General styles*/
-    .content__body { float: left; }
+    .content__body {width: 100%; }
     .content__featured-image { float: right; width: 50%; height: 320px; }
     
     

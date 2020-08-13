@@ -53,6 +53,7 @@
                 <div class="content page-content">
                     <div class="content-row">
                         <div class="content__body">
+                            <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
                             <?php if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; } //Show description on index page only. ?>
                             <?php
                             //Output the page content for the posts page here.
@@ -78,8 +79,7 @@
                             endwhile;
                             wp_reset_query(); //Reset the page query
                             ?>
-                        </div>
-                        <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
+                        </div>    
                     </div>
                 </div>
             </div>
