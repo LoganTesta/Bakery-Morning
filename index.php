@@ -68,8 +68,13 @@
                             }
 
                             //Show all pages' (besides the posts page) content, and on every page including the posts page, show any posts on that page.
-                            while (have_posts()) : the_post(); //You need a while loop to call the_content(). 
-                                the_content(); 
+                            while (have_posts()) : the_post(); //You need a while loop to call the_content().
+                                if( is_home() === false ){
+                                    the_content(); 
+                                } else {
+                                    echo "<div class='blog-post'>" . the_content() . "</div>";
+                                    echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>";
+                                }
                             endwhile;
                             wp_reset_query(); //Reset the page query
                             ?>
