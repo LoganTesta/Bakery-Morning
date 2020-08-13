@@ -31,7 +31,7 @@
                         </a>
                     </div>
                     <h1 class="main-title"><a class="main-title__title" href="index"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-                    <h2 class="header__subtitle"><?php the_title(); ?></h2>
+                    <h2 class="header__subtitle"><?php single_post_title(); ?></h2>
                 </div>
             </header>
             <nav class="nav desktop-nav" id="desktop-nav">
@@ -53,7 +53,20 @@
                 <div class="content page-content">
                     <div class="content-row">
                         <div class="content__body">
-                            <?php if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; }  ?>
+                            <?php if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; } //Show description on index page only. ?>
+                            <?php
+                            //Output the page content for the posts page here.
+                            if( is_home() ){ 
+                                global $post;
+                                $blog_page_id = get_option( 'page_for_posts' );
+                                if ( $blog_page_id ) {
+                                    $post = get_page( $blog_page_id );
+                                    setup_postdata( $post );
+                                    the_content();
+                                    rewind_posts();
+                                }
+                            }
+                            ?>
                             <?php
                             while (have_posts()) : the_post(); //You need a while loop to call the_content(). 
                                 ?>
