@@ -52,81 +52,87 @@
             <div class="inner-wrapper">
                 <div class="content page-content">
                     <div class="content-row">
-                        <div class="content__body">
-                            <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
-                            <?php if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; } //Show description on index page only. ?>
-                            <?php
-                            //Output the page content for the posts page here.
-                            if( is_home() ){ 
-                                global $post;
-                                $blog_page_id = get_option( 'page_for_posts' );
-                                if ( $blog_page_id ) {
-                                    $post = get_page( $blog_page_id );
-                                    setup_postdata( $post );
-                                    the_content();
-                                    rewind_posts();
+                        <div class="col-sma-12">
+                            <div class="content__body">
+                                <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
+                                <?php if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; } //Show description on index page only. ?>
+                                <?php
+                                //Output the page content for the posts page here.
+                                if( is_home() ){ 
+                                    global $post;
+                                    $blog_page_id = get_option( 'page_for_posts' );
+                                    if ( $blog_page_id ) {
+                                        $post = get_page( $blog_page_id );
+                                        setup_postdata( $post );
+                                        the_content();
+                                        rewind_posts();
+                                    }
                                 }
-                            }
 
-                            //Show all pages' (besides the posts page) content, and on every page including the posts page, show any posts on that page.
-                            while (have_posts()) : the_post(); //You need a while loop to call the_content().
-                                if( is_home() === false ){
-                                    the_content(); 
-                                } else {
-                                    ?>
-                                    <div class="blog-post">
-                                        <div class="blog__title"> <?php the_title(); ?></div>
-                                        <div class="blog__date"> <?php the_date(); ?></div>
-                                        <div class="blog__content"> <?php the_content(); ?></div>
-                                        <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
-                                   </div>
-                                   <?php
-                                }
-                            endwhile;
-                            wp_reset_query(); //Reset the page query
-
-                            //Show top blog posts on index page only.
-                            if ( is_front_page() ) {
-                                global $post;
-                                $args = array( 'posts_per_page' => 4 );
-                                $postsToDisplay = get_posts( $args );
-                                foreach ( $postsToDisplay as $post ) : setup_postdata( $post );
-                                    ?>      
-                                    <div class="col-sma-3">
+                                //Show all pages' (besides the posts page) content, and on every page including the posts page, show any posts on that page.
+                                while (have_posts()) : the_post(); //You need a while loop to call the_content().
+                                    if( is_home() === false ){
+                                        the_content(); 
+                                    } else {
+                                        ?>
                                         <div class="blog-post">
-                                            <h4 class="blog-post__title"><a href="blog#<?php the_title(); ?>" class="blog-post__title__link"><?php the_title(); ?></a></h4>
-                                            <div class="blog__categories"><?php
-                                                $categories = get_the_category();
-                                                $h = 0;
-                                                foreach ($categories as $category) {
-                                                    $h++;
+                                            <div class="blog__title"> <?php the_title(); ?></div>
+                                            <div class="blog__date"> <?php the_date(); ?></div>
+                                            <div class="blog__content"> <?php the_content(); ?></div>
+                                            <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
+                                       </div>
+                                       <?php
+                                    }
+                                endwhile;
+                                wp_reset_query(); //Reset the page query
+                                ?>
+                            </div>  
+                        </div>
+                    </div>                   
+                    <div class="content-row">
+                        <?php
+                        //Show top blog posts on index page only.
+                        if ( is_front_page() ) {
+                            global $post;
+                            $args = array( 'posts_per_page' => 4 );
+                            $postsToDisplay = get_posts( $args );
+                            foreach ( $postsToDisplay as $post ) : setup_postdata( $post );
+                                ?>      
+                                <div class="col-sma-3">
+                                    <div class="blog-post">
+                                        <h4 class="blog-post__title"><a href="blog#<?php the_title(); ?>" class="blog-post__title__link"><?php the_title(); ?></a></h4>
+                                        <div class="blog__categories"><?php
+                                            $categories = get_the_category();
+                                            $h = 0;
+                                            foreach ($categories as $category) {
+                                                $h++;
+                                            }
+                                            $h = $h - 1;
+                                            $i = 0;
+                                            foreach ($categories as $category) {
+                                                $result = "";
+                                                if ($i < $h) {
+                                                    $result .= $category->name . ", ";
+                                                } else {
+                                                    $result .= $category->name;
                                                 }
-                                                $h = $h - 1;
-                                                $i = 0;
-                                                foreach ($categories as $category) {
-                                                    $result = "";
-                                                    if ($i < $h) {
-                                                        $result .= $category->name . ", ";
-                                                    } else {
-                                                        $result .= $category->name;
-                                                    }
-                                                    echo $result;
-                                                    $i++;
-                                                }
-                                                ?>
-                                            </div>
-                                            <div class="blog__date"><?php the_date(); ?></div>
-                                            <div class="blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
-                                                <div class="clear-both"></div>
-                                            </div>
-                                            <div class="blog__content"><?php the_excerpt(); ?></div>
+                                                echo $result;
+                                                $i++;
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="blog__date"><?php the_date(); ?></div>
+                                        <div class="blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
                                             <div class="clear-both"></div>
                                         </div>
+                                        <div class="blog__content"><?php the_excerpt(); ?></div>
+                                        <div class="clear-both"></div>
                                     </div>
-                                <?php endforeach;
-                            }
-                            ?>
-                        </div>    
+                                </div>
+                            <?php 
+                            endforeach;
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
