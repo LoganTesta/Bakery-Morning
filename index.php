@@ -74,8 +74,6 @@
                                     <?php
                                 }
                                 
-                                if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; } //Show description on index page only. 
-                                
                                 //Show all pages' (besides the posts page) content, and on every page including the posts page, show any posts on that page.
                                 while (have_posts()) : the_post(); //You need a while loop to call the_content().
                                     if( is_home() === false ){
@@ -166,11 +164,14 @@
             </div>
             <div class="message"></div>
             <footer>
-                <div class="content-wrapper inner-wrapper">     
+                <div class="content-wrapper inner-wrapper">   
+                    <?php if( trim(get_bloginfo( 'description' )) !== "") { 
+                        echo "<div class='content-row'><div class='site-description'>" . get_bloginfo( 'description' ) . "</div></div>"; } 
+                    ?>
                     <div class="content-row">
-                        <div class="footer__copyright">
-                            <p>&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</p>
-                        </div>
+                        <div class="footer__copyright">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
+                    </div>
+                    <div class="content-row">
                         <div class="footer__social col-sma-4">
                             <h4 class="footer__subheader">Social</h4>
                             <div class="footer__social-logo facebook">
