@@ -75,7 +75,7 @@
                                         the_content(); 
                                     } else {
                                         ?>
-                                        <div class="blog-post">
+                                        <div class="blog">
                                             <div class="blog__title"> <?php the_title(); ?></div>
                                             <div class="blog__date"> <?php the_date(); ?></div>
                                             <div class="blog__content"> <?php the_content(); ?></div>
@@ -99,9 +99,9 @@
                             foreach ( $postsToDisplay as $post ) : setup_postdata( $post );
                                 ?>      
                                 <div class="col-sma-3">
-                                    <div class="blog-post">
-                                        <h4 class="blog-post__title"><a href="blog#<?php the_title(); ?>" class="blog-post__title__link"><?php the_title(); ?></a></h4>
-                                        <div class="blog__categories"><?php
+                                    <div class="index__blog">
+                                        <h4 class="index__blog__title"><a href="blog#<?php the_title(); ?>" class="index__blog__title__link"><?php the_title(); ?></a></h4>
+                                        <div class="index__blog__categories"><?php
                                             $categories = get_the_category();
                                             $h = 0;
                                             foreach ($categories as $category) {
@@ -121,11 +121,11 @@
                                             }
                                             ?>
                                         </div>
-                                        <div class="blog__date"><?php the_date(); ?></div>
-                                        <div class="blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
+                                        <div class="index__blog__date"><?php the_date(); ?></div>
+                                        <div class="index__blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
                                             <div class="clear-both"></div>
                                         </div>
-                                        <div class="blog__content"><?php the_excerpt(); ?></div>
+                                        <div class="index__blog__content"><?php the_excerpt(); ?></div>
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>

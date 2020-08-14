@@ -291,6 +291,14 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .index-content__baked-items-list { margin-left: 30px; list-style-type: disc; }
 .index-content__baked-items-list__list-item { padding-bottom: 10px; }
 
+.index__blog { padding-bottom: 40px; }
+.index__blog__title { padding-bottom: 10px; }
+.index__blog__title__link { font-size: 18px; font-weight: bold; }
+.index__blog__categories { padding-bottom: 4px; font-style: italic; color: #ac8949; }
+.index__blog__date { padding-bottom: 12px; font-weight: bold; color: #64460e; }
+.index__blog__image { padding-bottom: 4px; }
+.index__blog__content { }
+
 
 /*About Us*/
 .about-us-container__background { height: 240px; background: url('../images/bakery-shelf.jpg') 0% 0%/cover no-repeat; }
@@ -404,8 +412,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .blog-posts-container { padding-bottom: 20px; }
 .blog-posts { padding-top: 20px; }
 
-.blog-post { padding-bottom: 40px; }
-.blog-post:last-of-type { padding-bottom: 0; }
+.blog { padding-bottom: 40px; }
+.blog:last-of-type { padding-bottom: 0; }
 
 .blog__title { }
 .blog__categories { padding-bottom: 10px; font-size: 18px; }
@@ -470,6 +478,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     /*Index*/
     .item-container__background { height: 300px; }
     
+    .index__blog { padding-bottom: 0; }
+    
     
     /*About*/
     .about-us-container__background { height: 320px; }
@@ -530,6 +540,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
     /*Index*/
     .item-container__background { height: 360px; }
+    
+    .index__blog__title__link { font-size: 20px; }
     
     
     /*About*/
