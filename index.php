@@ -172,7 +172,7 @@
                         <div class="footer__copyright">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
                     </div>
                     <div class="content-row">
-                        <div class="footer__social col-sma-4">
+                        <div class="footer__social col-sma-3">
                             <h4 class="footer__subheader">Social</h4>
                             <div class="footer__social-logo facebook">
                                 <a href=""><i class="fab fa-facebook-f fa-2x social-icon"><span class="sr-only">Facebook</span></i>
@@ -185,11 +185,11 @@
                                 <a href=""><i class="fab fa-twitter fa-2x social-icon"><span class="sr-only">Twitter</span></i></a>
                             </div>
                         </div>
-                        <div class="footer__location col-sma-4">
+                        <div class="footer__location col-sma-6">
                             <h4 class="footer__subheader">Location</h4>
-                            <div>3388 SW Wilsonville Road, Wilsonville, Oregon 97070</div>
+                            <div><?php echo get_theme_mod( 'location_code' );?></div>
                         </div>
-                        <div class="footer__hours col-sma-4">
+                        <div class="footer__hours col-sma-3">
                             <h4 class="footer__subheader">Hours</h4>
                             <div class="footer__hours__day">Monday-Friday 7:00 AM-8:00 PM</div>
                             <div class="footer__hours__day">Saturday 8:00 AM-8:00 PM</div>

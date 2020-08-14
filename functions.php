@@ -37,18 +37,17 @@ add_action('wp_enqueue_scripts', function() {
 
 //Add Theme Appearance Customization controls.
 function bakery_theme_customize_register( $wp_customize ){
+    //Meta Settings
     $wp_customize->add_section( "MetaSettings", array(
         "title" => __("Meta Settings", "meta_settings_sections"),
         "priority" => 30,
     ));
-    
-    
+       
     //Meta Description control.
     $wp_customize->add_setting( "meta_description_code", array(
         "default" => "",
         "transport" => "refresh",
     ));
-    
     $wp_customize->add_control( new WP_Customize_control(
         $wp_customize,
         "meta_description_code",
@@ -60,13 +59,11 @@ function bakery_theme_customize_register( $wp_customize ){
         )
     ));   
     
-    
     //Meta Keywords control.
     $wp_customize->add_setting( "meta_keywords_code", array(
         "default" => "",
         "transport" => "refresh",
     ));
-        
     $wp_customize->add_control( new WP_Customize_control(
         $wp_customize,
         "meta_keywords_code",
@@ -76,6 +73,29 @@ function bakery_theme_customize_register( $wp_customize ){
             "settings" => "meta_keywords_code",
             "type" => "textarea",
         )
-    ));  
+    )); 
+    
+    
+    //Business Info
+    $wp_customize->add_section( "BusinessInfo", array(
+        "title" => __("Business Info", "business_info_sections"),
+        "priority" => 30,
+    ));
+    
+    //Location control.
+    $wp_customize->add_setting( "location_code", array(
+        "default" => "",
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "location_code",
+        array(
+            "label" =>__( "Location", "location_label" ),
+            "section" => "BusinessInfo",
+            "settings" => "location_code",
+            "type" => "text",
+        )
+    ));   
 }
 add_action( 'customize_register', 'bakery_theme_customize_register' );
