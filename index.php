@@ -115,7 +115,7 @@
                         //Show top blog posts on index page only.
                         if ( is_front_page() ) {
                             global $post;
-                            $args = array( 'posts_per_page' => 4 );
+                            $args = array( 'posts_per_page' => 4, 'orderBy' => 'date', 'order' => 'asc' );
                             $postsToDisplay = get_posts( $args );
                             foreach ( $postsToDisplay as $post ) : setup_postdata( $post );
                                 ?>      
