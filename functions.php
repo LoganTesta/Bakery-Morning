@@ -100,5 +100,72 @@ function bakery_theme_customize_register( $wp_customize ){
             "type" => "text",
         )
     ));   
+    
+    
+    
+    //Hours controls.
+    $wp_customize->add_setting( "hours_code0", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "hours_code0",
+        array(
+            "label" =>__( "Hours", "hours_label0" ),
+            "section" => "BusinessInfo",
+            "settings" => "hours_code0",
+            "type" => "text",
+        )
+    )); 
+    
+    $wp_customize->add_setting( "hours_code1", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "hours_code1",
+        array(
+            "label" =>__( "Hours (2nd line, as needed)", "hours_label1" ),
+            "section" => "BusinessInfo",
+            "settings" => "hours_code1",
+            "type" => "text",
+        )
+    )); 
+    
+    $wp_customize->add_setting( "hours_code2", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "hours_code2",
+        array(
+            "label" =>__( "Hours (3rd line, as needed)", "hours_label2" ),
+            "section" => "BusinessInfo",
+            "settings" => "hours_code2",
+            "type" => "text",
+        )
+    )); 
+    
+    $wp_customize->add_setting( "hours_code3", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "hours_code3",
+        array(
+            "label" =>__( "Hours (4th line, as needed)", "hours_label3" ),
+            "section" => "BusinessInfo",
+            "settings" => "hours_code3",
+            "type" => "text",
+        )
+    )); 
 }
 add_action( 'customize_register', 'bakery_theme_customize_register' );

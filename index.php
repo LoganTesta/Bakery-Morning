@@ -190,10 +190,11 @@
                             <div><?php echo get_theme_mod( 'location_code' );?></div>
                         </div>
                         <div class="footer__hours col-sma-3">
-                            <h4 class="footer__subheader">Hours</h4>
-                            <div class="footer__hours__day">Monday-Friday 7:00 AM-8:00 PM</div>
-                            <div class="footer__hours__day">Saturday 8:00 AM-8:00 PM</div>
-                            <div class="footer__hours__day">Sunday 8:00 AM-5:00 PM</div>
+                            <h4 class="footer__subheader">Hours</h4>     
+                            <?php if( trim( get_theme_mod ( 'hours_code0' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code0' ) . "</div>"; } ?>
+                            <?php if( trim( get_theme_mod ( 'hours_code1' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code1' ) . "</div>"; } ?>
+                            <?php if( trim( get_theme_mod ( 'hours_code2' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code2' ) . "</div>"; } ?>
+                            <?php if( trim( get_theme_mod ( 'hours_code3' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code3' ) . "</div>"; } ?>
                         </div>
                     </div>
                 </div>
