@@ -54,8 +54,6 @@
                     <div class="content-row">
                         <div class="col-sma-12">
                             <div class="content__body">
-                                <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
-                                <?php if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; } //Show description on index page only. ?>
                                 <?php
                                 //Output the page content for the posts page here.
                                 if( is_home() ){ 
@@ -64,11 +62,20 @@
                                     if ( $blog_page_id ) {
                                         $post = get_page( $blog_page_id );
                                         setup_postdata( $post );
+                                        ?>
+                                            <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
+                                        <?php
                                         the_content();
                                         rewind_posts();
                                     }
+                                } else {
+                                    ?>
+                                        <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
+                                    <?php
                                 }
-
+                                
+                                if( is_front_page() ){ echo "<h3 class='site-description'>" . get_bloginfo( 'description' ) . "</h3>"; } //Show description on index page only. 
+                                
                                 //Show all pages' (besides the posts page) content, and on every page including the posts page, show any posts on that page.
                                 while (have_posts()) : the_post(); //You need a while loop to call the_content().
                                     if( is_home() === false ){
