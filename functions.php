@@ -46,6 +46,7 @@ function bakery_theme_customize_register( $wp_customize ){
     //Meta Description control.
     $wp_customize->add_setting( "meta_description_code", array(
         "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
         "transport" => "refresh",
     ));
     $wp_customize->add_control( new WP_Customize_control(
@@ -62,6 +63,7 @@ function bakery_theme_customize_register( $wp_customize ){
     //Meta Keywords control.
     $wp_customize->add_setting( "meta_keywords_code", array(
         "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
         "transport" => "refresh",
     ));
     $wp_customize->add_control( new WP_Customize_control(
@@ -85,6 +87,7 @@ function bakery_theme_customize_register( $wp_customize ){
     //Location control.
     $wp_customize->add_setting( "location_code", array(
         "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
         "transport" => "refresh",
     ));
     $wp_customize->add_control( new WP_Customize_control(
