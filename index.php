@@ -76,9 +76,30 @@
                                     } else {
                                         ?>
                                         <div class="blog">
-                                            <div class="blog__title"> <?php the_title(); ?></div>
-                                            <div class="blog__date"> <?php the_date(); ?></div>
-                                            <div class="blog__content"> <?php the_content(); ?></div>
+                                            <div class="blog__title"><?php the_title(); ?></div>
+                                            <div class="blog__date"><?php the_date(); ?></div>
+                                            <div class="blog__categories">
+                                                <?php
+                                                $categories = get_the_category();
+                                                $h = 0;
+                                                foreach ( $categories as $category ) {
+                                                    $h++;
+                                                }
+                                                $h = $h - 1;
+                                                $i = 0;
+                                                foreach ( $categories as $category ) {
+                                                    $result = "";
+                                                    if ( $i < $h ) {
+                                                        $result .= $category->name . ", ";
+                                                    } else {
+                                                        $result .= $category->name;
+                                                    }
+                                                    echo $result;
+                                                    $i++;
+                                                }
+                                            ?>
+                                            </div>
+                                            <div class="blog__content"><?php the_content(); ?></div>
                                             <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
                                        </div>
                                        <?php
@@ -104,14 +125,14 @@
                                         <div class="index__blog__categories"><?php
                                             $categories = get_the_category();
                                             $h = 0;
-                                            foreach ($categories as $category) {
+                                            foreach ( $categories as $category ) {
                                                 $h++;
                                             }
                                             $h = $h - 1;
                                             $i = 0;
-                                            foreach ($categories as $category) {
+                                            foreach ( $categories as $category ) {
                                                 $result = "";
-                                                if ($i < $h) {
+                                                if ( $i < $h ) {
                                                     $result .= $category->name . ", ";
                                                 } else {
                                                     $result .= $category->name;
