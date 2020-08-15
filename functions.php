@@ -18,6 +18,19 @@ add_theme_support( "post-thumbnails" ); //Allow image thumbnails in pages and po
 add_theme_support( 'custom-logo' );   //Let user upload the logo.
 
 
+//Enable Widgets in theme.
+if ( function_exists( 'register_sidebar' ) ) {
+    register_sidebar( array(
+        'name' => 'Widgetized Area',
+        'id' => 'widgetized-area',
+        'description' => 'This is a widgetized area.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
+    ));
+}
+
 
 //Allow cropping for medium thumbnail images.
 if(false === get_option( "medium_crop" )) {
