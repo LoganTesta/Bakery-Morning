@@ -223,25 +223,6 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 .footer__social, .footer__location, .footer__hours { padding-top: 20px; padding-bottom: 20px; } 
 
-/* (Footer Subscribe button) */
-.footer__subscribe { padding-bottom: 30px; }
-
-.footer__subscribe-button { position: relative; width: 280px; text-align: center; cursor: pointer; transition: 0.4s ease-in; }
-.footer__subscribe-button, .footer__subscribe-button__bg, .footer__subscribe-button__bg--hover { margin-left: auto; margin-right: auto; border-radius: 15px; }
-.footer__subscribe-button__bg, .footer__subscribe-button__bg--hover { width: 280px; padding: 15px 10px; }
- 
-.footer__subscribe-button__text { font-size: 22px; color: #fbe3b7; z-index: 10; }
-
-.footer__subscribe-button__bg { opacity: 1; background: #64460e; transition: 0.4s ease-in;  z-index: 9; }
-.footer__subscribe-button__bg:hover { opacity: 0; transition: 0.4s ease-in; }
-.footer__subscribe-button__bg:hover .footer__subscribe-button__text { opacity: 0; }
-
-.footer__subscribe-button__bg--hover { opacity: 0; margin-top: -84px; transition: 0.4s ease-in; }
-.footer__subscribe-button__bg--hover:hover { opacity: 1; background: radial-gradient(#ac8949, #64460e); transition: 0.4s ease-in; }
-.footer__subscribe-button__bg--hover .footer__subscribe-button__text { opacity: 0; }
-.footer__subscribe-button__bg--hover:hover .footer__subscribe-button__text { opacity: 1; }
-/*End of footer subscribe button */
-
 .footer__copyright { text-align: center; }
 .footer__social { text-align: center; }
 .footer__social a { color: #64460e; transition: 0.3s; }
@@ -255,20 +236,6 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .footer__social-logo { display: inline-block; padding: 0 15px; }
 .footer__social-icon { transition: 0.4s all; }
 .footer__social-icon:hover { transition: 0.4s all; }
-
-
-/*Modal styles*/
-.subscribe-modal {}
-.subscribe-modal .input-container__contact-button { }
-.subscribe-modal .input-container__contact-button:hover { }
-
-.modal__mask { display: table; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100; background-color: rgba(0,0,0,0.5); }
-.modal__wrapper { display: table-cell; vertical-align: middle; }
-.modal__container { position: relative; width: 80%; padding: 10px; margin: 0 auto; border-radius: 20px; background-color: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0, 0.6); }
-.modal__close-button { position: absolute; top: 10px; right: 10px; padding: 10px; border-radius: 10px; background-color: #ac8949; color: #fbe3b7; cursor: pointer; transition: 0.6s ease-in; }
-.modal__close-button:hover { background-color: #64460e; transition: 0.6s ease-in; }
-.modal__header { margin-right: 50px; padding-bottom: 10px; }
-.modal__body { padding-bottom: 20px; }
 
 
 /*General site-specific classes*/
@@ -464,10 +431,6 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 @media only screen and (min-width: 700px){ 
 
     .footer__social, .footer__location, .footer__hours { padding-top: 0px; padding-bottom: 0px; } 
-    
-    .modal__container { width: 500px; padding: 30px; }
-    .modal__header { margin-right: 0; }
-    .modal__close-button { top: 15px; right: 15px; }
     
     
      /*General styles*/

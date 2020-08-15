@@ -37,6 +37,7 @@ add_action('wp_enqueue_scripts', function() {
 
 //Add Theme Appearance Customization controls.
 function bakery_theme_customize_register( $wp_customize ){
+    
     //Meta Settings
     $wp_customize->add_section( "MetaSettings", array(
         "title" => __("Meta Settings", "meta_settings_sections"),
@@ -78,12 +79,13 @@ function bakery_theme_customize_register( $wp_customize ){
     )); 
     
     
+    
     //Business Info
     $wp_customize->add_section( "BusinessInfo", array(
         "title" => __("Business Info", "business_info_sections"),
         "priority" => 30,
     ));
-    
+        
     //Location control.
     $wp_customize->add_setting( "location_code", array(
         "default" => "",
@@ -100,9 +102,7 @@ function bakery_theme_customize_register( $wp_customize ){
             "type" => "text",
         )
     ));   
-    
-    
-    
+        
     //Hours controls.
     $wp_customize->add_setting( "hours_code0", array(
         "default" => "",
