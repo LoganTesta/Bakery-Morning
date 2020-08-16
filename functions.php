@@ -182,3 +182,30 @@ function bakery_theme_customize_register( $wp_customize ){
     )); 
 }
 add_action( 'customize_register', 'bakery_theme_customize_register' );
+
+
+
+//Add About Theme tab in Admin Menu.
+function add_about_theme_page(){
+    ?>
+<div class="wrap">
+    <h1>About Bakery Morning</h1>
+    <div class="wrap__content">
+        <p>Use this theme for your bakery website or for any other business.  The color scheme is especially designed for bakery themed sites but you can
+            customize the CSS too.</p>
+        <h2>Theme Customization Features</h2>
+        <ul>
+            <li>Set Meta Description and Keywords.<li>
+            <li>Store Location</li>
+            <li>Store Hours</li>
+        </ul>
+    </div>
+</div>
+    <?php
+}
+
+
+function add_about_theme_item(){
+    add_theme_page( "About Bakery Morning", "About Theme", "manage_options", "theme-options", "add_about_theme_page", null, 99 ); 
+}
+add_action( "admin_menu", "add_about_theme_item" );
