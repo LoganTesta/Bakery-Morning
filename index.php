@@ -172,24 +172,44 @@
                         <div class="footer__copyright">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
                     </div>
                     <div class="content-row">
-                        <div class="footer__social col-sma-3">
+                        <div class="footer__social col-sma-4">
                             <h4 class="footer__subheader">Social</h4>
-                            <div class="footer__social-logo facebook">
-                                <a href=""><i class="fab fa-facebook-f fa-2x social-icon"><span class="sr-only">Facebook</span></i>
+                            <?php if( trim( get_theme_mod ( 'pinterest_code' ) ) !== "" ){ ?>
+                                <div class="footer__social-logo pinterest">
+                                    <a href="<?php echo get_theme_mod ( 'pinterest_code' ); ?>" target="_blank"><i class="fab fa-pinterest-p fa-2x social-icon"><span class="sr-only">Pinterest</span></i>
                                 </a>
                             </div>
-                            <div class="footer__social-logo instagram">
-                                <a href=""><i class="fab fa-instagram fa-2x social-icon"><span class="sr-only">Instagram</span></i></a>
+                            <?php } ?>
+                            <?php if( trim( get_theme_mod ( 'instagram_code' ) ) !== "" ){ ?>
+                                <div class="footer__social-logo instagram">
+                                    <a href="<?php echo get_theme_mod ( 'instagram_code' ); ?>" target="_blank"><i class="fab fa-instagram fa-2x social-icon"><span class="sr-only">Instagram</span></i>
+                                </a>
                             </div>
-                            <div class="footer__social-logo twitter">
-                                <a href=""><i class="fab fa-twitter fa-2x social-icon"><span class="sr-only">Twitter</span></i></a>
+                            <?php } ?>
+                            <?php if( trim( get_theme_mod ( 'facebook_code' ) ) !== "" ){ ?>
+                                <div class="footer__social-logo facebook">
+                                    <a href="<?php echo get_theme_mod ( 'facebook_code' ); ?>" target="_blank"><i class="fab fa-facebook fa-2x social-icon"><span class="sr-only">Facebook</span></i>
+                                </a>
                             </div>
+                            <?php } ?>
+                            <?php if( trim( get_theme_mod ( 'twitter_code' ) ) !== "" ){ ?>
+                                <div class="footer__social-logo twitter">
+                                    <a href="<?php echo get_theme_mod ( 'twitter_code' ); ?>" target="_blank"><i class="fab fa-twitter  fa-2x social-icon"><span class="sr-only">Twitter</span></i>
+                                </a>
+                            </div>
+                            <?php } ?>
+                            <?php if( trim( get_theme_mod ( 'youtube_code' ) ) !== "" ){ ?>
+                                <div class="footer__social-logo youtube">
+                                    <a href="<?php echo get_theme_mod ( 'youtube_code' ); ?>" target="_blank"><i class="fab fa-youtube fa-2x social-icon"><span class="sr-only">Youtube</span></i>
+                                </a>
+                            </div>
+                            <?php } ?>
                         </div>
-                        <div class="footer__location col-sma-6">
+                        <div class="footer__location col-sma-4">
                             <h4 class="footer__subheader">Location</h4>
                             <div><?php echo get_theme_mod( 'location_code' );?></div>
                         </div>
-                        <div class="footer__hours col-sma-3">
+                        <div class="footer__hours col-sma-4">
                             <h4 class="footer__subheader">Hours</h4>     
                             <?php if( trim( get_theme_mod ( 'hours_code0' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code0' ) . "</div>"; } ?>
                             <?php if( trim( get_theme_mod ( 'hours_code1' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code1' ) . "</div>"; } ?>

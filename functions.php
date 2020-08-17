@@ -184,6 +184,99 @@ function bakery_theme_customize_register( $wp_customize ){
             "type" => "text",
         )
     )); 
+    
+    
+    //Scoial Links
+    $wp_customize->add_section( "SocialLinks", array(
+        "title" => __("Social Links", "social_links_sections"),
+        "priority" => 30,
+    ));
+       
+    //Social Links controls.
+    $wp_customize->add_setting( "pinterest_code", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "pinterest_code",
+        array(
+            "label" =>__( "Pinterest URL:", "pinterest_label" ),
+            "section" => "SocialLinks",
+            "settings" => "pinterest_code",
+            "type" => "text",
+        )
+    ));
+    
+    //Social Links controls.
+    $wp_customize->add_setting( "instagram_code", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "instagram_code",
+        array(
+            "label" =>__( "Instagram URL:", "instagram_label" ),
+            "section" => "SocialLinks",
+            "settings" => "instagram_code",
+            "type" => "text",
+        )
+    ));
+    
+    //Social Links controls.
+    $wp_customize->add_setting( "facebook_code", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "facebook_code",
+        array(
+            "label" =>__( "Facebook URL:", "facebook_label" ),
+            "section" => "SocialLinks",
+            "settings" => "facebook_code",
+            "type" => "text",
+        )
+    ));
+    
+    //Social Links controls.
+    $wp_customize->add_setting( "twitter_code", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "twitter_code",
+        array(
+            "label" =>__( "Twitter URL:", "twitter_label" ),
+            "section" => "SocialLinks",
+            "settings" => "twitter_code",
+            "type" => "text",
+        )
+    ));
+    
+    //Social Links controls.
+    $wp_customize->add_setting( "youtube_code", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "youtube_code",
+        array(
+            "label" =>__( "Youtube URL:", "youtube_label" ),
+            "section" => "SocialLinks",
+            "settings" => "youtube_code",
+            "type" => "text",
+        )
+    ));
+    
 }
 add_action( 'customize_register', 'bakery_theme_customize_register' );
 
