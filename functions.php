@@ -295,6 +295,7 @@ function add_about_theme_page(){
             <li>Set Meta Description and Keywords.</li>
             <li>Store Location</li>
             <li>Store Hours</li>
+            <li>Social Media Links</li>
         </ul>
     </div>
 </div>
