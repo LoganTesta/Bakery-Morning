@@ -224,9 +224,10 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .footer__social, .footer__location-phone, .footer__hours { padding-top: 20px; padding-bottom: 20px; } 
 
 .footer__copyright { text-align: center; }
-.footer__social { text-align: center; }
+.footer__social { text-align: center; font-size: 0; }
 .footer__social a { color: #64460e; transition: 0.3s; }
 .footer__social a:hover { color: #fff; transition: 0.3s; }
+.social-icon { font-size: 26px; }
 .footer__location-phone { text-align: center; }
 .footer__location-phone__location { padding-bottom: 15px; }
 .footer__location-phone__phone { }
@@ -234,7 +235,6 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .footer__hours__day { padding-bottom: 15px; }
 .footer__hours__day:last-of-type { padding-bottom: 0; }
 
-.footer__social { } 
 .footer__social-logo { display: inline-block; padding: 0 15px; }
 .footer__social-icon { transition: 0.4s all; }
 .footer__social-icon:hover { transition: 0.4s all; }
