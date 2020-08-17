@@ -1,0 +1,5 @@
+
+/*WordPress Admin styling customization.*/
+.wrap .wrap__title { font-weight: 600; color: #64460e; }
+h2 { color: #ac8949; }
+.content__features-list li { margin-left: 15px; list-style-type: disc; }

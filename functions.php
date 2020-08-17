@@ -12,6 +12,17 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 });
 
 
+add_action( 'admin_enqueue_scripts', function() { 
+    wp_enqueue_style( 'admin-styles', "" . get_template_directory_uri() . '/assets/css/admin-styles.css?mod=08172020' );   
+});
+
+add_action( 'wp_enqueue_scripts', function() {
+    wp_register_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );
+    wp_enqueue_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );  
+    wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/main-styles.css?mod=08082020' );
+    wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/print-styles.css?mod=12202019' );   
+});
+
 
 //Theme support.
 add_theme_support( "post-thumbnails" ); //Allow image thumbnails in pages and posts.
@@ -38,13 +49,6 @@ if(false === get_option( "medium_crop" )) {
 } else {
     update_option( "medium_crop", "1" );
 }
-
-add_action('wp_enqueue_scripts', function() {
-    wp_register_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );
-    wp_enqueue_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );  
-    wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/main-styles.css?mod=08082020' );
-    wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/print-styles.css?mod=12202019' );   
-});
 
 
 
@@ -189,13 +193,13 @@ add_action( 'customize_register', 'bakery_theme_customize_register' );
 function add_about_theme_page(){
     ?>
 <div class="wrap">
-    <h1>About Bakery Morning</h1>
+    <h1 class="wrap__title">About Bakery Morning</h1>
     <div class="wrap__content">
         <p>Use this theme for your bakery website or for any other business.  The color scheme is especially designed for bakery themed sites but you can
             customize the CSS too.</p>
         <h2>Theme Customization Features</h2>
-        <ul>
-            <li>Set Meta Description and Keywords.<li>
+        <ul class="content__features-list">
+            <li>Set Meta Description and Keywords.</li>
             <li>Store Location</li>
             <li>Store Hours</li>
         </ul>
