@@ -32,6 +32,9 @@
                     </div>
                     <h1 class="main-title"><a class="main-title__title" href="index"><?php echo get_bloginfo( 'name' ); ?></a></h1>
                     <h2 class="header__subtitle"><?php single_post_title(); ?></h2>
+                    <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
+                        <div class="header__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
+                    <?php } ?>
                 </div>
             </header>
             <nav class="nav desktop-nav" id="desktop-nav">
@@ -207,8 +210,12 @@
                         </div>
                         <div class="footer__location-phone col-sma-4">
                             <h4 class="footer__subheader">Location</h4>
-                            <div class="footer__location-phone__location"><?php echo get_theme_mod( 'location_code' ); ?></div>
-                            <div class="footer__location-phone__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
+                            <?php if( trim( get_theme_mod ( 'location_code' ) ) !== "" ){ ?>
+                                <div class="footer__location-phone__location"><?php echo get_theme_mod( 'location_code' ); ?></div>
+                            <?php } ?>
+                            <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
+                                <div class="footer__location-phone__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
+                            <?php } ?>
                         </div>
                         <div class="footer__hours col-sma-4">
                             <h4 class="footer__subheader">Hours</h4>     
