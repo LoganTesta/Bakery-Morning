@@ -221,13 +221,15 @@ header { min-height: 200px; background: linear-gradient(#fbe3b7, #f3f3f3); }
 footer { padding: 50px 10px; background-color: #fbe3b7; }
 .footer__subheader { padding-bottom: 15px; color: #64460e; }
 
-.footer__social, .footer__location, .footer__hours { padding-top: 20px; padding-bottom: 20px; } 
+.footer__social, .footer__location-phone, .footer__hours { padding-top: 20px; padding-bottom: 20px; } 
 
 .footer__copyright { text-align: center; }
 .footer__social { text-align: center; }
 .footer__social a { color: #64460e; transition: 0.3s; }
 .footer__social a:hover { color: #fff; transition: 0.3s; }
-.footer__location { text-align: center; }
+.footer__location-phone { text-align: center; }
+.footer__location-phone__location { padding-bottom: 15px; }
+.footer__location-phone__phone { }
 .footer__hours { text-align: center; }
 .footer__hours__day { padding-bottom: 15px; }
 .footer__hours__day:last-of-type { padding-bottom: 0; }
@@ -430,7 +432,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 @media only screen and (min-width: 700px){ 
 
-    .footer__social, .footer__location, .footer__hours { padding-top: 0px; padding-bottom: 0px; } 
+    .footer__social, .footer__location-phone, .footer__hours { padding-top: 0px; padding-bottom: 0px; } 
     
     
      /*General styles*/

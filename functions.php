@@ -119,6 +119,23 @@ function bakery_theme_customize_register( $wp_customize ){
             "type" => "text",
         )
     ));   
+    
+    //Phone control.
+    $wp_customize->add_setting( "phone_code", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "phone_code",
+        array(
+            "label" =>__( "Phone", "phone_label" ),
+            "section" => "BusinessInfo",
+            "settings" => "phone_code",
+            "type" => "text",
+        )
+    )); 
         
     //Hours controls.
     $wp_customize->add_setting( "hours_code0", array(

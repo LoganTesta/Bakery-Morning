@@ -205,9 +205,10 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="footer__location col-sma-4">
+                        <div class="footer__location-phone col-sma-4">
                             <h4 class="footer__subheader">Location</h4>
-                            <div><?php echo get_theme_mod( 'location_code' );?></div>
+                            <div class="footer__location-phone__location"><?php echo get_theme_mod( 'location_code' ); ?></div>
+                            <div class="footer__location-phone__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
                         </div>
                         <div class="footer__hours col-sma-4">
                             <h4 class="footer__subheader">Hours</h4>     
