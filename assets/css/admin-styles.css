@@ -1,5 +1,9 @@
 
 /*WordPress Admin styling customization.*/
+
+.appearance_page_theme-options #wpwrap { background: linear-gradient(#fbe3b7, #f3f3f3 80%); }
+
+
 .wrap .wrap__title { font-weight: 600; color: #64460e; }
-h2 { color: #ac8949; }
+h2 { color: #64460e; }
 .content__features-list li { margin-left: 15px; list-style-type: disc; }
