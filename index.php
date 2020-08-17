@@ -165,12 +165,13 @@
                     </div>
                 </div>
             </div>
-            <div class="message"></div>
+            <div class="message">
+                <?php if( trim(get_bloginfo( 'description' )) !== "") { ?>
+                    <div class="message__text"><?php echo get_bloginfo( 'description' ); ?></div>
+                <?php } ?>
+            </div>
             <footer>
                 <div class="content-wrapper inner-wrapper">   
-                    <?php if( trim(get_bloginfo( 'description' )) !== "") { 
-                        echo "<div class='content-row'><div class='site-description'>" . get_bloginfo( 'description' ) . "</div></div>"; } 
-                    ?>
                     <div class="content-row">
                         <div class="footer__copyright">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
                     </div>
