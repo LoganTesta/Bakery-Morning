@@ -310,8 +310,9 @@ function add_about_theme_page(){
         <h2>Theme Customization Features</h2>
         <ul class="content__features-list">
             <li>Set Meta Description and Keywords.</li>
-            <li>Store Location</li>
+            <li>Location</li>
             <li>Store Hours</li>
+            <li>Phone Number</li>
             <li>Social Media Links</li>
         </ul>
     </div>
