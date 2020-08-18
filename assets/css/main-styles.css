@@ -269,115 +269,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .index__blog__content { }
 
 
-/*About Us*/
-.about-us-container__background { height: 240px; background: url('../images/bakery-shelf.jpg') 0% 0%/cover no-repeat; }
-
-
-/*Location */
-.location-container__background { height: 240px; padding-top: 20px; background: url('../images/location.png') 0% 0%/cover no-repeat;}
-.location-container__header { }
-
-
-/*Products*/
-.products-header { padding-bottom: 20px; }
-.product-container { margin-bottom: 50px; box-shadow: 0 2px 8px rgba(0,0,0, 0.6); border-radius: 20px; }
-.product__title { padding: 15px; font-size: 24px; border-radius: 20px 20px 0 0; font-weight: bold; text-align: center; background: linear-gradient(#64460e 20%, #ac8949 100%); color: #ffffff; }
-.product__price { padding: 15px 20px; background-color: #eeeeee; }
-.product__description { padding: 15px 20px; background-color: #fbe3b7; border-radius: 0 0 20px 20px; }
-.product__background-container { overflow: hidden; }
-.product__background { height: 240px; transition: transform 0.6s ease-in; cursor: pointer; }
-.product__background:hover { transform: scale(1.12); transition: transform 0.6s ease-in; }
-
-.product-container.zero .product__background { background: url('../images/products/whole-wheat-bread.jpg') 0% 0%/cover no-repeat; }
-.product-container.one .product__background { background: url('../images/products/white-bread.jpg') 0% 0%/cover no-repeat; }
-.product-container.two .product__background { background: url('../images/products/scone.jpg') 0% 0%/cover no-repeat; }
-.product-container.three .product__background { background: url('../images/products/chocolate-cake.jpg') 0% 0%/cover no-repeat; }
-.product-container.four .product__background { background: url('../images/products/cherry-pie.jpg') 0% 0%/cover no-repeat; }
-.product-container.five .product__background { background: url('../images/products/blueberry-muffin.jpg') 0% 0%/cover no-repeat; }
-
-.product-container.five { margin-bottom: 0; }
-
-.estimate-section { padding-top: 30px; }
-
-.estimate-table { padding-top: 15px; }
-.estimate-table th, .estimate-table td { display: inline-block; width: 100%; }
-.estimate-table th { width: 100%; padding: 10px 5px; text-align: center; font-size: 19px; font-weight: bold; }
-.estimate-table td { text-align: center; } 
-
-.estimate-table__item-title { width: 100%; padding: 50px 5px 10px 5px; font-weight: bold; }
-.estimate-table__item-image { width: 100%; padding: 10px 5px; }
-.estimate-table__item-cost { width: 100%; padding: 10px 5px; }
-.estimate-table__item-quantity { width: 100%; padding: 10px 5px;  } 
-.estimate-table__item-subtotal { width: 100%; padding: 10px 5px; }
-.estimate-table__add { width: 100%; padding: 10px 5px; }
-.estimate-table__minus { width: 100%; padding: 10px 5px 10px 5px; }
-        
-.estimate-table__add__item { width: 40px; padding: 5px; margin-left: auto; margin-right: auto; border-radius: 15px; background-color: #009900; color: #ffffff; font-size: 24px; font-weight: bold; text-align: center; cursor: pointer; }
-.estimate-table__minus__item { width: 40px; padding: 5px; margin-left: auto; margin-right: auto; border-radius: 15px; background-color: #cc0000; color: #ffffff; font-size: 24px; font-weight: bold; text-align: center; cursor: pointer; }
-
-.estimate-table__cart-summary { margin-top: 60px; }
-.cart-total { padding-bottom: 15px; font-size: 18px; font-weight: bold; text-align: center; }
-.reset-cart { width: 112px; padding: 10px; margin-left: auto; margin-right: auto; border-radius: 15px; background-color: #64460e; color: #ffffff; font-size: 18px; font-weight: bold; cursor: pointer; }
-
-.estimate-container { padding-top: 30px; }
-
-.estimate-table__item-image__photo { width: 100px; height: 70px; margin-left: auto; margin-right: auto; }
-.estimate-table__item-zero .estimate-table__item-image__photo{ background: url('../images/products/whole-wheat-bread.jpg') 0% 0%/cover no-repeat; }
-.estimate-table__item-one .estimate-table__item-image__photo { background: url('../images/products/white-bread.jpg') 0% 0%/cover no-repeat; }
-.estimate-table__item-two .estimate-table__item-image__photo { background: url('../images/products/scone.jpg') 0% 0%/cover no-repeat; }
-.estimate-table__item-three .estimate-table__item-image__photo { background: url('../images/products/chocolate-cake.jpg') 0% 0%/cover no-repeat; }
-.estimate-table__item-four .estimate-table__item-image__photo { background: url('../images/products/cherry-pie.jpg') 0% 0%/cover no-repeat; }
-.estimate-table__item-five .estimate-table__item-image__photo { background: url('../images/products/blueberry-muffin.jpg') 0% 0%/cover no-repeat; }
-
-
-/*Recipes*/
-.recipies-header { padding-bottom: 20px; }
-.recipe-container { margin-bottom: 40px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0, 0.6);}
-.recipe__title, .recipe__image, .recipe__description {  padding: 15px; }
-.recipe__title { border-radius: 15px 15px 0 0; background: radial-gradient(#64460e, #64460e, #ac8949); color: #fbe3b7; font-size: 20px; font-weight: bold; text-align: center; }
-.recipe__description { border-radius: 0 0 15px 15px; background-color: #eeeeee; }
-.recipe__background-container { position: relative; }
-
-.recipe-container.four { margin-bottom: 0; }
-
-.recipe__background { width: 100%; height: 200px; }
-.recipe-container.one .recipe__background { background: url('../images/recipes/chocolate-cupcakes.jpg') 0% 0%/cover no-repeat; }
-.recipe-container.two .recipe__background { background: url('../images/recipes/chocolate-brownies.jpg') 0% 0%/cover no-repeat; }
-.recipe-container.three .recipe__background { background: url('../images/recipes/cinnamon-roll.jpeg') 0% 0%/cover no-repeat; }
-.recipe-container.four .recipe__background { background: url('../images/recipes/angel-food-cake.jpg') 0% 0%/cover no-repeat; }
-
-.recipe__background-text { opacity: 0; position: absolute; top: 40px; padding: 20px; width: 100%; font-size: 28px; font-weight: bold; color: #64460e; }
-.recipe__background, .recipe__background-text { transition: 1s; }
-
-/* (Recipe more info) */
-.recipeShowMoreInfo-enter-active, .recipeShowMoreInfo-leave-active { transition: opacity 0.8s ease-in; }
-.recipeShowMoreInfo-enter, .recipeShowMoreInfo-leave-to { opacity: 0; }
-.recipe-more-info__button { width: 102px; padding: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; font-weight: bold; border-radius: 15px; 
-                            color: #ffffff; background-color: #64460e; cursor: pointer; }
-
-
-/*News amd Events*/
-.news-events-items { padding-top: 20px; }
-.events-container__background { height: 350px; background: url('../images/swede-cake.jpg') 0% 0%/cover no-repeat; }
-
-.event-container { padding: 15px; margin-bottom: 40px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0, 0.6); }
-.event-container__title { padding-bottom: 15px; font-size: 20px; font-weight: bold; text-align: center; color: #64460e; }
-.event-container__date { padding-bottom: 8px; font-weight: bold; text-align: center; color: #64460e; }
-
-
-/*Careers*/
-.careers-container { padding-top: 30px; }
-.careers-container__position { padding: 15px; margin-bottom: 40px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0, 0.6); }
-.careers-container__posititon__title { padding-bottom: 15px; font-size: 20px; font-weight: bold; color: #64460e; text-align: center; }
-.careers-container__background { height: 300px; background: url('../images/bakery-shelf.jpg') 0% 0%/cover no-repeat; }
-
-
 /*Blog*/
-.blog-container__background { height: 300px; background: url('../images/bakery-shelf.jpg') 0% 0%/cover no-repeat; }
-
-.order-blogs { display: none; }
-.order-blogs.show { display: block; width: 213px; padding: 15px 10px; border-radius: 5px; font-weight: bold; background-color: #ac8949; color: #ffffff; cursor: pointer; }
-
 .blog-posts-container { padding-bottom: 20px; }
 .blog-posts { padding-top: 20px; }
 
@@ -392,40 +284,9 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .blog__content.hide { display: none; }
 
 
-/*Contact*/
-.input-container { padding: 10px 10px 20px 10px; }
-.input-container__label { display: inline-block; padding-bottom: 10px; color: #64460e; }
-.input-container__input { }
-.input-container__contact-button { padding: 15px 10px; color: #fbe3b7; background-color: #64460e; border: 1px solid #64460e; border-radius: 15px; cursor: pointer; transition: 0.4s; }
-.input-container__contact-button:hover { color: #64460e; background-color:#fbe3b7; transition: 0.4s; }
-
-.contact-us-container__background { height: 240px; background: url('../images/dough-and-roller.jpg') 0% 0%/cover no-repeat; }
-
-.contact-container { padding-top: 30px; }
-.contact-container__title { color: #64460e; }
-.contact-container__response { padding-top: 15px; padding-bottom: 15px; }
-.contact-container__response-message { font-size: 16px; font-weight: bold; }
-.contact-container__response-message p { padding-bottom: 12px; font-size: inherit; font-weight: bold; }
-
-
-/* Clearing variable width columns */
-@media only screen and (min-width: 700px) and (max-width: 1199px){   
-    .recipes > div:nth-child(2n+1){ content: ""; display: block; clear: both; }
-}
-@media only screen and (min-width: 700px) {
-    .products > div:nth-child(odd){ content: ""; display: block; clear: both; }
-}
-
-@media only screen and (min-width: 1200px){   
-     .recipes > div:nth-child(3n+1){ content: ""; display: block; clear: both; }   
-}
-
-
 
 @media only screen and (min-width: 500px){   
-    .product__background { height: 360px; }
-
-    .recipe__background { height: 360px; } 
+    
 }
 
 
@@ -444,40 +305,11 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .item-container__background { height: 300px; }
     
     .index__blog { padding-bottom: 0; }
-    
-    
-    /*About*/
-    .about-us-container__background { height: 320px; }
-    
-    
-    /*Products*/
-    .products-header { padding-bottom: 10px; }
-    .product__background { height: 280px; }
-    
-    .product-container.four, .product-container.five { margin-bottom: 0; }    
-    
-    
-    /*Recipes*/
-    .recipies-header { padding-bottom: 10px; }
-    .recipe__background { height: 280px; }
-    
-    .recipe-container.three, .recipe-container.four { margin-bottom: 0; }
-    
-    
-    /*News/Events*/
-    .event-container__title, .event-container__date { text-align: left; }
-    
-    
-    /*Careers*/
-    .careers-container__posititon__title { text-align: left; }
-    
+     
     
     /*Blog*/
     .blog-posts-container { padding-bottom: 0px; }
     
-    
-    /*Contact*/
-    .contact-us-container__background { height: 300px; }
 }
 
 @media only screen and (min-width: 1200px){ 
@@ -515,63 +347,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .index__blog__title__link { font-size: 20px; }
     
     
-    /*About*/
-    
-    
-    /*Location*/
-    .location-container__background { height: 400px; }
-
-    
-    /*Products*/
-    .products-header { padding-bottom: 0px; }
-    .product-container { margin-bottom: 60px; }
-    .product__background { height: 360px; }
-    
-    .estimate-cart__title { text-align: center; }
-    .estimate-table { }
-    .estimate-table th, .estimate-table td { display: table-cell; }
-    .estimate-table th { width: auto; text-align: left; }
-    .estimate-table td { text-align: left; }
-    
-    .estimate-container { padding-top: 0; }
-    .estimate-container__title { text-align: center; }
-    .estimate-table__item-image { }
-    .estimate-table__item-title { padding: 10px 5px; }
-    .estimate-table__item-cost { padding-left: 10px; padding-right: 25px; }
-    .estimate-table__item-quantity { } 
-    .estimate-table__item-subtotal {  }
-    .estimate-table__add { width: 70px; }
-    .estimate-table__minus { width: 70px; }
-    
-    .estimate-table__cart-summary { margin-top: 15px; }
-    .cart-total { padding-top: 10px; padding-bottom: 0; text-align: left; }
-    .reset-cart {}
-    
-    
-    /*Recipes*/
-    .recipies-header { padding-bottom: 0px; }
-    
-    
-    /* News/Events */
-    .event-container__title { font-size: 22px; }
-    .event-container__date { font-size: 17px; }
-    
-    
     /*Blog*/
     .blog__title { font-size: 24px; }
     .blog__image { width: 500px; height: 350px; }
-    
-    
-    /*Contact Us*/
-    .contact-us-container__background { height: 400px; }
-    .contact-container__response-message { font-size: 18px; }
   
 }
-
-
-
-
-
-
-
-
