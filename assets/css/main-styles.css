@@ -225,6 +225,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .footer__social, .footer__location-phone, .footer__hours { padding-top: 20px; padding-bottom: 20px; } 
 
 .footer__copyright { text-align: center; }
+.footer__nav { text-align: center; }
 .footer__social { text-align: center; font-size: 0; }
 .footer__social a { color: #64460e; transition: 0.3s; }
 .footer__social a:hover { color: #fff; transition: 0.3s; }

@@ -40,7 +40,7 @@
             <nav class="nav desktop-nav" id="desktop-nav">
                 <div class="inner-wrapper">
                     <?php
-                        wp_nav_menu();
+                        wp_nav_menu( array( 'theme_location' => 'main-nav' ) );
                     ?>
                 </div>
             </nav>
@@ -48,7 +48,7 @@
                 <div id="dropdownButton"></div>
                 <div id="dropdownContent">
                     <?php
-                        wp_nav_menu();
+                        wp_nav_menu( array( 'theme_location' => 'main-nav' ) );
                     ?>
                 </div>
             </nav>
@@ -176,6 +176,10 @@
                         <div class="footer__copyright">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
                     </div>
                     <div class="content-row">
+                        <div class="footer__nav col-sma-2">
+                            <h4 class="footer__subheader">Links</h4>
+                            <?php wp_nav_menu( array( 'theme_location'=>'footer-nav' ) ); ?>
+                        </div>
                         <div class="footer__social col-sma-4">
                             <h4 class="footer__subheader">Social</h4>
                             <?php if( trim( get_theme_mod ( 'pinterest_code' ) ) !== "" ){ ?>
@@ -209,7 +213,7 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="footer__location-phone col-sma-4">
+                        <div class="footer__location-phone col-sma-3">
                             <h4 class="footer__subheader">Location</h4>
                             <?php if( trim( get_theme_mod ( 'location_code' ) ) !== "" ){ ?>
                                 <div class="footer__location-phone__location"><?php echo get_theme_mod( 'location_code' ); ?></div>
@@ -218,7 +222,7 @@
                                 <div class="footer__location-phone__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
                             <?php } ?>
                         </div>
-                        <div class="footer__hours col-sma-4">
+                        <div class="footer__hours col-sma-3">
                             <h4 class="footer__subheader">Hours</h4>     
                             <?php if( trim( get_theme_mod ( 'hours_code0' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code0' ) . "</div>"; } ?>
                             <?php if( trim( get_theme_mod ( 'hours_code1' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code1' ) . "</div>"; } ?>

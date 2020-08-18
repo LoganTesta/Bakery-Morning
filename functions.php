@@ -325,3 +325,17 @@ function add_about_theme_item(){
     add_theme_page( "About Bakery Morning", "About Theme", "manage_options", "theme-options", "add_about_theme_page", null, 99 ); 
 }
 add_action( "admin_menu", "add_about_theme_item" );
+
+
+
+//Add support for additional nav menus.
+function setup_nav_menus() {
+    register_nav_menus(
+        array(
+            'main-nav' => __( 'Main Nav' ),
+            'footer-nav' => __( 'Footer Nav' )
+        )
+    );
+}
+add_action( 'init', 'setup_nav_menus' );
+
