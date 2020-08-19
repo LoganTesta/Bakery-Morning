@@ -191,7 +191,7 @@ header { min-height: 200px; background: linear-gradient(#fbe3b7, #f3f3f3); }
 .main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
 .header__subtitle { text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }
 .logo { position: relative; width: 40px; top: 20px; left: 15px; }
-.header__phone { padding-top: 10px; text-align: center; font-weight: 600; color: #ac8949; }
+.header__phone { padding-top: 10px; text-align: center; font-size: 17px; font-weight: 600; color: #64460e; }
 
 
 /* Nav styles */
@@ -256,7 +256,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 /*Index page*/
 .item-container__background.one { background: url('../images/bakery-shelf-cakes.jpg') 0% 0%/cover no-repeat;}
 
-.index-content__h3 { text-align: center; }
+.index-content__subheading { padding-bottom: 18px; text-align: center; }
 
 .index-content__baked-items-list { margin-left: 30px; list-style-type: disc; }
 .index-content__baked-items-list__list-item { padding-bottom: 10px; }
@@ -328,7 +328,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     header { min-height: 200px; }
     .main-title { padding-top: 50px; text-align: left; margin-left: 180px; }
     .header__subtitle { text-align: left; margin-left: 220px; }
-    .header__phone { position: absolute; right: 20px; top: 172px; padding-top: 0; text-align: left;  }
+    .header__phone { position: absolute; right: 20px; top: 170px; padding-top: 0; text-align: left;  }
     
     
     /* Nav styles */
