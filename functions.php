@@ -105,15 +105,31 @@ function bakery_theme_customize_register( $wp_customize ){
         $wp_customize,
         "index_blog_heading_code",
         array(
-            "label" =>__( "Index Blog Heading text.", "index_blog_heading_code_label" ),
+            "label" =>__( "Index Blog Heading text.", "index_blog_heading_label" ),
             "section" => "GeneralSettings",
             "settings" => "index_blog_heading_code",
             "type" => "text",
         )
     ));
     
+    //Show/hide Index page Blog posts.
+    $wp_customize->add_setting( "index_show_blog_code", array(
+        "default" => "checked",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "index_show_blog_code",
+        array(
+            "label" =>__( "Show most recent 4 blog posts on index page.", "index_show_blog_label" ),
+            "section" => "GeneralSettings",
+            "settings" => "index_show_blog_code",
+            "type" => "checkbox",
+        )
+    ));
     
-    
+      
     //Business Info
     $wp_customize->add_section( "BusinessInfo", array(
         "title" => __("Business Info", "business_info_sections"),
