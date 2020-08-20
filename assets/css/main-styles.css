@@ -280,9 +280,10 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .blog { padding-bottom: 40px; }
 .blog:last-of-type { padding-bottom: 0; }
 
-.blog__title { padding-bottom: 12px; font-size: 18px; font-weight: bold; color: #64460e; }
-.blog__categories { padding-bottom: 4px; font-size: 18px; font-style: italic; color: #ac8949; }
-.blog__date { font-weight: bold; padding-bottom: 10px; color: #64460e; }
+.blog__title { padding-bottom: 12px; font-size: 20px; font-weight: bold; color: #64460e; }
+.blog__categories { padding-bottom: 5px; font-size: 18px; color: #64460e; }
+.blog__author { padding-bottom: 5px; font-weight: bold; color: #64460e; }
+.blog__date { padding-bottom: 10px; font-style: italic; color: #64460e; }
 .blog__image { width: 100%; height: 200px; background-size: cover; background-repeat: no-repeat; }
 .blog__content { display: block; }
 .blog__content.hide { display: none; }
