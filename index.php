@@ -151,6 +151,7 @@
                                             }
                                             ?>
                                         </div>
+                                        <div class="index__blog__author">By <?php the_author(); ?><span class="index__blog__author__extra-text">, </span></div>
                                         <div class="index__blog__date"><?php the_date(); ?></div>
                                         <div class="index__blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
                                             <div class="clear-both"></div>

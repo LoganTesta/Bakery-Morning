@@ -265,8 +265,10 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .index__blog { padding-bottom: 40px; }
 .index__blog__title { padding-bottom: 10px; }
 .index__blog__title__link { font-size: 18px; font-weight: bold; }
-.index__blog__categories { padding-bottom: 4px; font-style: italic; color: #ac8949; }
-.index__blog__date { padding-bottom: 12px; font-weight: bold; color: #64460e; }
+.index__blog__categories { padding-bottom: 4px; font-size: 18px; color: #64460e; }
+.index__blog__author { padding-bottom: 4px; font-weight: bold; color: #64460e; }
+.index__blog__author__extra-text { font-weight: normal; }
+.index__blog__date { padding-bottom: 12px; font-style: italic; color: #64460e; }
 .index__blog__image { padding-bottom: 4px; }
 .index__blog__content { }
 
