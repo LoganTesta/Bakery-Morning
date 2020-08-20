@@ -122,7 +122,7 @@
                         <?php
                         //Show top blog posts on index page only.
                         if ( is_front_page() ) { ?>
-                            <h3 class="index-content__subheading">Recent Blog Posts</h3>
+                            <h3 class="index-content__subheading"><?php echo get_theme_mod( 'index_blog_heading_code' ); ?></h3>
                             <?php global $post;
                             $args = array( 'posts_per_page' => 4, 'orderBy' => 'date', 'order' => 'asc' );
                             $postsToDisplay = get_posts( $args );

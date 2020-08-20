@@ -54,10 +54,10 @@ if(false === get_option( "medium_crop" )) {
 
 //Add Theme Appearance Customization controls.
 function bakery_theme_customize_register( $wp_customize ){
-    
-    //Meta Settings
-    $wp_customize->add_section( "MetaSettings", array(
-        "title" => __("Meta Settings", "meta_settings_sections"),
+     
+    //General Settings
+    $wp_customize->add_section( "GeneralSettings", array(
+        "title" => __("General Settings", "general_settings_sections"),
         "priority" => 30,
     ));
        
@@ -72,7 +72,7 @@ function bakery_theme_customize_register( $wp_customize ){
         "meta_description_code",
         array(
             "label" =>__( "Meta Description (sitewide): add a short description of your site for search engine visitors.", "meta_settings_label" ),
-            "section" => "MetaSettings",
+            "section" => "GeneralSettings",
             "settings" => "meta_description_code",
             "type" => "textarea",
         )
@@ -89,11 +89,28 @@ function bakery_theme_customize_register( $wp_customize ){
         "meta_keywords_code",
         array(
             "label" =>__( "Meta Keywords (sitewide): add several relevant words or short phrases about your site.  Example: bakery, baked goods, fresh.", "meta_keywords_label" ),
-            "section" => "MetaSettings",
+            "section" => "GeneralSettings",
             "settings" => "meta_keywords_code",
             "type" => "textarea",
         )
     )); 
+    
+   //Index Blog Heading text control.
+    $wp_customize->add_setting( "index_blog_heading_code", array(
+        "default" => "Recent Blog Posts",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "index_blog_heading_code",
+        array(
+            "label" =>__( "Index Blog Heading text.", "index_blog_heading_code_label" ),
+            "section" => "GeneralSettings",
+            "settings" => "index_blog_heading_code",
+            "type" => "text",
+        )
+    ));
     
     
     
