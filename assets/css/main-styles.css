@@ -297,8 +297,9 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 
 @media only screen and (min-width: 700px){ 
-
+    /*Footer Styles*/
     .footer__social, .footer__location-phone, .footer__hours { padding-top: 0px; padding-bottom: 0px; } 
+    .footer__social-logo { display: block; padding: 15px 15px; }    
     
     
      /*General styles*/
@@ -340,7 +341,11 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .desktop-nav { display: block; }
     .nav li { display: inline-block; padding: 15px 32px 15px 15px; text-align: left; }
 
-
+    
+    /*Footer Styles*/
+    .footer__social-logo { display: inline-block; padding: 0 15px; } 
+    
+    
     /*General styles*/
     .content__body { }
     .content__featured-image { height: 380px; }
