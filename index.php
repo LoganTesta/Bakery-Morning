@@ -172,7 +172,7 @@
                 <?php } ?>
             </div>
             <footer>
-                <div class="content-wrapper inner-wrapper">   
+                <div class="inner-wrapper">   
                     <div class="content-row">
                         <div class="footer__copyright">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
                     </div>

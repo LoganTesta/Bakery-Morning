@@ -17,7 +17,7 @@ html { box-sizing: border-box; }
 /***########## Grid Column layout available.  Desktop and mobile settings.  Automatically make columns full width below a certain width. Very-small (vsm) 
 columns display at their designated widths at all device sizes, small (sma) above the first breakpoint, large (lar) above the next breakpoint. ***/
 .content { width: 100%; padding: 20px 10px 20px 10px; }
-.content-row { width: 100%; padding: 10px 0 10px 0; }
+.content-row { width: 100%; padding: 20px 0 20px 0; }
 .content-row:after { content: ""; display: block; clear: both; }
 .content-row.no-content-row-padding { padding: 0; }
 .content-row:first-of-type { padding-top: 0; }
