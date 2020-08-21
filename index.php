@@ -66,14 +66,14 @@
                                         $post = get_page( $blog_page_id );
                                         setup_postdata( $post );
                                         ?>
-                                            <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
+                                            <div class="content__featured-image <?php if( trim( the_post_thumbnail_url() ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
                                         <?php
                                         the_content();
                                         rewind_posts();
                                     }
                                 } else {
                                     ?>
-                                        <div class="content__featured-image <?php if(trim(the_post_thumbnail_url()) === "") { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
+                                        <div class="content__featured-image <?php if( trim(the_post_thumbnail_url() ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
                                     <?php
                                 }
                                 
@@ -125,7 +125,7 @@
                         <div class="content-row">
                             <h3 class="index-content__subheading"><?php echo get_theme_mod( 'index_blog_heading_code' ); ?></h3>
                             <?php global $post;
-                            $args = array( 'posts_per_page' => 4, 'orderBy' => 'date', 'order' => 'asc' );
+                            $args = array( 'posts_per_page' => 4, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) );
                             $postsToDisplay = get_posts( $args );
                             foreach ( $postsToDisplay as $post ) : setup_postdata( $post );
                                 ?>      

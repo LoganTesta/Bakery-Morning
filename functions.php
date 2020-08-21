@@ -112,7 +112,7 @@ function bakery_theme_customize_register( $wp_customize ){
         )
     ));
     
-    //Show/hide Index page Blog posts.
+    //Show/hide Index page blog posts.
     $wp_customize->add_setting( "index_show_blog_code", array(
         "default" => "checked",
         "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
@@ -128,6 +128,26 @@ function bakery_theme_customize_register( $wp_customize ){
             "type" => "checkbox",
         )
     ));
+    
+    //Set order of Index page blog posts.
+    $wp_customize->add_setting( "index_blog_order_code", array(
+        "default" => "asc",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh"
+        )
+    );
+    $wp_customize->add_control( 'index_blog_order_code',
+        array(
+            'label' => __( 'Index Post Order' ),
+            'section' => 'GeneralSettings',
+            'priority' => 10,
+            'type' => 'radio',
+            'choices' => array(
+                'desc' => __( 'newest to oldest' ),
+                'asc' => __( 'oldest to newest' )
+            )
+        )
+    );
     
       
     //Business Info
