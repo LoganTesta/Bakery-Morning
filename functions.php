@@ -71,7 +71,8 @@ function bakery_theme_customize_register( $wp_customize ){
         $wp_customize,
         "meta_description_code",
         array(
-            "label" =>__( "Meta Description (sitewide): add a short description of your site for search engine visitors.", "meta_settings_label" ),
+            "label" =>__( "Meta Description", "meta_settings_label" ),
+            "description" => __( '(Sitewide): add a short description of your site.' ),
             "section" => "GeneralSettings",
             "settings" => "meta_description_code",
             "type" => "textarea",
@@ -88,7 +89,8 @@ function bakery_theme_customize_register( $wp_customize ){
         $wp_customize,
         "meta_keywords_code",
         array(
-            "label" =>__( "Meta Keywords (sitewide): add several relevant words or short phrases about your site.  Example: bakery, baked goods, fresh.", "meta_keywords_label" ),
+            "label" =>__( "Meta Keywords", "meta_keywords_label" ),
+            "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.' ),
             "section" => "GeneralSettings",
             "settings" => "meta_keywords_code",
             "type" => "textarea",
