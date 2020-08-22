@@ -360,16 +360,20 @@ function add_about_theme_page(){
 <div class="wrap">
     <h1 class="wrap__title">About Bakery Morning</h1>
     <div class="wrap__content">
-        <p>Use this theme for your bakery website or for any other business.  The color scheme is especially designed for bakery themed sites but you can
-            customize the CSS too.</p>
+        <p>Use this fully responsive theme for your bakery website or for any other site you need.</p>
+        <p>Looks great on phones, tablets, laptops, and desktops.  
+            The color scheme is especially designed for bakery websites and you can always customize the CSS too.</p>
         <h2>Theme Customization Features</h2>
         <ul class="content__features-list">
-            <li>Set Meta Description and Keywords.</li>
+            <li>Meta Description and Keywords.</li>
             <li>Location</li>
             <li>Store Hours</li>
             <li>Phone Number</li>
             <li>Social Media Links</li>
+            <li>header and a footer nav menu</li>
+            <li>... and more</li>
         </ul>
+        <p>Enjoy using the Bakery Morning theme on your website!</li>
     </div>
 </div>
     <?php
