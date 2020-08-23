@@ -120,12 +120,16 @@
                         </div>
                     </div>  
                     <?php 
-                    //Show top blog posts on index page only.
-                    if ( is_front_page() && get_theme_mod( 'index_show_blog_code' ) ) { ?>
+                    //Show most recent blog posts on index page only.
+                    if ( is_front_page() && get_theme_mod( 'index_show_blog_code' ) ) { ?>                     
                         <div class="content-row">
                             <h3 class="index-content__subheading"><?php echo get_theme_mod( 'index_blog_heading_code' ); ?></h3>
                             <?php global $post;
-                            $args = array( 'posts_per_page' => 4, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) );
+                            if( get_theme_mod( 'index_blog_order_code' ) === 'desc' ) {
+                                $args = array( 'posts_per_page' => 4, 'offset' => 0, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) ); 
+                            } else {
+                                $args = array( 'posts_per_page' => 4, 'offset' => wp_count_posts( 'post' )->publish - 4, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) );     
+                            }
                             $postsToDisplay = get_posts( $args );
                             foreach ( $postsToDisplay as $post ) : setup_postdata( $post );
                                 ?>      
