@@ -53,7 +53,7 @@ if(false === get_option( "medium_crop" )) {
 
 
 //Add Theme Appearance Customization controls.
-function bakery_theme_customize_register( $wp_customize ){
+function bakery_morning_customize_register( $wp_customize ){
      
     //General Settings
     $wp_customize->add_section( "GeneralSettings", array(
@@ -350,7 +350,7 @@ function bakery_theme_customize_register( $wp_customize ){
     ));
     
 }
-add_action( 'customize_register', 'bakery_theme_customize_register' );
+add_action( 'customize_register', 'bakery_morning_customize_register' );
 
 
 
