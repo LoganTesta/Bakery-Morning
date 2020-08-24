@@ -26,6 +26,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 //Theme support.
 add_theme_support( "post-thumbnails" ); //Allow image thumbnails in pages and posts.
+add_theme_support( "post-formats", array( 'aside', 'gallery', 'quote', 'image', 'video' ) ); //Let user customize the post format.  
 add_theme_support( 'custom-logo' );   //Let user upload the logo.
 
 
