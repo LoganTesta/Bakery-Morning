@@ -12,6 +12,43 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 });
 
 
+
+
+//Theme setup and support.
+if ( function_exists( 'bakery_morning_setup' ) === false ) {
+    function bakery_morning_setup() {
+        add_theme_support( "post-thumbnails" ); //Allow image thumbnails in pages and posts.
+        add_theme_support( "post-formats", array( 'aside', 'gallery', 'quote', 'image', 'video' ) ); //Let user customize the post format.  
+        add_theme_support( 'custom-logo' );   //Let user upload the logo.
+
+
+        //Enable Widgets in theme.
+        if ( function_exists( 'register_sidebar' ) ) {
+            register_sidebar( array(
+                'name' => 'Widgetized Area',
+                'id' => 'widgetized-area',
+                'description' => 'This is a widgetized area.',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget' => '</div>',
+                'before_title' => '<h4>',
+                'after_title' => '</h4>'
+            ));
+        }
+
+
+        //Allow cropping for medium thumbnail images.
+        if(false === get_option( "medium_crop" )) {
+            add_option( "medium_crop", "1" );
+        } else {
+            update_option( "medium_crop", "1" );
+        }
+    }
+}
+add_action( 'after_theme_setup', 'bakery_morning_setup' );
+
+
+
+
 add_action( 'admin_enqueue_scripts', function() { 
     wp_enqueue_style( 'admin-styles', "" . get_template_directory_uri() . '/assets/css/admin-styles.css?mod=08172020' );   
 });
@@ -23,33 +60,6 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_style( 'styles', "" . get_template_directory_uri() . '/assets/css/print-styles.css?mod=12202019' );   
 });
 
-
-//Theme support.
-add_theme_support( "post-thumbnails" ); //Allow image thumbnails in pages and posts.
-add_theme_support( "post-formats", array( 'aside', 'gallery', 'quote', 'image', 'video' ) ); //Let user customize the post format.  
-add_theme_support( 'custom-logo' );   //Let user upload the logo.
-
-
-//Enable Widgets in theme.
-if ( function_exists( 'register_sidebar' ) ) {
-    register_sidebar( array(
-        'name' => 'Widgetized Area',
-        'id' => 'widgetized-area',
-        'description' => 'This is a widgetized area.',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
-}
-
-
-//Allow cropping for medium thumbnail images.
-if(false === get_option( "medium_crop" )) {
-    add_option( "medium_crop", "1" );
-} else {
-    update_option( "medium_crop", "1" );
-}
 
 
 
