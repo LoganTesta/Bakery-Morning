@@ -9,7 +9,7 @@
         <meta name="description" content="<?php echo get_theme_mod( "meta_description_code" ); ?>" />
         <meta name="keywords" content="<?php echo get_theme_mod( "meta_keywords_code" ); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php if( get_the_title() !== "Index" && get_the_title() !== "Home" ) { echo get_the_title() . " | "; } ?><?php echo get_bloginfo( 'name' ); ?></title>
+        <title><?php if( get_the_title() !== "Index" && get_the_title() !== "Home" ) { if( !is_404() ) { echo get_the_title(); } else { echo "404"; } echo " | "; } ?><?php echo get_bloginfo( 'name' ); ?></title>
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <![endif]-->
@@ -34,7 +34,7 @@
                         </a>
                     </div>
                     <h1 class="main-title"><a class="main-title__title" href="index"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-                    <h2 class="header__subtitle"><?php single_post_title(); ?></h2>
+                    <h2 class="header__subtitle"><?php if( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
                     <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
                         <div class="header__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
                     <?php } ?>
