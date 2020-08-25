@@ -35,13 +35,23 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
             ));
         }
 
-
         //Allow cropping for medium thumbnail images.
         if(false === get_option( "medium_crop" )) {
             add_option( "medium_crop", "1" );
         } else {
             update_option( "medium_crop", "1" );
         }
+        
+        //Add support for additional nav menus.
+        register_nav_menus(
+            array(
+                'main-nav' => __( 'Main Nav' ),
+                'footer-nav' => __( 'Footer Nav' )
+            )
+        );
+        
+        //Enable theme translation.
+        load_theme_textdomain( 'bakerymorning', get_template_directory() . '/languages' );
     }
 }
 add_action( 'after_theme_setup', 'bakery_morning_setup' );
@@ -395,17 +405,3 @@ function add_about_theme_item(){
     add_theme_page( "About Bakery Morning", "About Theme", "manage_options", "theme-options", "add_about_theme_page", null, 99 ); 
 }
 add_action( "admin_menu", "add_about_theme_item" );
-
-
-
-//Add support for additional nav menus.
-function setup_nav_menus() {
-    register_nav_menus(
-        array(
-            'main-nav' => __( 'Main Nav' ),
-            'footer-nav' => __( 'Footer Nav' )
-        )
-    );
-}
-add_action( 'init', 'setup_nav_menus' );
-
