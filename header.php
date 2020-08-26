@@ -20,7 +20,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"> 
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body class="<?php echo strtolower( single_post_title( "", false ) ); ?>">
         <div class="body-wrapper">
             <header>
                 <div class="inner-wrapper">                  
