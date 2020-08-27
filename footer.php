@@ -10,8 +10,17 @@
             <footer>
                 <div class="inner-wrapper">   
                     <div class="content-row">
-                        <div class="footer__copyright">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
+                        <div class="footer__copyright col-sma-12">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
                     </div>
+                    <?php if ( is_active_sidebar( 'widgetized-area' ) ) : ?>
+                    <div class="content-row">                   
+                         <div class="col-sma-12">
+                            <div class="footer__widgets">
+                                <?php dynamic_sidebar( 'widgetized-area' ); ?>
+                            </div>
+                        </div>    
+                    </div>
+                    <?php endif; ?>
                     <div class="content-row">
                         <div class="footer__nav col-sma-2">
                             <h4 class="footer__subheader">Links</h4>
