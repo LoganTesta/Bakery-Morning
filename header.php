@@ -21,6 +21,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class( strtolower( single_post_title( "", false ) ) ); ?>>
+        <?php wp_body_open(); ?>
         <div class="body-wrapper">
             <header>
                 <div class="inner-wrapper">                  
