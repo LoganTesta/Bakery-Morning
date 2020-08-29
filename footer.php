@@ -48,7 +48,7 @@
                             <?php } ?>
                             <?php if( trim( get_theme_mod ( 'twitter_code' ) ) !== "" ){ ?>
                                 <div class="footer__social-logo twitter">
-                                    <a href="<?php echo get_theme_mod ( 'twitter_code' ); ?>" target="_blank"><i class="fab fa-twitter  fa-2x social-icon"><span class="sr-only">Twitter</span></i>
+                                    <a href="<?php echo get_theme_mod ( 'twitter_code' ); ?>" target="_blank"><i class="fab fa-twitter fa-2x social-icon"><span class="sr-only">Twitter</span></i>
                                 </a>
                             </div>
                             <?php } ?>
