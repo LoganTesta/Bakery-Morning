@@ -185,7 +185,7 @@ input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 
 
 /* Header styles */
-.header { min-height: 200px; background: linear-gradient(#fbe3b7, #f3f3f3); }
+.header { min-height: 200px; }
 .main-title { padding-top: 20px; text-align: center; }
 .main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
 .header__subtitle { text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }

@@ -21,7 +21,9 @@
         <style type="text/css">
             .header { 
                 <?php if( get_theme_mod( 'background_image' ) !== "" ) { ?> 
-                    background: url('<?php echo get_theme_mod( 'background_image' ); ?>') 50% 50%/cover no-repeat !important; 
+                    background: url('<?php echo get_theme_mod( 'background_image' ); ?>') 50% 50%/cover no-repeat; 
+                <?php } else { ?> 
+                    background: linear-gradient(#fbe3b7, #f3f3f3);    
                 <?php } ?>
             }
         </style>
