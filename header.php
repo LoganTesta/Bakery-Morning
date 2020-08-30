@@ -18,12 +18,19 @@
         <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"> 
+        <style type="text/css">
+            .header { 
+                <?php if( get_theme_mod( 'background_image' ) !== "" ) { ?> 
+                    background: url('<?php echo get_theme_mod( 'background_image' ); ?>') 50% 50%/cover no-repeat !important; 
+                <?php } ?>
+            }
+        </style>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class( strtolower( single_post_title( "", false ) ) ); ?>>
         <?php wp_body_open(); ?>
         <div class="body-wrapper">
-            <header style="background: url('<?php echo get_theme_mod( 'background_image' ); ?>') 50% 50%/cover no-repeat; ">
+            <header class="header">
                 <div class="inner-wrapper">                  
                     <div class="logo">
                         <a href="index">
@@ -34,10 +41,10 @@
                             <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo( 'name' ); ?> logo">
                         </a>
                     </div>
-                    <h1 class="main-title"><a class="main-title__title" href="index"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-                    <h2 class="header__subtitle"><?php if( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
+                    <h1 class="main-title"><a class="main-title__title" href="index" style="<?php if( get_theme_mod( 'background_image' ) !== "") { echo "color: #ffffff;"; } ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
+                    <h2 class="header__subtitle" style="<?php if( get_theme_mod( 'background_image' ) !== "" ) { echo "color: #ffffff;"; } ?>"><?php if( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
                     <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
-                        <div class="header__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
+                        <div class="header__phone" style="<?php if( get_theme_mod( 'background_image' ) !== "" ) { echo "color: #ffffff;"; } ?>"><?php echo get_theme_mod( 'phone_code' ); ?></div>
                     <?php } ?>
                 </div>
             </header>
