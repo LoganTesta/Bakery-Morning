@@ -23,7 +23,7 @@
     <body <?php body_class( strtolower( single_post_title( "", false ) ) ); ?>>
         <?php wp_body_open(); ?>
         <div class="body-wrapper">
-            <header>
+            <header style="background: url('<?php echo get_theme_mod( 'background_image' ); ?>') 50% 50%/cover no-repeat; ">
                 <div class="inner-wrapper">                  
                     <div class="logo">
                         <a href="index">
