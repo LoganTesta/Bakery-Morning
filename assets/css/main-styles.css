@@ -185,7 +185,7 @@ input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 
 
 /* Header styles */
-header { min-height: 200px; background: linear-gradient(#fbe3b7, #f3f3f3); }
+.header { min-height: 200px; background: linear-gradient(#fbe3b7, #f3f3f3); }
 .main-title { padding-top: 20px; text-align: center; }
 .main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
 .header__subtitle { text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }
@@ -305,7 +305,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     
      /*General styles*/
     .content__body {width: 100%; }
-    .content__featured-image { float: right; width: 50%; height: 320px; }
+    .content__featured-image { float: right; width: 50%; height: 280px; }
     
     
     /*Index*/
@@ -327,14 +327,14 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .inner-wrapper { width: 1200px; }
 
     
-    .logo { position: absolute; top: 40px; right: 20px; width: 80px; }
+    .logo { position: absolute; top: 70px; right: 20px; width: 80px; }
    
     
     /* Header styles */
-    header { min-height: 200px; }
-    .main-title { padding-top: 50px; text-align: left; margin-left: 180px; }
+    .header { min-height: 240px; }
+    .main-title { padding-top: 70px; text-align: left; margin-left: 180px; }
     .header__subtitle { text-align: left; margin-left: 220px; }
-    .header__phone { position: absolute; right: 20px; top: 170px; padding-top: 0; text-align: left;  }
+    .header__phone { position: absolute; right: 20px; top: 200px; padding-top: 0; text-align: left;  }
     
     
     /* Nav styles */
@@ -349,7 +349,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     
     /*General styles*/
     .content__body { }
-    .content__featured-image { height: 380px; }
+    .content__featured-image { height: 300px; }
 
 
     /*Index*/
