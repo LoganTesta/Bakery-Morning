@@ -13,7 +13,10 @@ if ( $comments ) {
     echo "<div class='comments'>";
     echo "<h3>Comments</h3>";
     foreach ( $comments as $comment ) {
-        echo "<div class='comments__comment'>" . $comment->comment_content . '</div>';
+        echo "<div class='comments__comment'>";
+        echo "<div class='comments__comment__body'>" . $comment->comment_content . '</div>';
+        echo "<div class='comments__comment__author'>-" . $comment->comment_author . '</div>';
+        echo "</div>";
     }  
     echo "</div>";
 } else {

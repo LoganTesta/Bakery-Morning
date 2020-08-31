@@ -249,7 +249,9 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .comment-form .submit { width: auto; cursor: pointer; }
 
 .comments { }
-.comments__comment { padding-bottom: 40px; }
+.comments__comment { padding-bottom: 50px; }
+.comments__comment__body { padding-bottom: 5px; }
+.comments__comment__author { font-weight: bold; color: #64460e; }
 
 
 /*General site-specific classes*/
