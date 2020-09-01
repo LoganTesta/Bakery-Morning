@@ -252,8 +252,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 .comments { }
 .comments__header { font-size: 19px; }
-.comments__comment { padding-bottom: 30px; }
-.comments__comment:last-of-type { padding-bottom: 0; }
+.comments__comment { padding: 10px; margin-bottom: 30px; background-color: rgba(172, 137, 73, 0.15); }
+.comments__comment:last-of-type { margin-bottom: 0; }
 .comments__comment__body { padding-bottom: 5px; }
 .comments__comment__author { font-weight: bold; color: #64460e; }
 
