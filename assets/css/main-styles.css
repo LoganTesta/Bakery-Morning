@@ -247,8 +247,15 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .comment-respond { padding-top: 20px; padding-bottom: 10px; }
 .comment-reply-title { font-size: 19px; }
 .comment-form { max-width: 500px; }
+.comment-form label { color: #64460e; }
 .comment-form #comment { height: 100px; }
-.comment-form .submit { width: auto; cursor: pointer; }
+.comment-form-comment { }
+.comment-form-author { float: left; width: 50%; padding-right: 10px; }
+.comment-form-email { float: left; width: 50%; padding-left: 10px; }
+.comment-form-email:after { content: ""; display: block; clear: both; }
+.comment-form-url { }
+.comment-form-cookies-consent { }
+.comment-form .submit { width: auto; background-color: #64460e; color: #fbe3b7; cursor: pointer; }
 
 .comments { }
 .comments__header { font-size: 19px; }
