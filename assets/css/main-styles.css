@@ -255,14 +255,16 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .comment-form-email:after { content: ""; display: block; clear: both; }
 .comment-form-url { }
 .comment-form-cookies-consent { }
+#wp-comment-cookies-consent { width: auto; margin-right: 4px; }
 .comment-form .submit { width: auto; background-color: #64460e; color: #fbe3b7; cursor: pointer; }
 
 .comments { }
 .comments__header { font-size: 19px; }
 .comments__comment { padding: 10px; margin-bottom: 30px; background-color: rgba(172, 137, 73, 0.15); }
 .comments__comment:last-of-type { margin-bottom: 0; }
-.comments__comment__body { padding-bottom: 5px; }
-.comments__comment__author { font-weight: bold; color: #64460e; }
+.comments__comment__body { padding-bottom: 10px; }
+.comments__comment__author { display: inline-block; font-weight: bold; color: #64460e; }
+.comments__comment__date { display: inline-block; padding-left: 12px; }
 
 
 /*General site-specific classes*/

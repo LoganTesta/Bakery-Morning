@@ -15,7 +15,8 @@ if ( $comments && have_comments() ) {
     foreach ( $comments as $comment ) {
         echo "<div class='comments__comment'>";
         echo "<div class='comments__comment__body'>" . $comment->comment_content . '</div>';
-        echo "<div class='comments__comment__author'>-" . $comment->comment_author . '</div>';
+        echo "<div class='comments__comment__author'>-" . $comment->comment_author . ':</div>';
+        echo "<div class='comments__comment__date'>" . get_comment_date( 'M d, Y' ) . ' at ' . get_comment_date( 'h:ha' ) . '</div>';
         echo "</div>";
     }  
     echo "</div>";
