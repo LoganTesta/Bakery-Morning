@@ -9,9 +9,9 @@ $args = array(
 $comments_query = new WP_Comment_Query;
 $comments = $comments_query->query( $args );
 
-if ( $comments ) {
+if ( $comments && have_comments() ) {
     echo "<div class='comments'>";
-    echo "<h3>Comments</h3>";
+    echo "<h3 class='comments__header'>Comments</h3>";
     foreach ( $comments as $comment ) {
         echo "<div class='comments__comment'>";
         echo "<div class='comments__comment__body'>" . $comment->comment_content . '</div>';

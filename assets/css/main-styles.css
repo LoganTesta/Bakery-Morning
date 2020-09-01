@@ -244,12 +244,16 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 
 /*Comments*/
-.comment-respond { padding-top: 40px; padding-bottom: 60px; }
-.comment-form { max-width: 600px; }
+.comment-respond { padding-top: 20px; padding-bottom: 10px; }
+.comment-reply-title { font-size: 19px; }
+.comment-form { max-width: 500px; }
+.comment-form #comment { height: 100px; }
 .comment-form .submit { width: auto; cursor: pointer; }
 
 .comments { }
-.comments__comment { padding-bottom: 50px; }
+.comments__header { font-size: 19px; }
+.comments__comment { padding-bottom: 30px; }
+.comments__comment:last-of-type { padding-bottom: 0; }
 .comments__comment__body { padding-bottom: 5px; }
 .comments__comment__author { font-weight: bold; color: #64460e; }
 
@@ -288,7 +292,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .blog-posts-container { padding-bottom: 20px; }
 .blog-posts { padding-top: 20px; }
 
-.blog { padding-bottom: 40px; }
+.blog { padding-bottom: 100px; }
 .blog:last-of-type { padding-bottom: 0; }
 
 .blog__title { padding-bottom: 12px; font-size: 20px; font-weight: bold; color: #64460e; }

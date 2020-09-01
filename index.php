@@ -1,6 +1,8 @@
 
-<?php get_header(); ?>
-
+<?php
+get_header();
+$withcomments = "1";
+?>
             <div class="inner-wrapper">
                 <div class="content page-content">
                     <div class="content-row">
@@ -59,7 +61,12 @@
                                             <div class="blog__date"><?php echo get_the_date(); ?></div>
                                             <div class="blog__content"><?php the_content(); ?></div>
                                             <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
-                                       </div>
+                                            <?php 
+                                                if( comments_open() ) {
+                                                    comments_template();
+                                                } 
+                                            ?>
+                                        </div>
                                        <?php
                                     }
                                 endwhile;
