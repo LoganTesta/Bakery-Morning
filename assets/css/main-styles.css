@@ -260,11 +260,12 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 .comments { }
 .comments__header { font-size: 19px; }
-.comments__comment { padding: 10px; margin-bottom: 30px; background-color: rgba(172, 137, 73, 0.15); }
-.comments__comment:last-of-type { margin-bottom: 0; }
-.comments__comment__body { padding-bottom: 10px; }
-.comments__comment__author { display: inline-block; font-weight: bold; color: #64460e; }
-.comments__comment__date { display: inline-block; padding-left: 12px; }
+
+.comments .comment { padding: 10px; margin-bottom: 30px; list-style-type: none; background-color: rgba(172, 137, 73, 0.15); }
+.comments .comment:last-of-type { margin-bottom: 0; }
+.comments .fn { font-weight: bold; color: #64460e; }
+.comments .commentmetadata { padding-bottom: 10px; }
+.comments .reply { }
 
 
 /*General site-specific classes*/
