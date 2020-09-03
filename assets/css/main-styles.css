@@ -266,6 +266,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .comments .fn { font-weight: bold; color: #64460e; }
 .comments .commentmetadata { padding-bottom: 10px; }
 .comments .reply { }
+.comments .children { margin-top: 15px; margin-left: 5px; }
 
 
 /*General site-specific classes*/
