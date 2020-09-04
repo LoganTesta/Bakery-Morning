@@ -9,31 +9,26 @@ $withcomments = "1";
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <?php
-                                //Output the page content for the posts page here.
-                                if( is_home() ){ 
+                                //General layout.  Show content on all pages.  For the blog page, extra code to show the post page's content, and then
+                                //show the blog posts.
+                                if( is_home() === false ){
+                                    the_content(); ?>
+                                    <div class="content__featured-image <?php if( trim( the_post_thumbnail_url() ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
+                                    <?php
+                                 } else if( is_home() ){ 
                                     global $post;
                                     $blog_page_id = get_option( 'page_for_posts' );
                                     if ( $blog_page_id ) {
                                         $post = get_page( $blog_page_id );
                                         setup_postdata( $post );
                                         ?>
-                                            <div class="content__featured-image <?php if( trim( the_post_thumbnail_url() ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
+                                        <div class="content__featured-image <?php if( trim( the_post_thumbnail_url() ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
                                         <?php
                                         the_content();
                                         rewind_posts();
                                     }
-                                } else {
-                                    ?>
-                                        <div class="content__featured-image <?php if( trim(the_post_thumbnail_url() ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
-                                    <?php
-                                }
-                                
-                                //Show all pages' (besides the posts page) content, and on every page including the posts page, show any posts on that page.
-                                while (have_posts()) : the_post(); //You need a while loop to call the_content().
-                                    if( is_home() === false ){
-                                        the_content(); 
-                                    } else {
-                                        ?>
+                                    
+                                    while (have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
                                         <div class="blog">
                                             <div class="blog__title"><?php the_title(); ?></div>
                                             <div class="blog__categories">
@@ -67,16 +62,15 @@ $withcomments = "1";
                                                 } 
                                             ?>
                                         </div>
-                                       <?php
-                                    }
-                                endwhile;
-                                wp_reset_query(); //Reset the page query
-                                ?>
+                                    <?php
+                                    endwhile;
+                                    wp_reset_query(); //Reset the page query
+                                } ?>
                             </div>  
                         </div>
                     </div>  
                     <?php 
-                    //Show most recent blog posts on index page only.
+                    //Index page only: show most recent blog posts.
                     if ( is_front_page() && get_theme_mod( 'index_show_blog_code' ) ) { ?>                     
                         <div class="content-row">
                             <h3 class="index-content__subheading"><?php echo get_theme_mod( 'index_blog_heading_code' ); ?></h3>
