@@ -52,6 +52,7 @@ $withcomments = "1";
                                                 }
                                             ?>
                                             </div>
+                                            <div class="blog__tags"><?php the_tags(); ?></div>
                                             <div class="blog__author">By: <?php the_author(); ?></div>
                                             <div class="blog__date"><?php echo get_the_date(); ?></div>
                                             <div class="blog__content"><?php the_content(); ?></div>
