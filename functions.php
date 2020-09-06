@@ -23,20 +23,6 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         add_theme_support( "custom-background" );
         add_theme_support( "custom-header" );
 
-        
-        //Enable Widgets in theme.
-        if ( function_exists( 'register_sidebar' ) ) {
-            register_sidebar( array(
-                'name' => 'Widgetized Area',
-                'id' => 'widgetized-area',
-                'description' => 'This is a widgetized area.',
-                'before_widget' => '<div id="%1$s" class="widget %2$s">',
-                'after_widget' => '</div>',
-                'before_title' => '<h4>',
-                'after_title' => '</h4>'
-            ));
-        }
-
         //Allow cropping for medium thumbnail images.
         if(false === get_option( "medium_crop" )) {
             add_option( "medium_crop", "1" );
@@ -59,6 +45,21 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
 add_action( 'after_setup_theme', 'bakery_morning_setup' );
 
 
+function bakery_morning_enable_sidebars(){
+    //Enable Widgets in theme.
+    if ( function_exists( 'register_sidebar' ) ) {
+        register_sidebar( array(
+            'name' => 'Widgetized Area',
+            'id' => 'widgetized-area',
+            'description' => 'This is a widgetized area.',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>'
+        ));
+    } 
+}
+add_action( 'widgets_init', 'bakery_morning_enable_sidebars' );
 
 
 add_action( 'admin_enqueue_scripts', function() { 
