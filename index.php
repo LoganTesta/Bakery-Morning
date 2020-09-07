@@ -74,7 +74,7 @@ $withcomments = "1";
                     //Index page only: show most recent blog posts.
                     if ( is_front_page() && get_theme_mod( 'index_show_blog_code' ) ) { ?>                     
                         <div class="content-row">
-                            <h3 class="index-content__subheading"><?php echo get_theme_mod( 'index_blog_heading_code' ); ?></h3>
+                            <h3 class="index-content__subheading"><?php echo esc_html( get_theme_mod( 'index_blog_heading_code' ) ); ?></h3>
                             <?php global $post;
                             if( get_theme_mod( 'index_blog_order_code' ) === 'desc' ) {
                                 $args = array( 'posts_per_page' => 4, 'offset' => 0, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) ); 
