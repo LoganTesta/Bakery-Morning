@@ -5,6 +5,7 @@
                     <div class="content-row">
                         <div class="col-sma-12">
                             <div class="content__body">
+                                <?php while (have_posts()) : the_post(); //You need a while loop to call the_author(). ?>
                                 <div class="blog">
                                     <div class="blog__title"><?php the_title(); ?></div>
                                     <div class="blog__categories">
@@ -39,6 +40,7 @@
                                         } 
                                     ?>
                                 </div>
+                                <?php endwhile; ?>
                             </div>  
                         </div>
                     </div>
