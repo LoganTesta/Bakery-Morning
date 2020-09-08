@@ -65,7 +65,7 @@
                                 <div class="footer__location-phone__location"><?php echo get_theme_mod( 'location_code' ); ?></div>
                             <?php } ?>
                             <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
-                                <div class="footer__location-phone__phone"><?php echo get_theme_mod( 'phone_code' ); ?></div>
+                                <div class="footer__location-phone__phone"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
                             <?php } ?>
                         </div>
                         <div class="footer__hours col-sma-3">

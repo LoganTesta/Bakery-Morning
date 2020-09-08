@@ -46,7 +46,7 @@
                     <h1 class="main-title"><a class="main-title__title" href="index" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
                     <h2 class="header__subtitle" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php if( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
                     <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
-                        <div class="header__phone" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo get_theme_mod( 'phone_code' ); ?></div>
+                        <div class="header__phone" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
                     <?php } ?>
                 </div>
             </header>
