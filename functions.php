@@ -22,6 +22,7 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         add_theme_support( "custom-logo", array ( 'width' => 200, 'height' => 200 ) );   //Let user upload the logo.
         add_theme_support( "custom-background" );
         add_theme_support( "custom-header" );
+        add_theme_support( "title-tag");
 
         //Allow cropping for medium thumbnail images.
         if(false === get_option( "medium_crop" )) {
