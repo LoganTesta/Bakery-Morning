@@ -41,6 +41,10 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         
         //Enable theme translation.
         load_theme_textdomain( 'bakerymorning', get_template_directory() . '/languages' );
+        
+        if( !isset( $content_width ) ){
+            $content_width = 1920;            
+        };
     }
 }
 add_action( 'after_setup_theme', 'bakery_morning_setup' );
