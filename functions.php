@@ -34,13 +34,13 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         //Add support for additional nav menus.
         register_nav_menus(
             array(
-                'main-nav' => __( 'Main Nav', 'bakerymorning' ),
-                'footer-nav' => __( 'Footer Nav', 'bakerymorning' )
+                'main-nav' => __( 'Main Nav', 'bakery-morning' ),
+                'footer-nav' => __( 'Footer Nav', 'bakery-morning' )
             )
         );
         
         //Enable theme translation.
-        load_theme_textdomain( 'bakerymorning', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'bakery-morning', get_template_directory() . '/languages' );
         
         if( !isset( $content_width ) ){
             $content_width = 1920;            
@@ -90,7 +90,7 @@ function bakery_morning_customize_register( $wp_customize ){
      
     //General Settings
     $wp_customize->add_section( "GeneralSettings", array(
-        "title" => __("General Settings", "bakerymorning"),
+        "title" => __("General Settings", "bakery-morning"),
         "priority" => 30,
     ));
        
@@ -104,8 +104,8 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "meta_description_code",
         array(
-            "label" =>__( "Meta Description", "bakerymorning" ),
-            "description" => __( '(Sitewide): add a short description of your site.', 'bakerymorning' ),
+            "label" =>__( "Meta Description", "bakery-morning" ),
+            "description" => __( '(Sitewide): add a short description of your site.', 'bakery-morning' ),
             "section" => "GeneralSettings",
             "settings" => "meta_description_code",
             "type" => "textarea",
@@ -122,8 +122,8 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "meta_keywords_code",
         array(
-            "label" =>__( "Meta Keywords", "bakerymorning" ),
-            "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.', 'bakerymorning' ),
+            "label" =>__( "Meta Keywords", "bakery-morning" ),
+            "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.', 'bakery-morning' ),
             "section" => "GeneralSettings",
             "settings" => "meta_keywords_code",
             "type" => "textarea",
@@ -140,7 +140,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "index_blog_heading_code",
         array(
-            "label" =>__( "Index Blog Heading text.", "bakerymorning" ),
+            "label" =>__( "Index Blog Heading text.", "bakery-morning" ),
             "section" => "GeneralSettings",
             "settings" => "index_blog_heading_code",
             "type" => "text",
@@ -157,7 +157,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "index_show_blog_code",
         array(
-            "label" =>__( "Show most recent 4 blog posts on index page.", "bakerymorning" ),
+            "label" =>__( "Show most recent 4 blog posts on index page.", "bakery-morning" ),
             "section" => "GeneralSettings",
             "settings" => "index_show_blog_code",
             "type" => "checkbox",
@@ -173,13 +173,13 @@ function bakery_morning_customize_register( $wp_customize ){
     );
     $wp_customize->add_control( 'index_blog_order_code',
         array(
-            'label' => __( 'Index Post Order', 'bakerymorning' ),
+            'label' => __( 'Index Post Order', 'bakery-morning' ),
             'section' => 'GeneralSettings',
             'priority' => 10,
             'type' => 'radio',
             'choices' => array(
-                'desc' => __( 'newest to oldest', 'bakerymorning' ),
-                'asc' => __( 'oldest to newest', 'bakerymorning' )
+                'desc' => __( 'newest to oldest', 'bakery-morning' ),
+                'asc' => __( 'oldest to newest', 'bakery-morning' )
             )
         )
     );
@@ -187,7 +187,7 @@ function bakery_morning_customize_register( $wp_customize ){
       
     //Business Info
     $wp_customize->add_section( "BusinessInfo", array(
-        "title" => __("Business Info", "bakerymorning"),
+        "title" => __("Business Info", "bakery-morning"),
         "priority" => 30,
     ));
         
@@ -201,7 +201,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "location_code",
         array(
-            "label" =>__( "Location", "bakerymorning" ),
+            "label" =>__( "Location", "bakery-morning" ),
             "section" => "BusinessInfo",
             "settings" => "location_code",
             "type" => "text",
@@ -218,7 +218,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "phone_code",
         array(
-            "label" =>__( "Phone", "bakerymorning" ),
+            "label" =>__( "Phone", "bakery-morning" ),
             "section" => "BusinessInfo",
             "settings" => "phone_code",
             "type" => "text",
@@ -235,7 +235,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code0",
         array(
-            "label" =>__( "Hours", "bakerymorning" ),
+            "label" =>__( "Hours", "bakery-morning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code0",
             "type" => "text",
@@ -251,7 +251,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code1",
         array(
-            "label" =>__( "Hours (2nd line, as needed)", "bakerymorning" ),
+            "label" =>__( "Hours (2nd line, as needed)", "bakery-morning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code1",
             "type" => "text",
@@ -267,7 +267,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code2",
         array(
-            "label" =>__( "Hours (3rd line, as needed)", "bakerymorning" ),
+            "label" =>__( "Hours (3rd line, as needed)", "bakery-morning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code2",
             "type" => "text",
@@ -283,7 +283,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code3",
         array(
-            "label" =>__( "Hours (4th line, as needed)", "bakerymorning" ),
+            "label" =>__( "Hours (4th line, as needed)", "bakery-morning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code3",
             "type" => "text",
@@ -293,7 +293,7 @@ function bakery_morning_customize_register( $wp_customize ){
     
     //Scoial Links
     $wp_customize->add_section( "SocialLinks", array(
-        "title" => __("Social Links", "bakerymorning"),
+        "title" => __("Social Links", "bakery-morning"),
         "priority" => 30,
     ));
        
@@ -307,7 +307,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "pinterest_code",
         array(
-            "label" =>__( "Pinterest URL:", "bakerymorning" ),
+            "label" =>__( "Pinterest URL:", "bakery-morning" ),
             "section" => "SocialLinks",
             "settings" => "pinterest_code",
             "type" => "text",
@@ -324,7 +324,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "instagram_code",
         array(
-            "label" =>__( "Instagram URL:", "bakerymorning" ),
+            "label" =>__( "Instagram URL:", "bakery-morning" ),
             "section" => "SocialLinks",
             "settings" => "instagram_code",
             "type" => "text",
@@ -341,7 +341,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "facebook_code",
         array(
-            "label" =>__( "Facebook URL:", "bakerymorning" ),
+            "label" =>__( "Facebook URL:", "bakery-morning" ),
             "section" => "SocialLinks",
             "settings" => "facebook_code",
             "type" => "text",
@@ -358,7 +358,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "twitter_code",
         array(
-            "label" =>__( "Twitter URL:", "bakerymorning" ),
+            "label" =>__( "Twitter URL:", "bakery-morning" ),
             "section" => "SocialLinks",
             "settings" => "twitter_code",
             "type" => "text",
@@ -375,7 +375,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "youtube_code",
         array(
-            "label" =>__( "Youtube URL:", "bakerymorning" ),
+            "label" =>__( "Youtube URL:", "bakery-morning" ),
             "section" => "SocialLinks",
             "settings" => "youtube_code",
             "type" => "text",

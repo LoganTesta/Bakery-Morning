@@ -1,6 +1,6 @@
 
 === Bakery Morning ===
-Contributors: bakerymorning
+Contributors: bakery-morning
 Tags: food-and-drink
 Version: 1.0
 Requires at least: 5.2
