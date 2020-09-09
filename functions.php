@@ -201,7 +201,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "location_code",
         array(
-            "label" =>__( "Location", "location_label" ),
+            "label" =>__( "Location", "bakerymorning" ),
             "section" => "BusinessInfo",
             "settings" => "location_code",
             "type" => "text",
@@ -218,7 +218,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "phone_code",
         array(
-            "label" =>__( "Phone", "phone_label" ),
+            "label" =>__( "Phone", "bakerymorning" ),
             "section" => "BusinessInfo",
             "settings" => "phone_code",
             "type" => "text",
@@ -235,7 +235,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code0",
         array(
-            "label" =>__( "Hours", "hours_label0" ),
+            "label" =>__( "Hours", "bakerymorning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code0",
             "type" => "text",
@@ -251,7 +251,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code1",
         array(
-            "label" =>__( "Hours (2nd line, as needed)", "hours_label1" ),
+            "label" =>__( "Hours (2nd line, as needed)", "bakerymorning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code1",
             "type" => "text",
@@ -267,7 +267,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code2",
         array(
-            "label" =>__( "Hours (3rd line, as needed)", "hours_label2" ),
+            "label" =>__( "Hours (3rd line, as needed)", "bakerymorning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code2",
             "type" => "text",
@@ -283,7 +283,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "hours_code3",
         array(
-            "label" =>__( "Hours (4th line, as needed)", "hours_label3" ),
+            "label" =>__( "Hours (4th line, as needed)", "bakerymorning" ),
             "section" => "BusinessInfo",
             "settings" => "hours_code3",
             "type" => "text",
@@ -307,7 +307,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "pinterest_code",
         array(
-            "label" =>__( "Pinterest URL:", "pinterest_label" ),
+            "label" =>__( "Pinterest URL:", "bakerymorning" ),
             "section" => "SocialLinks",
             "settings" => "pinterest_code",
             "type" => "text",
@@ -324,7 +324,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "instagram_code",
         array(
-            "label" =>__( "Instagram URL:", "instagram_label" ),
+            "label" =>__( "Instagram URL:", "bakerymorning" ),
             "section" => "SocialLinks",
             "settings" => "instagram_code",
             "type" => "text",
@@ -341,7 +341,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "facebook_code",
         array(
-            "label" =>__( "Facebook URL:", "facebook_label" ),
+            "label" =>__( "Facebook URL:", "bakerymorning" ),
             "section" => "SocialLinks",
             "settings" => "facebook_code",
             "type" => "text",
@@ -358,7 +358,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "twitter_code",
         array(
-            "label" =>__( "Twitter URL:", "twitter_label" ),
+            "label" =>__( "Twitter URL:", "bakerymorning" ),
             "section" => "SocialLinks",
             "settings" => "twitter_code",
             "type" => "text",
@@ -375,7 +375,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "youtube_code",
         array(
-            "label" =>__( "Youtube URL:", "youtube_label" ),
+            "label" =>__( "Youtube URL:", "bakerymorning" ),
             "section" => "SocialLinks",
             "settings" => "youtube_code",
             "type" => "text",
