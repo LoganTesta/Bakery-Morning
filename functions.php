@@ -34,8 +34,8 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         //Add support for additional nav menus.
         register_nav_menus(
             array(
-                'main-nav' => __( 'Main Nav', 'Main Nav' ),
-                'footer-nav' => __( 'Footer Nav', 'Footer Nav' )
+                'main-nav' => __( 'Main Nav', 'bakerymorning' ),
+                'footer-nav' => __( 'Footer Nav', 'bakerymorning' )
             )
         );
         
@@ -90,7 +90,7 @@ function bakery_morning_customize_register( $wp_customize ){
      
     //General Settings
     $wp_customize->add_section( "GeneralSettings", array(
-        "title" => __("General Settings", "general_settings_sections"),
+        "title" => __("General Settings", "bakerymorning"),
         "priority" => 30,
     ));
        
@@ -105,7 +105,7 @@ function bakery_morning_customize_register( $wp_customize ){
         "meta_description_code",
         array(
             "label" =>__( "Meta Description", "bakerymorning" ),
-            "description" => __( '(Sitewide): add a short description of your site.', '(Sitewide): add a short description of your site.' ),
+            "description" => __( '(Sitewide): add a short description of your site.', 'bakerymorning' ),
             "section" => "GeneralSettings",
             "settings" => "meta_description_code",
             "type" => "textarea",
@@ -123,7 +123,7 @@ function bakery_morning_customize_register( $wp_customize ){
         "meta_keywords_code",
         array(
             "label" =>__( "Meta Keywords", "bakerymorning" ),
-            "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.', '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.' ),
+            "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.', 'bakerymorning' ),
             "section" => "GeneralSettings",
             "settings" => "meta_keywords_code",
             "type" => "textarea",
@@ -178,8 +178,8 @@ function bakery_morning_customize_register( $wp_customize ){
             'priority' => 10,
             'type' => 'radio',
             'choices' => array(
-                'desc' => __( 'newest to oldest', 'newest to oldest' ),
-                'asc' => __( 'oldest to newest', 'oldest to newest' )
+                'desc' => __( 'newest to oldest', 'bakerymorning' ),
+                'asc' => __( 'oldest to newest', 'bakerymorning' )
             )
         )
     );
@@ -187,7 +187,7 @@ function bakery_morning_customize_register( $wp_customize ){
       
     //Business Info
     $wp_customize->add_section( "BusinessInfo", array(
-        "title" => __("Business Info", "business_info_sections"),
+        "title" => __("Business Info", "bakerymorning"),
         "priority" => 30,
     ));
         
@@ -293,7 +293,7 @@ function bakery_morning_customize_register( $wp_customize ){
     
     //Scoial Links
     $wp_customize->add_section( "SocialLinks", array(
-        "title" => __("Social Links", "social_links_sections"),
+        "title" => __("Social Links", "bakerymorning"),
         "priority" => 30,
     ));
        
