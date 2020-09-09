@@ -167,6 +167,11 @@ Monochromatic color scheme.
 3:     #fbe3b7;  light brown       (251, 227, 183)
 */
 
+@font-face {
+   font-family: Pacifico;
+   src: url('../fonts/Pacifico/Pacifico-Regular.ttf'); 
+   font-weight: normal;
+}
 
 @font-face {
    font-family: Lato;
@@ -175,7 +180,7 @@ Monochromatic color scheme.
 }
 
 html, body, div, span, p, img, a, br, ul, li, ol, header, nav, footer, table, button, label, input, textarea, tr, td, th, h1, h2, h3, h4, h5, h6 {
-   font-family: Lato;
+   font-family: 'Lato', sans-serif;
 }
 h1, h2, h3, h4 { font-weight: bold; }
 input, textarea { width: 100%; padding: 10px; border: 1px solid #000000; border-radius: 15px; }
