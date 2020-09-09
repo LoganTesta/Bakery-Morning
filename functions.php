@@ -34,8 +34,8 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         //Add support for additional nav menus.
         register_nav_menus(
             array(
-                'main-nav' => __( 'Main Nav' ),
-                'footer-nav' => __( 'Footer Nav' )
+                'main-nav' => __( 'Main Nav', 'Main Nav' ),
+                'footer-nav' => __( 'Footer Nav', 'Footer Nav' )
             )
         );
         
@@ -101,7 +101,7 @@ function bakery_morning_customize_register( $wp_customize ){
         "meta_description_code",
         array(
             "label" =>__( "Meta Description", "meta_settings_label" ),
-            "description" => __( '(Sitewide): add a short description of your site.' ),
+            "description" => __( '(Sitewide): add a short description of your site.', '(Sitewide): add a short description of your site.' ),
             "section" => "GeneralSettings",
             "settings" => "meta_description_code",
             "type" => "textarea",
@@ -119,7 +119,7 @@ function bakery_morning_customize_register( $wp_customize ){
         "meta_keywords_code",
         array(
             "label" =>__( "Meta Keywords", "meta_keywords_label" ),
-            "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.' ),
+            "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.', '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.' ),
             "section" => "GeneralSettings",
             "settings" => "meta_keywords_code",
             "type" => "textarea",
@@ -169,13 +169,13 @@ function bakery_morning_customize_register( $wp_customize ){
     );
     $wp_customize->add_control( 'index_blog_order_code',
         array(
-            'label' => __( 'Index Post Order' ),
+            'label' => __( 'Index Post Order', 'Index Post Order' ),
             'section' => 'GeneralSettings',
             'priority' => 10,
             'type' => 'radio',
             'choices' => array(
-                'desc' => __( 'newest to oldest' ),
-                'asc' => __( 'oldest to newest' )
+                'desc' => __( 'newest to oldest', 'newest to oldest' ),
+                'asc' => __( 'oldest to newest', 'oldest to newest' )
             )
         )
     );
