@@ -104,7 +104,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "meta_description_code",
         array(
-            "label" =>__( "Meta Description", "meta_settings_label" ),
+            "label" =>__( "Meta Description", "bakerymorning" ),
             "description" => __( '(Sitewide): add a short description of your site.', '(Sitewide): add a short description of your site.' ),
             "section" => "GeneralSettings",
             "settings" => "meta_description_code",
@@ -122,7 +122,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "meta_keywords_code",
         array(
-            "label" =>__( "Meta Keywords", "meta_keywords_label" ),
+            "label" =>__( "Meta Keywords", "bakerymorning" ),
             "description" =>__( '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.', '(Sitewide): add several relevant words or short phrases.  Example: bakery, baked goods, fresh.' ),
             "section" => "GeneralSettings",
             "settings" => "meta_keywords_code",
@@ -140,7 +140,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "index_blog_heading_code",
         array(
-            "label" =>__( "Index Blog Heading text.", "index_blog_heading_label" ),
+            "label" =>__( "Index Blog Heading text.", "bakerymorning" ),
             "section" => "GeneralSettings",
             "settings" => "index_blog_heading_code",
             "type" => "text",
@@ -157,7 +157,7 @@ function bakery_morning_customize_register( $wp_customize ){
         $wp_customize,
         "index_show_blog_code",
         array(
-            "label" =>__( "Show most recent 4 blog posts on index page.", "index_show_blog_label" ),
+            "label" =>__( "Show most recent 4 blog posts on index page.", "bakerymorning" ),
             "section" => "GeneralSettings",
             "settings" => "index_show_blog_code",
             "type" => "checkbox",
@@ -173,7 +173,7 @@ function bakery_morning_customize_register( $wp_customize ){
     );
     $wp_customize->add_control( 'index_blog_order_code',
         array(
-            'label' => __( 'Index Post Order', 'Index Post Order' ),
+            'label' => __( 'Index Post Order', 'bakerymorning' ),
             'section' => 'GeneralSettings',
             'priority' => 10,
             'type' => 'radio',
