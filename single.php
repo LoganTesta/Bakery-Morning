@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
             <div class="inner-wrapper">
-                <div class="content page-content">
+                <div id="post_<?php the_ID(); ?>" <?php echo post_class("content page-content"); ?>>
                     <div class="content-row">
                         <div class="col-sma-12">
                             <div class="content__body">
