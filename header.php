@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
     <head>
         <meta charset="utf-8">
         <meta name="description" content="<?php echo esc_html( get_theme_mod( "meta_description_code" ) ); ?>" />
