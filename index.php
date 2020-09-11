@@ -112,7 +112,7 @@ $withcomments = "1";
                                         <div class="index__blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
                                             <div class="clear-both"></div>
                                         </div>
-                                        <div class="index__blog__content"><?php the_excerpt(); ?></div>
+                                        <div class="index__blog__content"><?php echo wp_trim_words( get_the_excerpt(), 40 ); ?></div>
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
