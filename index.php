@@ -66,8 +66,8 @@ $withcomments = "1";
                                     <?php endwhile; ?>
                                         <div class="posts__navigation">
                                             <?php the_posts_pagination( 
-                                                array( 'mid_size' => 2, 'prev_text' => __( '<< Prev', 'bakery-morning' ), 'next_text' => __( 'Next >>', 'bakery-morning' ) ) );
-                                            ?>
+                                                array( 'mid_size' => 2, 'prev_text' => __( '<< Prev', 'bakery-morning' ), 'next_text' => __( 'Next >>', 'bakery-morning' ) )
+                                            ); ?>
                                         </div>    
                                     <?php wp_reset_query(); //Reset the page query
                                 } ?>

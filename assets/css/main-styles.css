@@ -353,6 +353,11 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .post_format-post-format-image .blog__date { display: inline-block; padding-left: 15px; }
 .post_format-post-format-image .blog__image { margin-top: 30px; margin-bottom: 30px; }
 
+.posts__navigation { }
+.nav-links { font-size: 0; }
+.posts__navigation a { display: inline-block; padding-right: 10px; }
+.posts__navigation span { display: inline-block; padding-right: 10px; }
+
 
 
 @media only screen and (min-width: 500px){   
