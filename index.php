@@ -63,9 +63,13 @@ $withcomments = "1";
                                                 } 
                                             ?>
                                         </div>
-                                    <?php
-                                    endwhile;
-                                    wp_reset_query(); //Reset the page query
+                                    <?php endwhile; ?>
+                                        <div class="posts__navigation">
+                                            <?php the_posts_pagination( 
+                                                array( 'mid_size' => 2, 'prev_text' => __( '<< Prev', 'bakery-morning' ), 'next_text' => __( 'Next >>', 'bakery-morning' ) ) );
+                                            ?>
+                                        </div>    
+                                    <?php wp_reset_query(); //Reset the page query
                                 } ?>
                             </div>  
                         </div>

@@ -211,6 +211,8 @@ input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 .alignleft { }
 .aligncenter { }
 
+.screen-reader-text { display: none; }
+
 
 /* Header styles */
 .header { min-height: 200px; }
