@@ -42,7 +42,9 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         
         //Enable theme translation.
         load_theme_textdomain( 'bakery-morning', get_template_directory() . '/languages' );
-        
+        add_theme_support( 'editor-styles' ); //Enable theme support for styling posts.
+        add_editor_style( 'assets/css/editor-styles.css' );
+              
         if( !isset( $content_width ) ){
             $content_width = 1920;            
         };
