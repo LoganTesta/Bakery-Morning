@@ -359,6 +359,12 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .posts__navigation span { display: inline-block; padding-right: 10px; }
 
 
+/*Comments*/
+.comments-pagination { }
+.comments-pagination a { display: inline-block; padding-right: 10px; }
+.comments-pagination span { display: inline-block; padding-right: 10px; }
+
+
 
 @media only screen and (min-width: 500px){   
     
