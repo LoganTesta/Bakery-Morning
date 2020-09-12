@@ -113,9 +113,7 @@ $withcomments = "1";
                                         </div>
                                         <div class="index__blog__author">By <?php the_author(); ?><span class="index__blog__author__extra-text">, </span></div>
                                         <div class="index__blog__date"><?php echo get_the_date(); ?></div>
-                                        <div class="index__blog__image"><a href="blog#<?php the_title(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a> 
-                                            <div class="clear-both"></div>
-                                        </div>
+                                        <?php if( has_post_thumbnail() ) { echo "<div class='index__blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"><a class='index__blog__link' href='blog#" . get_the_title() . "'></a></div>"; } ?>
                                         <div class="index__blog__content"><?php echo wp_trim_words( get_the_excerpt(), 40 ); ?></div>
                                         <div class="clear-both"></div>
                                     </div>
