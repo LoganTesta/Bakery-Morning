@@ -73,7 +73,7 @@ $format = get_post_format();
                                     ?>
                                     </div>
                                     <div class="blog__tags"><?php the_tags(); ?></div>
-                                    <div class="blog__content"><?php the_content(); ?></div>
+                                    <div class="blog__content"><?php the_content(); ?></div>                           
                                     <?php 
                                         if( comments_open() ) {
                                             comments_template();
@@ -81,6 +81,7 @@ $format = get_post_format();
                                     ?>
                                 </div>
                                 <?php } ?>
+                                <?php wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) ); ?>
                                 <?php endwhile; ?>
                             </div>  
                         </div>
