@@ -338,6 +338,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .blog:last-of-type { padding-bottom: 0; }
 
 .blog__title { padding-bottom: 12px; font-size: 20px; font-weight: bold; color: #64460e; }
+.blog__title__link { font-size: inherit; font-weight: inherit; color: inherit; }
 .blog__categories { padding-bottom: 5px; font-size: 18px; color: #64460e; }
 .blog__tags { padding-bottom: 5px; font-size: 16px; color: #64460e; }
 .blog__author { padding-bottom: 5px; font-weight: bold; color: #64460e; }

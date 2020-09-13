@@ -27,10 +27,9 @@ $withcomments = "1";
                                         the_content();
                                         rewind_posts();
                                     }
-                                    
                                     while (have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
                                         <div id="<?php the_title(); ?>" class="blog">
-                                            <div class="blog__title"><?php the_title(); ?></div>
+                                            <div class="blog__title"><a class="blog__title__link" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php the_title(); ?></a></div>
                                             <div class="blog__categories">
                                                 <?php
                                                 $categories = get_the_category();
