@@ -29,7 +29,7 @@ $withcomments = "1";
                                     }
                                     
                                     while (have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
-                                        <div class="blog">
+                                        <div id="<?php the_title(); ?>" class="blog">
                                             <div class="blog__title"><?php the_title(); ?></div>
                                             <div class="blog__categories">
                                                 <?php
