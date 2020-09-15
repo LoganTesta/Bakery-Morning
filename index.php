@@ -11,10 +11,9 @@ $withcomments = "1";
                                 <?php
                                 //General layout.  Show content on all pages.  For the blog page, extra code to show the post page's content, and then
                                 //show the blog posts.
-                                if( is_home() === false ){
-                                    the_content(); ?>
+                                if( is_home() === false ){ ?>
                                     <div class="content__featured-image <?php if( trim( the_post_thumbnail_url() ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>')"></div>    
-                                    <?php
+                                    <?php the_content(); 
                                  } else if( is_home() ){ 
                                     global $post;
                                     $blog_page_id = get_option( 'page_for_posts' );
