@@ -381,6 +381,12 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .post-page-numbers { padding-right: 15px; }
 
 
+/*Tag pages*/
+.tag-page-heading { padding-bottom: 40px; }
+.tag-page-heading__title { font-weight: normal; }
+.tag-page-heading__tag { font-size: inherit; font-weight: bold; font-style: italic; }
+
+
 
 @media only screen and (min-width: 500px){   
     

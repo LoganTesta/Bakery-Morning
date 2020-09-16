@@ -10,44 +10,43 @@ $withcomments = "1";
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <?php
-                                if( is_home() === false ){ 
-                                    while (have_posts()) : the_post(); //You need a while loop to call the_author(). ?>
-                                        <div class="blog">
-                                            <div class="blog__title"><?php the_title(); ?></div>
-                                            <div class="blog__categories">
-                                                <?php
-                                                $categories = get_the_category();
-                                                $h = 0;
-                                                foreach ( $categories as $category ) {
-                                                    $h++;
+                                echo "<div class='tag-page-heading'><h3 class='tag-page-heading__title'>Show all posts for the tag: <span class='tag-page-heading__tag'>" . get_queried_object()->slug . "</span></h3></div>";
+                                while (have_posts()) : the_post(); ?>
+                                    <div class="blog">
+                                        <div class="blog__title"><?php the_title(); ?></div>
+                                        <div class="blog__categories">
+                                            <?php
+                                            $categories = get_the_category();
+                                            $h = 0;
+                                            foreach ( $categories as $category ) {
+                                                $h++;
+                                            }
+                                            $h = $h - 1;
+                                            $i = 0;
+                                            foreach ( $categories as $category ) {
+                                                $result = "";
+                                                if ( $i < $h ) {
+                                                    $result .= $category->name . ", ";
+                                                } else {
+                                                    $result .= $category->name;
                                                 }
-                                                $h = $h - 1;
-                                                $i = 0;
-                                                foreach ( $categories as $category ) {
-                                                    $result = "";
-                                                    if ( $i < $h ) {
-                                                        $result .= $category->name . ", ";
-                                                    } else {
-                                                        $result .= $category->name;
-                                                    }
-                                                    echo $result;
-                                                    $i++;
-                                                }
-                                            ?>
-                                            </div>
-                                            <div class="blog__tags"><?php the_tags(); ?></div>
-                                            <div class="blog__author">By: <?php the_author(); ?></div>
-                                            <div class="blog__date"><?php echo get_the_date(); ?></div>
-                                            <div class="blog__content"><?php the_excerpt(); ?></div>
-                                            <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
-                                            <?php 
-                                                if( comments_open() ) {
-                                                    comments_template();
-                                                } 
-                                            ?>
+                                                echo $result;
+                                                $i++;
+                                            }
+                                        ?>
                                         </div>
-                                    <?php endwhile; 
-                                } ?>
+                                        <div class="blog__tags"><?php the_tags(); ?></div>
+                                        <div class="blog__author">By: <?php the_author(); ?></div>
+                                        <div class="blog__date"><?php echo get_the_date(); ?></div>
+                                        <div class="blog__content"><?php the_excerpt(); ?></div>
+                                        <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
+                                        <?php 
+                                            if( comments_open() ) {
+                                                comments_template();
+                                            } 
+                                        ?>
+                                    </div>
+                                <?php endwhile; ?>
                             </div>  
                         </div>
                     </div>  
