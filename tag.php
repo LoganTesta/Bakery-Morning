@@ -38,8 +38,9 @@ $withcomments = "1";
                                         <div class="blog__tags"><?php the_tags(); ?></div>
                                         <div class="blog__author">By: <?php the_author(); ?></div>
                                         <div class="blog__date"><?php echo get_the_date(); ?></div>
-                                        <div class="blog__content"><?php the_excerpt(); ?><a class="read-more" href="<?php echo get_permalink( get_the_ID() ); ?>">Read More</a></div>
                                         <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
+                                        <div class="blog__content"><?php the_excerpt(); ?><a class="read-more" href="<?php echo get_permalink( get_the_ID() ); ?>">Read More</a></div>
+                                        <div class="clear-both"></div>
                                     </div>
                                 <?php endwhile; ?>
                             </div>  
