@@ -310,6 +310,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .content__featured-image { width: 100%; height: 240px; margin-bottom: 15px; background-repeat: no-repeat; background-position: 50% 50%; }
 .content__featured-image.hide { display: none; }
 
+.body-wrapper .read-more { display: inline-block; width: auto; padding: 10px; border: 1px solid #000000; border-radius: 15px; background-color: #64460e; color: #fbe3b7; cursor: pointer; }
+
 
 /*Index page*/
 .item-container__background.one { background: url('../images/bakery-shelf-cakes.jpg') 0% 0%/cover no-repeat;}
@@ -385,6 +387,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .tag-page-heading { padding-bottom: 40px; }
 .tag-page-heading__title { font-weight: normal; text-align: left; }
 .tag-page-heading__tag { font-size: inherit; font-weight: bold; font-style: italic; }
+
+.tag .blog__image { margin-top: 15px; }
 
 
 
