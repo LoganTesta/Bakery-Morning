@@ -31,6 +31,7 @@ $withcomments = "1";
                                             <div class="blog__title"><a class="blog__title__link" href="<?php echo get_permalink( get_the_ID() ); ?>"><?php the_title(); ?></a></div>
                                             <div class="blog__categories">
                                                 <?php
+                                                if( has_category() ) { echo "Categories: "; }
                                                 $categories = get_the_category();
                                                 $h = 0;
                                                 foreach ( $categories as $category ) {

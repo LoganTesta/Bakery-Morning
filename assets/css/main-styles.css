@@ -341,7 +341,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 .blog__title { padding-bottom: 12px; font-size: 20px; font-weight: bold; color: #64460e; }
 .blog__title__link { font-size: inherit; font-weight: inherit; color: inherit; }
-.blog__categories { padding-bottom: 5px; font-size: 18px; color: #64460e; }
+.blog__categories { padding-bottom: 5px; font-size: 16px; color: #64460e; }
 .blog__tags { padding-bottom: 5px; font-size: 16px; color: #64460e; }
 .blog__author { padding-bottom: 5px; font-weight: bold; color: #64460e; }
 .blog__date { padding-bottom: 10px; font-style: italic; color: #64460e; }
@@ -388,6 +388,12 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .tag-page-heading__title { font-weight: normal; text-align: left; }
 .tag-page-heading__tag { font-size: inherit; font-weight: bold; font-style: italic; }
 
+.tag .blog__header { padding-bottom: 10px; font-size: 0; }
+.tag .blog__title { display: inline-block; padding-bottom: 5px; }
+.tag .blog__author { display: inline-block; padding-bottom: 5px; padding-left: 4px; }
+.tag .blog__date { display: inline-block; padding-bottom: 5px; padding-left: 4px; }
+.tag .blog__categories { }
+.tag .blog__tags { padding-bottom: 10px; }
 .tag .blog__image { margin-bottom: 5px; }
 
 
