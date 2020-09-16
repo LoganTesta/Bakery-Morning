@@ -383,7 +383,7 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 /*Tag pages*/
 .tag-page-heading { padding-bottom: 40px; }
-.tag-page-heading__title { font-weight: normal; }
+.tag-page-heading__title { font-weight: normal; text-align: left; }
 .tag-page-heading__tag { font-size: inherit; font-weight: bold; font-style: italic; }
 
 
