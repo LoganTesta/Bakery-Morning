@@ -1,6 +1,6 @@
 
 <?php
-//This is a special page just for showing all posts with a given tag.
+//This is a special page just for showing all posts with a given category.
 get_header();
 $withcomments = "1";
 ?>
@@ -10,7 +10,7 @@ $withcomments = "1";
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <?php
-                                echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>Show all posts for the tag: <span class='archive-page-heading__name'>" . get_queried_object()->slug . "</span></h3></div>";
+                                echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>Show all posts for the category: <span class='archive-page-heading__name'>" . get_queried_object()->slug . "</span></h3></div>";
                                 while (have_posts()) : the_post(); ?>
                                     <div class="blog">
                                         <div class="blog__header">

@@ -383,18 +383,18 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 .post-page-numbers { padding-right: 15px; }
 
 
-/*Tag pages*/
-.tag-page-heading { padding-bottom: 40px; }
-.tag-page-heading__title { font-weight: normal; text-align: left; }
-.tag-page-heading__tag { font-size: inherit; font-weight: bold; font-style: italic; }
+/*Archive (tag, category) pages*/
+.archive-page-heading { padding-bottom: 40px; }
+.archive-page-heading__title { font-weight: normal; text-align: left; }
+.archive-page-heading__name { font-size: inherit; font-weight: bold; font-style: italic; }
 
-.tag .blog__header { padding-bottom: 10px; font-size: 0; }
-.tag .blog__title { display: inline-block; padding-bottom: 5px; }
-.tag .blog__author { display: inline-block; padding-bottom: 5px; padding-left: 4px; }
-.tag .blog__date { display: inline-block; padding-bottom: 5px; padding-left: 4px; }
-.tag .blog__categories { }
-.tag .blog__tags { padding-bottom: 10px; }
-.tag .blog__image { margin-bottom: 5px; }
+.archive .blog__header { padding-bottom: 10px; font-size: 0; }
+.archive .blog__title { display: inline-block; padding-bottom: 5px; }
+.archive .blog__author { display: inline-block; padding-bottom: 5px; padding-left: 4px; }
+.archive .blog__date { display: inline-block; padding-bottom: 5px; padding-left: 4px; }
+.archive .blog__categories { }
+.archive .blog__tags { padding-bottom: 10px; }
+.archive .blog__image { margin-bottom: 5px; }
 
 
 
@@ -426,8 +426,8 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
     .blog-posts-container { padding-bottom: 0px; }
     
     
-    /*Tag pages*/
-    .tag .blog__image { float: left; width: 260px; height: 200px; margin-right: 20px; }
+    /*Archive (tag, category) pages*/
+    .archive .blog__image { float: left; width: 260px; height: 200px; margin-right: 20px; }
     
 }
 
