@@ -1,5 +1,7 @@
 
-<?php get_header(); 
+<?php 
+//This file is for individual blog post pages.
+get_header(); 
 
 $format = get_post_format();
 

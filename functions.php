@@ -22,7 +22,7 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         add_theme_support( "custom-logo", array ( 'width' => 200, 'height' => 200 ) );   //Let user upload the logo.
         add_theme_support( "custom-background" );
         add_theme_support( "custom-header" );
-        add_theme_support( "title-tag");
+        add_theme_support( "title-tag" );
         add_theme_support( "automatic-feed-links" ); //Add default post and comment RSS links to head.
 
         //Allow cropping for medium thumbnail images.
