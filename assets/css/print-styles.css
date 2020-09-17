@@ -1,11 +1,35 @@
 
-/***############### Base reset and generic styles for print ***/
-/*Enable background-colors and background-images on (most) browsers. */
-* { -webkit-print-color-adjust: exact !important; /* Chrome, Safari */ color-adjust: exact !important; /* Firefox */ }
+@media print {
+    
+    /***############### Base reset and generic styles for print ***/
+    /*Enable background-colors and background-images on (most) browsers. */
+    * { -webkit-print-color-adjust: exact !important; /* Chrome, Safari */ color-adjust: exact !important; /* Firefox */ }
 
-.noprint { display: none; }
-/***########## End of General Reset and Setup ****/
+    .noprint { display: none; }
+    /***########## End of General Reset and Setup ****/
 
 
 
-/***############### Website Specific Styles. ***/
+    /***############### Website Specific Styles. ***/
+    .index__blog__image { width: 270px; height: 200px; }
+    .index__blog__link { width: 270px; height: 200px; }
+
+
+
+    @media only screen and (min-width: 500px){   
+
+    }
+
+
+
+    @media only screen and (min-width: 700px){ 
+
+    }
+
+
+
+    @media only screen and (min-width: 1200px){ 
+
+    }
+
+}
