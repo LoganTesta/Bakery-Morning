@@ -11,6 +11,12 @@
 
 
     /***############### Website Specific Styles. ***/
+    
+    /*General styles*/
+    .content__featured-image { width: 50%; }
+    
+    
+    /*Index page*/
     .index__blog__image { width: 270px; height: 200px; }
     .index__blog__link { width: 270px; height: 200px; }
 
