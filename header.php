@@ -27,7 +27,7 @@
             <header class="header">
                 <div class="inner-wrapper">                  
                     <div class="logo">
-                        <a href="index">
+                        <a href="<?php echo get_home_url(); ?>">
                             <?php
                                 $logo_id = get_theme_mod( 'custom_logo' );
                                 $logo = wp_get_attachment_image_src( $logo_id, 'full' );
@@ -35,7 +35,7 @@
                             <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo( 'name' ); ?> logo">
                         </a>
                     </div>
-                    <h1 class="main-title"><a class="main-title__title" href="index" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
+                    <h1 class="main-title"><a class="main-title__title" href="<?php echo get_home_url(); ?>" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
                     <h2 class="header__subtitle" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php if( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
                     <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
                         <div class="header__phone" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
