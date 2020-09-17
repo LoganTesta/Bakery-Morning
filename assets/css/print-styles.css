@@ -12,6 +12,11 @@
 
     /***############### Website Specific Styles. ***/
     
+    /*WordPress generated classes.*/
+    
+    .wp-block-image img { width: 100%; height: 100%;}
+    
+    
     /* Header styles */
     .main-title .main-title__title { }
     
