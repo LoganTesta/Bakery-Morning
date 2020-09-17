@@ -12,14 +12,23 @@
 
     /***############### Website Specific Styles. ***/
     
+    /* Header styles */
+    .main-title .main-title__title { }
+    
+    
     /*General styles*/
-    .content__featured-image { width: 50%; }
+    .content__featured-image { float: right; width: 50%; }
     
     
     /*Index page*/
-    .index__blog__image { width: 270px; height: 200px; }
+    .index__blog__image { float: left; width: 270px; height: 200px; margin-right: 15px; }
     .index__blog__link { width: 270px; height: 200px; }
 
+    
+    /*Message styles*/
+    .message__text { }
+    
+    
 
 
     @media only screen and (min-width: 500px){   
