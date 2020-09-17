@@ -26,6 +26,15 @@
     .main-title .main-title__title { }
     
     
+    /*Message styles*/
+    .message__text { }
+    
+    
+    /*Comments*/
+    .comment-respond { float: left; width: 100%; }
+    .comment-respond:after { content: ""; display: block; clear: both; }
+    
+    
     /*General styles*/
     .content__featured-image { float: right; width: 50%; break-inside: avoid; page-break-inside: avoid; }
     
@@ -34,14 +43,12 @@
     .index__blog__image { float: left; width: 270px; height: 200px; margin-right: 15px; }
     .index__blog__link { width: 270px; height: 200px; }
 
-    
-    /*Message styles*/
-    .message__text { }
-    
-    
+      
     /*Blog*/
+    .blog:after { content: ""; display: block; clear: both; }
     .blog__image { float: left; width: 300px; height: 240px; margin-right: 15px; margin-bottom: 15px; break-inside: avoid; page-break-inside: avoid; }
     .blog__content:after { content: ""; display: block; clear: both; }
+    
     
 
     @media only screen and (min-width: 500px){   
