@@ -39,7 +39,7 @@ $withcomments = "1";
                                                 echo $result;
                                                 $i++;
                                             }
-                                        ?>
+                                            ?>
                                         </div>
                                         <div class="blog__tags"><?php the_tags(); ?></div>
                                         <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
