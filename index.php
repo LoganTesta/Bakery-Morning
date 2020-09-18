@@ -1,6 +1,7 @@
 <?php
 //The default page layout and template.  
 get_header();
+$withcomments = "1";
 ?>
             <div class="inner-wrapper">
                 <div class="content page-content">
