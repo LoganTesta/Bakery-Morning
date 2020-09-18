@@ -4,13 +4,13 @@
 
             <div class="message">
                 <?php if( trim(get_bloginfo( 'description' )) !== "") { ?>
-                    <div class="message__text"><?php echo get_bloginfo( 'description' ); ?></div>
+                    <div class="message__text"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></div>
                 <?php } ?>
             </div>
             <footer>
                 <div class="inner-wrapper">   
                     <div class="content-row">
-                        <div class="footer__copyright col-sma-12">&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All Rights Reserved.</div>
+                        <div class="footer__copyright col-sma-12">&copy; <?php echo esc_html( date("Y") ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>. All Rights Reserved.</div>
                     </div>
                     <?php if ( is_active_sidebar( 'widgetized-area' ) ) : ?>
                     <div class="content-row">                   
@@ -70,10 +70,10 @@
                         </div>
                         <div class="footer__hours col-sma-3">
                             <h4 class="footer__subheader">Hours</h4>     
-                            <?php if( trim( get_theme_mod ( 'hours_code0' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code0' ) . "</div>"; } ?>
-                            <?php if( trim( get_theme_mod ( 'hours_code1' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code1' ) . "</div>"; } ?>
-                            <?php if( trim( get_theme_mod ( 'hours_code2' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code2' ) . "</div>"; } ?>
-                            <?php if( trim( get_theme_mod ( 'hours_code3' ) ) !== "" ) { echo "<div class='footer__hours__day'>" . get_theme_mod( 'hours_code3' ) . "</div>"; } ?>
+                            <?php if( esc_html( trim( get_theme_mod ( 'hours_code0' ) ) ) !== "" ) { echo "<div class='footer__hours__day'>" . esc_html( get_theme_mod( 'hours_code0' ) ) . "</div>"; } ?>
+                            <?php if( esc_html( trim( get_theme_mod ( 'hours_code1' ) ) ) !== "" ) { echo "<div class='footer__hours__day'>" . esc_html( get_theme_mod( 'hours_code1' ) ) . "</div>"; } ?>
+                            <?php if( esc_html( trim( get_theme_mod ( 'hours_code2' ) ) ) !== "" ) { echo "<div class='footer__hours__day'>" . esc_html( get_theme_mod( 'hours_code2' ) ) . "</div>"; } ?>
+                            <?php if( esc_html( trim( get_theme_mod ( 'hours_code3' ) ) ) !== "" ) { echo "<div class='footer__hours__day'>" . esc_html( get_theme_mod( 'hours_code3' ) ) . "</div>"; } ?>
                         </div>
                     </div>
                 </div>
