@@ -1,7 +1,6 @@
 <?php
 //The default page layout and template.  
 get_header();
-$withcomments = "1";
 ?>
             <div class="inner-wrapper">
                 <div class="content page-content">
@@ -60,6 +59,7 @@ $withcomments = "1";
                                             <?php 
                                                 if( comments_open() ) {
                                                     comments_template();
+                                                    comment_form();
                                                 } 
                                             ?>
                                             <div class="clear-both"></div>

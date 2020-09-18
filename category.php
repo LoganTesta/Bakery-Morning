@@ -1,7 +1,6 @@
 <?php
 //This is a special page just for showing all posts with a given category.
 get_header();
-$withcomments = "1";
 ?>
             <div class="inner-wrapper">
                 <div class="content page-content">

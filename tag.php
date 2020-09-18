@@ -1,7 +1,6 @@
 <?php
 //This is a special page just for showing all posts with a given tag.
 get_header();
-$withcomments = "1";
 ?>
             <div class="inner-wrapper">
                 <div class="content page-content">
