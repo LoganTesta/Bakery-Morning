@@ -62,6 +62,7 @@ $withcomments = "1";
                                                     comments_template();
                                                 } 
                                             ?>
+                                            <div class="clear-both"></div>
                                         </div>
                                     <?php endwhile; ?>
                                         <div class="posts__navigation">
