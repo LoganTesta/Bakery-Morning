@@ -1,4 +1,3 @@
-
 <?php
 //This is a special page just for showing all posts with a given category.
 get_header();

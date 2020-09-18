@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
             <div class="inner-wrapper">
                 <div class="content page-content">

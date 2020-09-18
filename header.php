@@ -1,5 +1,5 @@
 <?php
-
+//Header template.  
 ?>
 
 <!DOCTYPE html>

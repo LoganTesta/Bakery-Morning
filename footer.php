@@ -1,5 +1,5 @@
 <?php
-
+//Footer template.
 ?>
 
             <div class="message">

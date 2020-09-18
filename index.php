@@ -1,5 +1,5 @@
-
 <?php
+//The default page layout and template.  
 get_header();
 $withcomments = "1";
 ?>
