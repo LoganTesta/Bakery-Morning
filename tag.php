@@ -9,7 +9,7 @@ $withcomments = "1";
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <?php
-                                echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>Show all posts for the tag: <span class='archive-page-heading__name'>" . get_queried_object()->slug . "</span></h3></div>";
+                                echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>Show all posts for the tag: <span class='archive-page-heading__name'>" . esc_html( get_queried_object()->slug ) . "</span></h3></div>";
                                 while (have_posts()) : the_post(); ?>
                                     <div class="blog">
                                         <div class="blog__header">
@@ -40,8 +40,8 @@ $withcomments = "1";
                                             ?>
                                         </div>
                                         <div class="blog__tags"><?php the_tags(); ?></div>
-                                        <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . get_the_post_thumbnail_url() . "')\"></div>"; } ?>
-                                        <div class="blog__content"><?php the_excerpt(); ?><a class="read-more" href="<?php echo get_permalink( get_the_ID() ); ?>">Read More</a></div>
+                                        <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; } ?>
+                                        <div class="blog__content"><?php the_excerpt(); ?><a class="read-more" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>">Read More</a></div>
                                         <div class="clear-both"></div>
                                     </div>
                                 <?php endwhile; ?>
