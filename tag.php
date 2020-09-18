@@ -28,14 +28,13 @@ $withcomments = "1";
                                             $h = $h - 1;
                                             $i = 0;
                                             foreach ( $categories as $category ) {
-                                                $result = "<a href='" . get_category_link( $category ) . "'>";
+                                                echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                                 if ( $i < $h ) {
-                                                    $result .= "" . $category->name . ", ";
+                                                    echo "" . esc_html( $category->name ) . ", ";
                                                 } else {
-                                                    $result .= $category->name;
+                                                   echo "" . esc_html( $category->name );
                                                 }
-                                                $result .= "</a>";
-                                                echo $result;
+                                                echo "</a>";
                                                 $i++;
                                             }
                                             ?>
