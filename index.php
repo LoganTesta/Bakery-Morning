@@ -1,7 +1,6 @@
 <?php
 //The default page layout and template.  
 get_header();
-$withcomments = "1";
 ?>
             <div class="inner-wrapper">
                 <div class="content page-content">
@@ -54,13 +53,23 @@ $withcomments = "1";
                                             <div class="blog__author">By: <?php the_author(); ?></div>
                                             <div class="blog__date"><?php echo get_the_date(); ?></div>
                                             <?php if( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; } ?>
-                                            <div class="blog__content"><?php the_content(); ?></div>                                          
-                                            <?php 
-                                                if( comments_open() ) {
-                                                    comments_template();
-                                                    comment_form();
-                                                } 
-                                            ?>
+                                            <div class="blog__content"><?php the_content(); ?></div>    
+                                            <div class="blog__number-of-comments">
+                                                <?php 
+                                                    if( get_comments_number() > 0 ) {
+                                                        echo "<a class='blog__number-of-comments__link' href='" . get_permalink( get_the_ID() ) . "#comments'>" . get_comments_number();
+                                                    } else {
+                                                        echo "<a class='blog__number-of-comments__link' href='" . get_permalink( get_the_ID() ) . "#respond'>Leave a Comment";
+                                                    }
+                                                
+                                                    if( get_comments_number() === "1" ){
+                                                        echo " Comment";
+                                                    } else if ( get_comments_number() > "1" ){
+                                                        echo " Comments";
+                                                    }
+                                                    echo "</a>";
+                                                ?>
+                                            </div>   
                                             <div class="clear-both"></div>
                                         </div>
                                     <?php endwhile; ?>
@@ -79,7 +88,7 @@ $withcomments = "1";
                     if ( is_front_page() && get_theme_mod( 'index_show_blog_code' ) ) { ?>                     
                         <div class="content-row">
                             <h3 class="index-content__subheading"><?php echo esc_html( get_theme_mod( 'index_blog_heading_code' ) ); ?></h3>
-                            <?php global $post;
+                            <?php
                             $index_page_query;
                             if( get_theme_mod( 'index_blog_order_code' ) === 'desc' ) {
                                 $index_page_query = new WP_Query( 
