@@ -24,12 +24,13 @@ $format = get_post_format();
                                         $h = $h - 1;
                                         $i = 0;
                                         foreach ( $categories as $category ) {
-                                            echo "";
+                                            echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                             if ( $i < $h ) {
                                                 echo esc_html( $category->name ) . ", ";
                                             } else {
                                                 echo esc_html( $category->name );
                                             }
+                                            echo "</a>";
                                             $i++;
                                         }
                                     ?>
@@ -61,12 +62,13 @@ $format = get_post_format();
                                         $h = $h - 1;
                                         $i = 0;
                                         foreach ( $categories as $category ) {
-                                            echo "";
+                                            echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                             if ( $i < $h ) {
                                                 echo esc_html( $category->name ) . ", ";
                                             } else {
                                                 echo esc_html( $category->name );
                                             }
+                                            echo "</a>";
                                             $i++;
                                         }
                                     ?>
@@ -95,12 +97,13 @@ $format = get_post_format();
                                         $h = $h - 1;
                                         $i = 0;
                                         foreach ( $categories as $category ) {
-                                            echo "";
+                                            echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                             if ( $i < $h ) {
                                                 echo esc_html( $category->name ) . ", ";
                                             } else {
                                                 echo esc_html( $category->name );
                                             }
+                                            echo "</a>";
                                             $i++;
                                         }
                                     ?>

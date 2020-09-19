@@ -47,7 +47,6 @@ $withcomments = "1";
                                                         echo "" . esc_html( $category->name );
                                                     }
                                                     echo "</a>";
-                                                   
                                                     $i++;
                                                 }
                                                 ?>
