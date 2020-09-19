@@ -12,7 +12,7 @@ get_header();
                                 while (have_posts()) : the_post(); ?>
                                     <div class="blog">
                                         <div class="blog__header">
-                                            <div class="blog__title"><?php the_title(); ?></div>
+                                            <div class="blog__title"><a class="blog__title__link" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>"><?php the_title(); ?></a></div>
                                             <div class="blog__author">-- <?php the_author(); ?>,</div>
                                             <div class="blog__date"><?php echo get_the_date(); ?></div>
                                         </div>
