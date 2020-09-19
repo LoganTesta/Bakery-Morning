@@ -4,6 +4,8 @@ Contributors: bakery-morning
 Tags: food-and-drink
 Version: 1.0
 Requires at least: 5.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Use this theme for your bakery website or for any other business.
 
