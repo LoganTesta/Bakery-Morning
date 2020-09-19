@@ -57,11 +57,10 @@ get_header();
                                             <div class="blog__number-of-comments">
                                                 <?php 
                                                     if( get_comments_number() > 0 ) {
-                                                        echo "<a class='blog__number-of-comments__link' href='" . get_permalink( get_the_ID() ) . "#comments'>" . get_comments_number();
+                                                        echo "<a class='blog__number-of-comments__link' href='" . esc_url( get_permalink( get_the_ID() ) ) . "#comments'>" . esc_html( get_comments_number() );
                                                     } else {
-                                                        echo "<a class='blog__number-of-comments__link' href='" . get_permalink( get_the_ID() ) . "#respond'>Leave a Comment";
+                                                        echo "<a class='blog__number-of-comments__link' href='" . esc_url( get_permalink( get_the_ID() ) ) . "#respond'>Leave a Comment";
                                                     }
-                                                
                                                     if( get_comments_number() === "1" ){
                                                         echo " Comment";
                                                     } else if ( get_comments_number() > "1" ){
