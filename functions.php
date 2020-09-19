@@ -78,6 +78,7 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_register_script( 'html5-shiv', get_template_directory_uri() . '/assets/javascript/html5shiv.js.js' );
     wp_enqueue_script( 'html5-shiv', get_template_directory_uri() . '/assets/javascript/html5shiv.js.js' ); 
     wp_script_add_data( 'html5-shiv', 'conditional', 'lt IE 9' );
+    wp_enqueue_style( 'font-awesome', "" . get_template_directory_uri() . '/assets/css/font-awesome/css/all.css' );
     
     if( is_singular() ) { wp_enqueue_script( 'comment-reply' ); }
  
