@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style type="text/css">
             .header { 
-                <?php if( get_header_image() ) { ?> 
+                <?php if ( get_header_image() ) { ?> 
                     background: url('<?php echo esc_url( header_image() ); ?>') 50% 50%/cover no-repeat; 
                 <?php } else { ?> 
                     background: linear-gradient(#fbe3b7, #f3f3f3);    
@@ -34,10 +34,10 @@
                             <img src="<?php echo esc_attr( $logo[0] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> logo">
                         </a>
                     </div>
-                    <h1 class="main-title"><a class="main-title__title" href="<?php echo esc_url( get_home_url() ); ?>" style="<?php if( esc_attr( get_header_image() ) ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
-                    <h2 class="header__subtitle" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php if( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
-                    <?php if( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
-                        <div class="header__phone" style="<?php if( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
+                    <h1 class="main-title"><a class="main-title__title" href="<?php echo esc_url( get_home_url() ); ?>" style="<?php if ( esc_attr( get_header_image() ) ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
+                    <h2 class="header__subtitle" style="<?php if ( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php if ( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
+                    <?php if ( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
+                        <div class="header__phone" style="<?php if ( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
                     <?php } ?>
                 </div>
             </header>

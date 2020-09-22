@@ -2,10 +2,10 @@
 
 /*Prevent non-logged in users from accessing the site's user and post data using the WordPress REST API.*/
 add_filter( 'rest_authentication_errors', function( $result ) {
-   if ( !empty( $result ) ) {
+   if ( ! empty( $result ) ) {
        return $result;
    } 
-   if( !is_user_logged_in() ) {
+   if ( ! is_user_logged_in() ) {
        return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );    
    }
    return $result;
@@ -26,7 +26,7 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         add_theme_support( "automatic-feed-links" ); //Add default post and comment RSS links to head.
 
         //Allow cropping for medium thumbnail images.
-        if(false === get_option( "medium_crop" )) {
+        if ( false === get_option( "medium_crop" ) ) {
             add_option( "medium_crop", "1" );
         } else {
             update_option( "medium_crop", "1" );
@@ -45,7 +45,7 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         add_theme_support( 'editor-styles' ); //Enable theme support for styling posts.
         add_editor_style( 'assets/css/editor-styles.css' );
               
-        if( !isset( $content_width ) ){
+        if ( ! isset( $content_width ) ){
             $content_width = 1920;            
         };
     }
@@ -80,7 +80,7 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_script_add_data( 'html5-shiv', 'conditional', 'lt IE 9' );
     wp_enqueue_style( 'font-awesome', "" . get_template_directory_uri() . '/assets/css/font-awesome/css/all.css' );
     
-    if( is_singular() ) { wp_enqueue_script( 'comment-reply' ); }
+    if ( is_singular() ) { wp_enqueue_script( 'comment-reply' ); }
  
     wp_register_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );
     wp_enqueue_script( 'javascript-functions', get_template_directory_uri() . '/assets/javascript/javascript-functions.js' );  
