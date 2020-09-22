@@ -24,6 +24,8 @@ if ( function_exists( 'bakery_morning_setup' ) === false ) {
         add_theme_support( "custom-header" );
         add_theme_support( "title-tag" );
         add_theme_support( "automatic-feed-links" ); //Add default post and comment RSS links to head.
+      
+        add_theme_support( "align-wide" ); // Add support for wide and full width aligned images in pages, etc. (Gutenberg only).
 
         //Allow cropping for medium thumbnail images.
         if ( false === get_option( "medium_crop" ) ) {
