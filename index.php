@@ -25,7 +25,10 @@ get_header();
                                         rewind_posts();
                                     }
                                     while (have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
-                                        <div id="<?php the_title(); ?>" class="blog">
+                                        <div id="<?php the_title(); ?>" <?php echo esc_attr( post_class( "blog" ) ); ?>>
+                                            <?php if ( is_sticky() ) {
+                                                echo "<div class='blog__featured'>" . _x( "Featured ", "post", "bakery-morning" ) . "</div>";
+                                            } ?>
                                             <div class="blog__title"><a class="blog__title__link" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>"><?php the_title(); ?></a></div>
                                             <div class="blog__categories">
                                                 <?php
