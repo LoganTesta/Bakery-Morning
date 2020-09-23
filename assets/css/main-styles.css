@@ -216,6 +216,10 @@ li { line-height: 22.4px; }
 .body-wrapper .submit:hover { background-color: #8b6928; transition: 0.4s ease-in; }
 .screen-reader-text { display: none; }
 
+.wp-block-button a:link, .wp-block-button a:visited { background-color: #64460e; color: #ffffff; }
+.wp-block-button__link { background-color: #64460e; color: #ffffff; }
+.is-style-outline .wp-block-button__link, .wp-block-button__link.is-style-outline { color: #64460e; }
+
 
 /* Header styles */
 .header { min-height: 200px; }
@@ -258,7 +262,6 @@ footer { padding: 50px 10px; background-color: #fbe3b7; }
 
 .footer__copyright { text-align: center; }
 .footer__widgets { display: flex; flex-wrap: wrap; text-align: center; }
-footer .widget { width: 50%; padding-bottom: 50px; }
 .footer__nav { text-align: center; }
 .footer__nav li { padding-bottom: 15px; }
 .footer__social { text-align: center; font-size: 0; }
@@ -275,6 +278,8 @@ footer .widget { width: 50%; padding-bottom: 50px; }
 .footer__social-logo { display: inline-block; padding: 0 15px; }
 .footer__social-icon { transition: 0.4s all; }
 .footer__social-icon:hover { transition: 0.4s all; }
+
+footer .widget { width: 50%; padding-bottom: 50px; }
 
 
 /*Comments*/
