@@ -208,16 +208,16 @@ li { line-height: 22.4px; }
 .screen-reader-text { }
 .gallery-caption { }
 .bypostauthor { }
-.alignright { }
-.alignleft { }
+.alignright { float: right; margin-left: 15px; }
+.alignleft { float: left; margin-right: 15px; }
 .aligncenter { }
 
 .body-wrapper .submit { transition: 0.4s ease-in; }
 .body-wrapper .submit:hover { background-color: #8b6928; transition: 0.4s ease-in; }
 .screen-reader-text { display: none; }
 
-.wp-block-button a:link, .wp-block-button a:visited { background-color: #64460e; color: #ffffff; }
-.wp-block-button__link { background-color: #64460e; color: #ffffff; }
+.wp-block-button a:link, .wp-block-button a:visited { background-color: #64460e; color: #fbe3b7; }
+.wp-block-button__link { background-color: #64460e; color: #fbe3b7; }
 .is-style-outline .wp-block-button__link, .wp-block-button__link.is-style-outline { color: #64460e; }
 
 
