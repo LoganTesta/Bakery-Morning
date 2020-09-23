@@ -216,9 +216,16 @@ li { line-height: 22.4px; }
 .body-wrapper .submit:hover { background-color: #8b6928; transition: 0.4s ease-in; }
 .screen-reader-text { display: none; }
 
+.wp-block-button { padding-bottom: 15px; }
 .wp-block-button a:link, .wp-block-button a:visited { background-color: #64460e; color: #fbe3b7; }
 .wp-block-button__link { background-color: #64460e; color: #fbe3b7; }
-.is-style-outline .wp-block-button__link, .wp-block-button__link.is-style-outline { color: #64460e; }
+.is-style-outline .wp-block-button__link, 
+.wp-block-button__link.is-style-outline { color: #64460e; }
+
+.wp-block-cover { margin-top: 15px; margin-bottom: 30px; }
+.body-wrapper .wp-block-cover .wp-block-cover-text { font-size: 20px; color: #ffffff; }
+.body-wrapper .wp-block-cover .wp-block-cover-text a:link,
+.body-wrapper .wp-block-cover .wp-block-cover-text a:visited { font-size: 20px; color: #ffffff; }
 
 
 /* Header styles */
@@ -455,6 +462,14 @@ footer .widget { width: 50%; padding-bottom: 50px; }
 
     .inner-wrapper { width: 1200px; }
 
+    
+    /*WordPress generated classes.*/
+    
+    .wp-block-cover { }
+    .body-wrapper .wp-block-cover .wp-block-cover-text { font-size: 24px;}
+    .body-wrapper .wp-block-cover .wp-block-cover-text a:link,
+    .body-wrapper .wp-block-cover .wp-block-cover-text a:visited { font-size: 24px; }
+    
     
     .logo { position: absolute; top: 70px; right: 20px; width: 80px; }
    
