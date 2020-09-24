@@ -227,6 +227,9 @@ li { line-height: 22.4px; }
 .body-wrapper .wp-block-cover .wp-block-cover-text a:link,
 .body-wrapper .wp-block-cover .wp-block-cover-text a:visited { font-size: 20px; color: #ffffff; }
 
+.editor-styles-wrapper .has-large-font-size, 
+.has-large-font-size { line-height: 50.4px; }
+
 
 /* Header styles */
 .header { min-height: 200px; }
