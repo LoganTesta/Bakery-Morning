@@ -43,6 +43,7 @@ $format = get_post_format();
                                         echo "<div class='blog__image'>";
                                             echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
                                             echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                            echo "<span class='blog__image__description'>" . get_post( get_post_thumbnail_id() )->post_content . "</span>"; 
                                             echo "<div class='clear-both'></div>";
                                         echo "</div>";
                                     } ?>
@@ -59,6 +60,7 @@ $format = get_post_format();
                                         echo "<div class='blog__image'>";
                                             echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
                                             echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                            echo "<span class='blog__image__description'>" . get_post( get_post_thumbnail_id() )->post_content . "</span>";
                                             echo "<div class='clear-both'></div>";
                                         echo "</div>";
                                     } ?>
@@ -125,6 +127,7 @@ $format = get_post_format();
                                         echo "<div class='blog__image'>";
                                             echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
                                             echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                            echo "<span class='blog__image__description'>" . get_post( get_post_thumbnail_id() )->post_content . "</span>";
                                             echo "<div class='clear-both'></div>";
                                         echo "</div>";
                                     } ?>
