@@ -39,7 +39,13 @@ $format = get_post_format();
                                     <div class="blog__author">By: <?php the_author(); ?></div>
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__content"><?php the_content(); ?></div>
-                                    <?php if ( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; } ?>
+                                    <?php if ( has_post_thumbnail() ) { 
+                                        echo "<div class='blog__image'>";
+                                            echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
+                                            echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                            echo "<div class='clear-both'></div>";
+                                        echo "</div>";
+                                    } ?>
                                     <?php 
                                         if ( comments_open() ) {
                                             comments_template();
@@ -49,7 +55,13 @@ $format = get_post_format();
                                 <?php } else if ( $format === "image" ) { ?>
                                 <div class="blog">
                                     <div class="blog__title"><?php the_title(); ?></div>
-                                    <?php if ( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; } ?>
+                                    <?php if ( has_post_thumbnail() ) { 
+                                        echo "<div class='blog__image'>";
+                                            echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
+                                            echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                            echo "<div class='clear-both'></div>";
+                                        echo "</div>";
+                                    } ?>
                                     <div class="blog__author">By: <?php the_author(); ?></div>
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__categories">
@@ -109,7 +121,13 @@ $format = get_post_format();
                                     ?>
                                     </div>
                                     <div class="blog__tags"><?php the_tags(); ?></div>
-                                    <?php if ( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; } ?>
+                                    <?php if ( has_post_thumbnail() ) { 
+                                        echo "<div class='blog__image'>";
+                                            echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
+                                            echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                            echo "<div class='clear-both'></div>";
+                                        echo "</div>";
+                                    } ?>
                                     <?php 
                                         if ( comments_open() ) {
                                             comments_template();

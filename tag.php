@@ -39,7 +39,13 @@ get_header();
                                             ?>
                                         </div>
                                         <div class="blog__tags"><?php the_tags(); ?></div>
-                                        <?php if ( has_post_thumbnail() ) { echo "<div class='blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; } ?>
+                                        <?php if ( has_post_thumbnail() ) { 
+                                            echo "<div class='blog__image'>";
+                                                echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
+                                                echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                                echo "<div class='clear-both'></div>";
+                                            echo "</div>";
+                                        } ?>
                                         <div class="blog__content"><?php the_excerpt(); ?><a class="read-more" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>">Read More</a></div>
                                         <div class="clear-both"></div>
                                     </div>
