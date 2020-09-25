@@ -188,16 +188,17 @@ Monochromatic color scheme.
 html, body, div, span, p, img, a, br, ul, li, ol, header, nav, footer, table, button, label, input, textarea, tr, td, th, h1, h2, h3, h4, h5, h6 {
    font-family: 'Lato', sans-serif;
 }
+h1, h2, h3, h4, h5, h6 { color: #64460e; }
 h1, h2, h3, h4 { font-weight: bold; }
 input, textarea { width: 100%; padding: 10px; border: 1px solid #000000; border-radius: 15px; }
 a:link, a:visited { color: #64460e; }
 a:hover { color: #ac8949; }
 h1 { font-size: 30px; padding: 0 0 15px 0; }
 h2 { font-size: 24px; padding: 0 0 15px 0; }
-h3 { padding: 0 0 15px 0; color: #64460e; text-align: center; }
-h4 { padding: 0 0 12px 0; color: #64460e; }
-h5 { padding: 0 0 12px 0; color: #64460e; }
-h6 { padding: 0 0 12px 0; color: #64460e; }
+h3 { padding: 0 0 15px 0; text-align: center; }
+h4 { padding: 0 0 12px 0; }
+h5 { padding: 0 0 12px 0; }
+h6 { padding: 0 0 12px 0; }
 input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s;}
 input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 ul { padding-bottom: 30px; padding-left: 20px; }
@@ -215,7 +216,7 @@ pre { display: inline-block; padding: 15px; }
 
 
 /*WordPress generated classes.*/
-.wp-caption { }
+.wp-caption { max-width: 100%; }
 .wp-caption-text { }
 .sticky { }
 .screen-reader-text { }
@@ -223,7 +224,7 @@ pre { display: inline-block; padding: 15px; }
 .bypostauthor { }
 .alignright { float: right; margin-left: 15px; }
 .alignleft { float: left; margin-right: 15px; }
-.aligncenter { }
+.aligncenter { display: block; clear: both; margin-left: auto; margin-right: auto; }
 
 .body-wrapper .submit { transition: 0.4s ease-in; }
 .body-wrapper .submit:hover { background-color: #8b6928; transition: 0.4s ease-in; }
