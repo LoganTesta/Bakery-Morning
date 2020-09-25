@@ -192,10 +192,12 @@ h1, h2, h3, h4 { font-weight: bold; }
 input, textarea { width: 100%; padding: 10px; border: 1px solid #000000; border-radius: 15px; }
 a:link, a:visited { color: #64460e; }
 a:hover { color: #ac8949; }
-h1 { font-size: 30px; }
-h2 { font-size: 24px; }
+h1 { font-size: 30px; padding: 0 0 15px 0; }
+h2 { font-size: 24px; padding: 0 0 15px 0; }
 h3 { padding: 0 0 15px 0; color: #64460e; text-align: center; }
 h4 { padding: 0 0 12px 0; color: #64460e; }
+h5 { padding: 0 0 12px 0; color: #64460e; }
+h6 { padding: 0 0 12px 0; color: #64460e; }
 input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s;}
 input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 li { line-height: 22.4px; }
@@ -233,9 +235,9 @@ li { line-height: 22.4px; }
 
 /* Header styles */
 .header { min-height: 200px; }
-.main-title { padding-top: 20px; text-align: center; }
+.main-title { padding-top: 20px; padding-bottom: 0; text-align: center; }
 .main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
-.header__subtitle { text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }
+.header__subtitle { padding-bottom: 0; text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }
 .logo { position: relative; width: 40px; top: 20px; left: 15px; }
 .header__phone { padding-top: 10px; text-align: center; font-size: 17px; font-weight: 600; color: #64460e; }
 
