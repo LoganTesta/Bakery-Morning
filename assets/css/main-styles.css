@@ -200,11 +200,16 @@ h5 { padding: 0 0 12px 0; color: #64460e; }
 h6 { padding: 0 0 12px 0; color: #64460e; }
 input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s;}
 input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
+ul { padding-bottom: 30px; }
+ul ul { padding-bottom: 0; }
+ol { padding-bottom: 30px; }
+ol ol { padding-bottom: 0; }
 li { line-height: 22.4px; }
 table { margin-bottom: 30px; border-collapse: collapse; }
 th { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); font-weight: bold; color: #64460e; }
 td { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); }
 th a { font-weight: bold; }
+pre { display: inline-block; padding: 15px; }
 
 
 /*WordPress generated classes.*/
@@ -234,6 +239,9 @@ th a { font-weight: bold; }
 .body-wrapper .wp-block-cover .wp-block-cover-text a:visited { font-size: 20px; color: #ffffff; }
 
 .wp-block-group.has-background { padding: 15px 20px; }
+
+.wp-block-code { border: 1px solid rgba(172, 137, 73, 0.4); }
+.wp-block-verse { background-color: #f3f3f3; }
 
 .editor-styles-wrapper .has-large-font-size, 
 .has-large-font-size { line-height: 50.4px; }
