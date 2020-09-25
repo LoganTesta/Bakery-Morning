@@ -201,6 +201,10 @@ h6 { padding: 0 0 12px 0; color: #64460e; }
 input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s;}
 input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 li { line-height: 22.4px; }
+table { margin-bottom: 30px; border-collapse: collapse; }
+th { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); font-weight: bold; color: #64460e; }
+td { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); }
+th a { font-weight: bold; }
 
 
 /*WordPress generated classes.*/
