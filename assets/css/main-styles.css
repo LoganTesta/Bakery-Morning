@@ -233,6 +233,8 @@ th a { font-weight: bold; }
 .body-wrapper .wp-block-cover .wp-block-cover-text a:link,
 .body-wrapper .wp-block-cover .wp-block-cover-text a:visited { font-size: 20px; color: #ffffff; }
 
+.wp-block-group.has-background { padding: 15px 20px; }
+
 .editor-styles-wrapper .has-large-font-size, 
 .has-large-font-size { line-height: 50.4px; }
 
