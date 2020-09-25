@@ -7,7 +7,7 @@
                     <div class="message__text"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></div>
                 <?php } ?>
             </div>
-            <footer>
+            <footer class="footer">
                 <div class="inner-wrapper">   
                     <div class="content-row">
                         <div class="footer__copyright col-sma-12">&copy; <?php echo esc_html( date("Y") ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>. All Rights Reserved.</div>
