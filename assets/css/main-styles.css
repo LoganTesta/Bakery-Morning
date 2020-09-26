@@ -216,6 +216,7 @@ th { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); font-weight: bold
 td { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); }
 th a { font-weight: bold; }
 pre { display: inline-block; padding: 15px; overflow: auto; }
+img { height: auto; max-width: auto; }
 
 
 /*WordPress generated classes.*/
@@ -229,6 +230,8 @@ pre { display: inline-block; padding: 15px; overflow: auto; }
 .alignleft { float: left; margin-right: 15px; }
 .aligncenter { display: block; clear: both; margin-left: auto; margin-right: auto; }
 
+
+/*Additional WordPress generated classes.*/
 .body-wrapper .submit { transition: 0.4s ease-in; }
 .body-wrapper .submit:hover { background-color: #8b6928; transition: 0.4s ease-in; }
 .screen-reader-text { display: none; }
@@ -251,6 +254,9 @@ pre { display: inline-block; padding: 15px; overflow: auto; }
 
 .editor-styles-wrapper .has-large-font-size, 
 .has-large-font-size { line-height: 50.4px; }
+
+#gallery-1.gallery .gallery-item { padding-left: 8px; padding-right: 8px; }
+#gallery-1.gallery img { border: 0; }
 
 
 /* Header styles */
@@ -462,6 +468,10 @@ pre { display: inline-block; padding: 15px; overflow: auto; }
     input, textarea { width: auto; }
     
     
+    /*Additional WordPress generated classes.*/
+    #gallery-1.gallery .gallery-item { padding-left: 0; padding-right: 0; }
+    
+    
     /*Footer Styles*/
     .footer__social, .footer__location-phone, .footer__hours { padding-top: 0px; padding-bottom: 0px; } 
     .footer__widgets { width: 80%; margin-left: auto; margin-right: auto; }
@@ -497,8 +507,7 @@ pre { display: inline-block; padding: 15px; overflow: auto; }
     .inner-wrapper { width: 1200px; }
 
     
-    /*WordPress generated classes.*/
-    
+    /*Additional WordPress generated classes.*/
     .wp-block-cover { }
     .body-wrapper .wp-block-cover .wp-block-cover-text { font-size: 24px;}
     .body-wrapper .wp-block-cover .wp-block-cover-text a:link,
