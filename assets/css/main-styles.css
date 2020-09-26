@@ -255,7 +255,7 @@ img { height: auto; max-width: auto; }
 .editor-styles-wrapper .has-large-font-size, 
 .has-large-font-size { line-height: 50.4px; }
 
-#gallery-1.gallery .gallery-item { padding-left: 8px; padding-right: 8px; }
+.gallery-item { padding-left: 8px; padding-right: 8px; }
 #gallery-1.gallery img,
 #gallery-2.gallery img,
 #gallery-3.gallery img,
