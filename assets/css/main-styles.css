@@ -256,7 +256,15 @@ img { height: auto; max-width: auto; }
 .has-large-font-size { line-height: 50.4px; }
 
 #gallery-1.gallery .gallery-item { padding-left: 8px; padding-right: 8px; }
-#gallery-1.gallery img { border: 0; }
+#gallery-1.gallery img,
+#gallery-2.gallery img,
+#gallery-3.gallery img,
+#gallery-4.gallery img,
+#gallery-5.gallery img,
+#gallery-6.gallery img,
+#gallery-7.gallery img,
+#gallery-8.gallery img,
+#gallery-9.gallery img { border: 0; }
 
 
 /* Header styles */
