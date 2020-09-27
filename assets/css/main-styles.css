@@ -207,8 +207,8 @@ li > ul { padding-bottom: 0; }
 ol { padding-bottom: 30px; padding-left: 20px; }
 li > ol { padding-bottom: 0; }
 li { line-height: 22.4px; }
-ul li { list-style-type: disc; }
-ol li { }
+ul > li { list-style-type: disc; }
+ol > li { list-style-type: var; }
 dl { }
 dt { font-weight: bold; }
 dd { padding-bottom: 25px; }
