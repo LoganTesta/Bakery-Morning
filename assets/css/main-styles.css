@@ -188,6 +188,7 @@ Monochromatic color scheme.
 html, body, div, span, p, img, a, br, ul, li, ol, header, nav, footer, table, button, label, input, textarea, tr, td, th, h1, h2, h3, h4, h5, h6 {
    font-family: 'Lato', sans-serif;
 }
+html { word-wrap: break-word; -ms-word-wrap: break-word; }
 h1, h2, h3, h4, h5, h6 { color: #64460e; }
 h1, h2, h3, h4 { font-weight: bold; }
 h1 { font-size: 30px; padding: 0 0 15px 0; }
