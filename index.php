@@ -54,7 +54,11 @@ get_header();
                                             </div>
                                             <div class="blog__tags"><?php the_tags(); ?></div>
                                             <div class="blog__author">By: <?php the_author(); ?></div>
-                                            <div class="blog__date"><?php echo get_the_date(); ?></div>
+                                            <div class="blog__date">
+                                                <a class="blog__date__link" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>">
+                                                    <?php echo get_the_date(); ?>
+                                                </a>
+                                            </div>
                                             <?php if ( has_post_thumbnail() ) { 
                                                 echo "<div class='blog__image'>";
                                                     echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
