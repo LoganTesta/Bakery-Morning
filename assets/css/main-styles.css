@@ -280,7 +280,7 @@ img { height: auto; max-width: auto; }
 .mobile-nav { display: block; }
 .desktop-nav { display: none; }
 .nav { background-color: #64460e; }
-.nav ul { font-size: 0; }
+.nav ul { padding-left: 0; padding-bottom: 0; font-size: 0; }
 .nav li { display: block; text-align: center; }
 .nav a { color: #f9f9f9; }
 .nav a:hover { color: #fbe3b7; }
