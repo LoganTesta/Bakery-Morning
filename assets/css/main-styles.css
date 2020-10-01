@@ -294,7 +294,7 @@ img { height: auto; max-width: 100%; }
 .nav ul ul li.page_item_has_children::after,
 .nav ul ul li.menu-item-has-children::after { content: "\25ba"; color: #ffffff; }
 
-.mobile-nav li ul li { padding: 0 10px 30px 10px; margin-left: 25px; }
+.mobile-nav li ul li { padding: 0 0 30px 15px; }
 .mobile-nav ul.show { display: block; }
 
 #dropdownButton { position: absolute; top: 25px; right: 20px; width: 30px; height: 30px;
@@ -552,6 +552,9 @@ img { height: auto; max-width: 100%; }
 
     .nav li:hover > ul { display: block; position: absolute; top: 50px; left: 0; background-color: #64460e; border: 2px solid rgba(172, 137, 73, 0.8); }
     .nav ul ul li:hover ul { top: -2px; left: 100%; padding-top: 0; padding-bottom: 0; }
+       
+    .nav li.page_item_has_children::after,
+    .nav li.menu-item-has-children::after { top: 15px; }
     
     
     /*Footer Styles*/

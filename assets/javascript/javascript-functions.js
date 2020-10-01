@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
     }
 
     function showMenu(itemNumber) {
-        var theSubMenus = theArrows[itemNumber].querySelectorAll(".sub-menu")
+        var theSubMenus = theArrows[itemNumber].querySelectorAll(".sub-menu, .children");
         theSubMenus[0].classList.toggle("show");
         
         for(let i = 0; i < theSubMenus.length; i++){
