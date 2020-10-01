@@ -227,9 +227,9 @@ img { height: auto; max-width: 100%; }
 .screen-reader-text { }
 .gallery-caption { }
 .bypostauthor { }
-.alignright { float: right; margin-left: 15px; }
 .alignleft { float: left; margin-right: 15px; }
 .aligncenter { display: block; clear: both; margin-left: auto; margin-right: auto; }
+.alignright { float: right; margin-left: 15px; }
 
 
 /*Additional WordPress generated classes.*/
