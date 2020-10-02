@@ -10,10 +10,14 @@ get_header();
                                 <?php
                                 //General layout.  Show content on all pages.  For the blog page, extra code to show the post page's content, and then
                                 //show the blog posts.
-                                if ( is_home() === false ){ ?>
-                                    <div class="content__featured-image <?php if ( esc_url( trim( the_post_thumbnail_url() ) ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo esc_url( the_post_thumbnail_url() ); ?>')"></div>    
-                                    <?php the_content(); 
-                                 } else if ( is_home() ){ 
+                                if ( is_home() === false ){ 
+                                    while ( have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
+                                        <div class="content__featured-image <?php if ( esc_url( trim( the_post_thumbnail_url() ) ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo esc_url( the_post_thumbnail_url() ); ?>')"></div>    
+                                        <?php the_content(); 
+                                        wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
+                                    endwhile;
+                                    wp_reset_query(); //Reset the page query
+                                } else if ( is_home() ){ 
                                     $blog_page_id = get_option( 'page_for_posts' );
                                     if ( $blog_page_id ) {
                                         $selected_post = get_page( $blog_page_id );
@@ -22,9 +26,10 @@ get_header();
                                         <div class="content__featured-image <?php if ( esc_url( trim( the_post_thumbnail_url() ) ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo esc_url( the_post_thumbnail_url() ); ?>')"></div>    
                                         <?php
                                         the_content();
+                                        wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
                                         rewind_posts();
                                     }
-                                    while (have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
+                                    while ( have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
                                         <div id="<?php the_title(); ?>" <?php echo esc_attr( post_class( "blog" ) ); ?>>
                                             <?php if ( is_sticky() ) {
                                                 echo "<div class='blog__featured'>" . _x( "Featured ", "post", "bakery-morning" ) . "</div>";
