@@ -15,6 +15,9 @@ get_header();
                                         <div class="content__featured-image <?php if ( esc_url( trim( the_post_thumbnail_url() ) ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo esc_url( the_post_thumbnail_url() ); ?>')"></div>    
                                         <?php the_content(); 
                                         wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
+                                        if ( comments_open() ) {
+                                            comments_template();
+                                        } 
                                     endwhile;
                                     wp_reset_query(); //Reset the page query
                                 } else if ( is_home() ){ 
@@ -27,6 +30,9 @@ get_header();
                                         <?php
                                         the_content();
                                         wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
+                                        if ( comments_open() ) {
+                                            comments_template();
+                                        } 
                                         rewind_posts();
                                     }
                                     while ( have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
