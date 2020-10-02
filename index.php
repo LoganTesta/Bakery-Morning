@@ -14,10 +14,12 @@ get_header();
                                     while ( have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
                                         <div class="content__featured-image <?php if ( esc_url( trim( the_post_thumbnail_url() ) ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo esc_url( the_post_thumbnail_url() ); ?>')"></div>    
                                         <?php the_content(); 
-                                        wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
-                                        if ( comments_open() ) {
-                                            comments_template();
-                                        } 
+                                        if ( is_front_page() === false ) {
+                                            wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
+                                            if ( comments_open() && is_front_page() === false ) {
+                                                comments_template();
+                                            } 
+                                        }
                                     endwhile;
                                     wp_reset_query(); //Reset the page query
                                 } else if ( is_home() ){ 
@@ -108,56 +110,66 @@ get_header();
                     </div>  
                     <?php 
                     //Index page only: show most recent blog posts.
-                    if ( is_front_page() && get_theme_mod( 'index_show_blog_code' ) ) { ?>                     
-                        <div class="content-row">
-                            <h3 class="index-content__subheading"><?php echo esc_html( get_theme_mod( 'index_blog_heading_code' ) ); ?></h3>
-                            <?php
-                            $index_page_query;
-                            if ( get_theme_mod( 'index_blog_order_code' ) === 'desc' ) {
-                                $index_page_query = new WP_Query( 
-                                    array( 'posts_per_page' => 4, 'offset' => 0, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
-                                ) ); 
-                            } else {
-                                $index_page_query = new WP_Query( 
-                                    array( 'posts_per_page' => 4, 'offset' => wp_count_posts( 'post' )->publish - 4, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
-                                ) );     
-                            }
-                            if ( $index_page_query->have_posts() ) {
-                                while( $index_page_query->have_posts() ) : $index_page_query->the_post(); ?>   
-                                    <div class="col-sma-3">
-                                        <div class="index__blog">
-                                            <h4 class="index__blog__title"><a href="blog#<?php the_title(); ?>" class="index__blog__title__link"><?php the_title(); ?></a></h4>
-                                            <div class="index__blog__categories"><?php
-                                                $categories = get_the_category();
-                                                $h = 0;
-                                                foreach ( $categories as $category ) {
-                                                    $h++;
-                                                }
-                                                $h = $h - 1;
-                                                $i = 0;
-                                                foreach ( $categories as $category ) {
-                                                    $result = "";
-                                                    if ( $i < $h ) {
-                                                        $result .= $category->name . ", ";
-                                                    } else {
-                                                        $result .= $category->name;
+                    if ( is_front_page() ) {  
+                        if ( get_theme_mod( 'index_show_blog_code' ) ) { //Index page only: show most recent blog posts. ?>  
+                            <div class="content-row">
+                                <h3 class="index-content__subheading"><?php echo esc_html( get_theme_mod( 'index_blog_heading_code' ) ); ?></h3>
+                                <?php
+                                $index_page_query;
+                                if ( get_theme_mod( 'index_blog_order_code' ) === 'desc' ) {
+                                    $index_page_query = new WP_Query( 
+                                        array( 'posts_per_page' => 4, 'offset' => 0, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
+                                    ) ); 
+                                } else {
+                                    $index_page_query = new WP_Query( 
+                                        array( 'posts_per_page' => 4, 'offset' => wp_count_posts( 'post' )->publish - 4, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
+                                    ) );     
+                                }
+                                if ( $index_page_query->have_posts() ) {
+                                    while( $index_page_query->have_posts() ) : $index_page_query->the_post(); ?>   
+                                        <div class="col-sma-3">
+                                            <div class="index__blog">
+                                                <h4 class="index__blog__title"><a href="blog#<?php the_title(); ?>" class="index__blog__title__link"><?php the_title(); ?></a></h4>
+                                                <div class="index__blog__categories"><?php
+                                                    $categories = get_the_category();
+                                                    $h = 0;
+                                                    foreach ( $categories as $category ) {
+                                                        $h++;
                                                     }
-                                                    echo esc_html( $result );
-                                                    $i++;
-                                                }
-                                                ?>
+                                                    $h = $h - 1;
+                                                    $i = 0;
+                                                    foreach ( $categories as $category ) {
+                                                        $result = "";
+                                                        if ( $i < $h ) {
+                                                            $result .= $category->name . ", ";
+                                                        } else {
+                                                            $result .= $category->name;
+                                                        }
+                                                        echo esc_html( $result );
+                                                        $i++;
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <div class="index__blog__author">By <?php the_author(); ?></div>
+                                                <div class="index__blog__date"><?php echo get_the_date(); ?></div>
+                                                <?php if ( has_post_thumbnail() ) { echo "<div class='index__blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"><a class='index__blog__link' href='blog#" . esc_url( get_the_title() ) . "'></a></div>"; } ?>
+                                                <div class="index__blog__content"><?php the_excerpt(); ?></div>
+                                                <div class="clear-both"></div>
                                             </div>
-                                            <div class="index__blog__author">By <?php the_author(); ?></div>
-                                            <div class="index__blog__date"><?php echo get_the_date(); ?></div>
-                                            <?php if ( has_post_thumbnail() ) { echo "<div class='index__blog__image' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"><a class='index__blog__link' href='blog#" . esc_url( get_the_title() ) . "'></a></div>"; } ?>
-                                            <div class="index__blog__content"><?php the_excerpt(); ?></div>
-                                            <div class="clear-both"></div>
                                         </div>
-                                    </div>
-                                <?php endwhile;
-                            } ?>
-                        </div>
-                    <?php } ?>
+                                    <?php endwhile;
+                                } ?>
+                            </div>
+                        <?php
+                            while ( have_posts()) : the_post(); //You need a while loop to call the_content().
+                                wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
+                                if ( comments_open() && is_front_page() === false ) {
+                                    comments_template();
+                                } 
+                            endwhile;
+                            wp_reset_query(); //Reset the page query
+                        } 
+                    } ?>
                 </div>
             </div>
             <?php get_footer(); ?>
