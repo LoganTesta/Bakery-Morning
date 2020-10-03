@@ -321,7 +321,7 @@ img { height: auto; max-width: 100%; }
 .footer__copyright { text-align: center; }
 .footer__widgets { display: flex; flex-wrap: wrap; text-align: center; }
 .footer__nav { text-align: center; }
-.footer__nav li { padding-bottom: 15px; }
+.footer__nav li { margin-top: 7.5px; margin-bottom: 7.5px; text-align: left; }
 .footer__social { text-align: center; font-size: 0; }
 .footer__social a { color: #64460e; transition: 0.3s; }
 .footer__social a:hover { color: #fff; transition: 0.3s; }
