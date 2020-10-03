@@ -321,7 +321,7 @@ img { height: auto; max-width: 100%; }
 .footer__social, .footer__location-phone, .footer__hours { padding-top: 20px; padding-bottom: 20px; } 
 
 .footer__copyright { text-align: center; }
-.footer__widgets { display: flex; flex-wrap: wrap; text-align: left; }
+.footer__widgets { display: flex; flex-wrap: wrap; justify-content: center; text-align: left; }
 .footer__nav { text-align: center; }
 .footer__nav li { margin-top: 10px; margin-bottom: 10px; text-align: left; list-style-type: none; }
 .footer__social { text-align: center; font-size: 0; }
@@ -339,7 +339,7 @@ img { height: auto; max-width: 100%; }
 .footer__social-icon { transition: 0.4s all; }
 .footer__social-icon:hover { transition: 0.4s all; }
 
-.footer .widget { width: 50%; padding-bottom: 50px; }
+.footer .widget { width: 100%; padding-bottom: 50px; }
 
 
 /*Comments*/
@@ -497,7 +497,8 @@ img { height: auto; max-width: 100%; }
     
     /*Footer Styles*/
     .footer__social, .footer__location-phone, .footer__hours { padding-top: 0px; padding-bottom: 0px; } 
-    .footer__widgets { width: 80%; margin-left: auto; margin-right: auto; }
+    .footer__widgets { margin-left: auto; margin-right: auto; }
+    .footer .widget { width: 50%; padding-bottom: 50px; padding-left: 15px; padding-right: 15px; }
     .footer__social-logo { display: block; padding: 15px 15px; }    
     
     
@@ -561,6 +562,7 @@ img { height: auto; max-width: 100%; }
     
     /*Footer Styles*/
     .footer__social-logo { display: inline-block; padding: 0 15px; } 
+    .footer .widget { width: 33.333333%; }
     
     
     /*General styles*/
