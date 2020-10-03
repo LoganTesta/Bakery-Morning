@@ -24,16 +24,18 @@
         <?php wp_body_open(); ?>
         <div class="body-wrapper">
             <header class="header">
-                <div class="inner-wrapper">                  
-                    <div class="logo">
-                        <a href="<?php echo esc_url( get_home_url() ); ?>">
-                            <?php
-                                $logo_id = get_theme_mod( 'custom_logo' );
-                                $logo = wp_get_attachment_image_src( $logo_id, 'full' );
-                            ?>
-                            <img src="<?php echo esc_attr( $logo[0] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> logo">
-                        </a>
-                    </div>
+                <div class="inner-wrapper">  
+                    <?php if ( has_custom_logo() ) { ?>
+                        <div class="logo">
+                            <a href="<?php echo esc_url( get_home_url() ); ?>">
+                                <?php
+                                    $logo_id = get_theme_mod( 'custom_logo' );
+                                    $logo = wp_get_attachment_image_src( $logo_id, 'full' );
+                                ?>
+                                <img src="<?php echo esc_attr( $logo[0] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> logo">
+                            </a>
+                        </div>
+                    <?php } ?>
                     <h1 class="main-title"><a class="main-title__title" href="<?php echo esc_url( get_home_url() ); ?>" style="<?php if ( esc_attr( get_header_image() ) ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
                     <h2 class="header__subtitle" style="<?php if ( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php if ( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
                     <?php if ( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
