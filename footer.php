@@ -21,12 +21,12 @@
                         </div>    
                     </div>
                     <?php endif; ?>
-                    <div class="content-row">
-                        <div class="footer__nav col-sma-3">
+                    <div class="footer__bottom-section content-row">
+                        <div class="footer__nav footer-column">
                             <h4 class="footer__subheader">Links</h4>
                             <?php wp_nav_menu( array( 'theme_location'=>'footer-nav' ) ); ?>
                         </div>
-                        <div class="footer__social col-sma-3">
+                        <div class="footer__social footer-column">
                             <h4 class="footer__subheader">Social</h4>
                             <?php if ( trim( get_theme_mod ( 'pinterest_code' ) ) !== "" ){ ?>
                                 <div class="footer__social-logo pinterest">
@@ -59,7 +59,7 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="footer__location-phone col-sma-3">
+                        <div class="footer__location-phone footer-column">
                             <h4 class="footer__subheader">Location</h4>
                             <?php if ( trim( get_theme_mod ( 'location_code' ) ) !== "" ){ ?>
                                 <div class="footer__location-phone__location"><?php echo esc_html( get_theme_mod( 'location_code' ) ); ?></div>
@@ -68,7 +68,7 @@
                                 <div class="footer__location-phone__phone"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
                             <?php } ?>
                         </div>
-                        <div class="footer__hours col-sma-3">
+                        <div class="footer__hours footer-column">
                             <h4 class="footer__subheader">Hours</h4>     
                             <?php if ( esc_html( trim( get_theme_mod ( 'hours_code0' ) ) ) !== "" ) { echo "<div class='footer__hours__day'>" . esc_html( get_theme_mod( 'hours_code0' ) ) . "</div>"; } ?>
                             <?php if ( esc_html( trim( get_theme_mod ( 'hours_code1' ) ) ) !== "" ) { echo "<div class='footer__hours__day'>" . esc_html( get_theme_mod( 'hours_code1' ) ) . "</div>"; } ?>

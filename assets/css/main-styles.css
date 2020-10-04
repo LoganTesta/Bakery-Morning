@@ -322,6 +322,9 @@ img { height: auto; max-width: 100%; }
 
 .footer__copyright { text-align: center; }
 .footer__widgets { display: flex; flex-wrap: wrap; justify-content: center; text-align: left; }
+.footer__bottom-section { display: flex; flex-wrap: wrap; justify-content: center; }
+.footer-column { width: 100%; }
+
 .footer__nav { text-align: center; }
 .footer__nav li { margin-top: 10px; margin-bottom: 10px; text-align: left; list-style-type: none; }
 .footer__nav li ul li { padding-left: 15px; }
@@ -500,6 +503,7 @@ img { height: auto; max-width: 100%; }
     .footer__social, .footer__location-phone, .footer__hours { padding-top: 0px; padding-bottom: 0px; } 
     .footer__widgets { margin-left: auto; margin-right: auto; }
     .footer .widget { width: 50%; padding-bottom: 50px; padding-left: 15px; padding-right: 15px; }
+    .footer-column { width: 50%; }
     .footer__social-logo { display: block; padding: 15px 15px; }    
     
     
@@ -564,6 +568,7 @@ img { height: auto; max-width: 100%; }
     /*Footer Styles*/
     .footer__social-logo { display: inline-block; padding: 0 15px; } 
     .footer .widget { width: 33.333333%; }
+    .footer-column { width: 25%; }
     
     
     /*General styles*/
