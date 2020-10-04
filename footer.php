@@ -22,11 +22,11 @@
                     </div>
                     <?php endif; ?>
                     <div class="content-row">
-                        <div class="footer__nav col-sma-2">
+                        <div class="footer__nav col-sma-3">
                             <h4 class="footer__subheader">Links</h4>
                             <?php wp_nav_menu( array( 'theme_location'=>'footer-nav' ) ); ?>
                         </div>
-                        <div class="footer__social col-sma-4">
+                        <div class="footer__social col-sma-3">
                             <h4 class="footer__subheader">Social</h4>
                             <?php if ( trim( get_theme_mod ( 'pinterest_code' ) ) !== "" ){ ?>
                                 <div class="footer__social-logo pinterest">

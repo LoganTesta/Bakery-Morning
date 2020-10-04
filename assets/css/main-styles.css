@@ -294,7 +294,7 @@ img { height: auto; max-width: 100%; }
 .nav ul ul li.page_item_has_children::after,
 .nav ul ul li.menu-item-has-children::after { content: "\25ba"; color: #ffffff; }
 
-.mobile-nav li ul li { padding: 0 0 30px 15px; }
+.mobile-nav li ul li { padding-left: 15px; }
 .mobile-nav ul.show { display: block; }
 
 #dropdownButton { position: absolute; top: 25px; right: 20px; width: 30px; height: 30px;
@@ -324,6 +324,7 @@ img { height: auto; max-width: 100%; }
 .footer__widgets { display: flex; flex-wrap: wrap; justify-content: center; text-align: left; }
 .footer__nav { text-align: center; }
 .footer__nav li { margin-top: 10px; margin-bottom: 10px; text-align: left; list-style-type: none; }
+.footer__nav li ul li { padding-left: 15px; }
 .footer__social { text-align: center; font-size: 0; }
 .footer__social a { color: #64460e; transition: 0.3s; }
 .footer__social a:hover { color: #fff; transition: 0.3s; }
