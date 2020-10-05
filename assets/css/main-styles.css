@@ -242,6 +242,8 @@ img { height: auto; max-width: 100%; }
 .wp-block-button__link { background-color: #64460e; color: #fbe3b7; }
 .is-style-outline .wp-block-button__link, 
 .wp-block-button__link.is-style-outline { color: #64460e; }
+.is-style-squared .wp-block-button__link, 
+.wp-block-button__link.is-style-squared { border-radius: 4px; }
 
 .wp-block-cover { margin-top: 15px; margin-bottom: 30px; }
 .body-wrapper .wp-block-cover .wp-block-cover-text { font-size: 20px; color: #ffffff; }
