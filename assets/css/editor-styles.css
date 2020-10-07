@@ -201,7 +201,7 @@ h6 { padding: 0 0 12px 0; }
 input, textarea { width: 100%; padding: 10px; margin-bottom: 5px; border: 1px solid #000000; border-radius: 15px; }
 a:link, a:visited { color: #64460e; }
 a:hover { color: #ac8949; }
-input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s;}
+input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s; }
 input::placeholder, textarea::placeholder { color: #64460e; opacity: 0.8; }
 ul { padding-bottom: 30px; padding-left: 20px; }
 li > ul { padding-bottom: 0; }
@@ -278,7 +278,7 @@ img { height: auto; max-width: 100%; }
 
 
 @media only screen and (min-width: 700px){ 
-    input, textarea { width: auto; }
+    input, textarea { }
 }
 
 
