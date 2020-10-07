@@ -463,7 +463,7 @@ img { height: auto; max-width: 100%; }
 
 /*Single post pages*/
 .single-post .blog { padding-bottom: 0px; }
-.post-nav-links { padding-top: 50px; font-size: 0; }
+.post-nav-links { clear: both; padding-top: 15px; font-size: 0; }
 .post-page-numbers { padding-right: 15px; }
 
 
