@@ -75,7 +75,7 @@ get_header();
                                             <?php if ( has_post_thumbnail() ) { 
                                                 echo "<div class='blog__image'>";
                                                     echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
-                                                    echo "<span class='blog__image__caption'> " . get_the_post_thumbnail_caption() . "</span>";
+                                                    echo "<span class='blog__image__caption'> " . esc_html( get_the_post_thumbnail_caption() ) . "</span>";
                                                     echo "<div class='clear-both'></div>";
                                                 echo "</div>";
                                             } ?>
