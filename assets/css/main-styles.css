@@ -412,7 +412,8 @@ img { height: auto; max-width: 100%; }
 
 /*Blog*/
 .blog-posts-container { padding-bottom: 20px; }
-.blog-posts { padding-top: 20px; }
+.blog-page-intro { padding-bottom: 20px; }
+.blog-posts { }
 
 .blog { padding-bottom: 100px; }
 .blog:last-of-type { padding-bottom: 0; }
