@@ -272,7 +272,7 @@ img { height: auto; max-width: 100%; }
 
 /* Header styles */
 .header { min-height: 200px; padding-bottom: 20px; }
-.main-title { padding-top: 40px; padding-bottom: 0; text-align: center; }
+.main-title { padding-top: 65px; padding-bottom: 0; text-align: center; }
 .main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
 .header__subtitle { padding-bottom: 0; text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }
 .logo { position: relative; width: 40px; top: 20px; left: 15px; }
