@@ -272,7 +272,7 @@ img { height: auto; max-width: 100%; }
 
 /* Header styles */
 .header { min-height: 200px; padding-bottom: 20px; }
-.main-title { padding-top: 65px; padding-bottom: 0; text-align: center; }
+.main-title { padding-top: 65px; padding-bottom: 0; margin-left: 5px; margin-right: 5px; text-align: center; }
 .main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
 .header__subtitle { padding-bottom: 0; text-align: center; color: #64460e; font-family: 'Noto Serif', serif; }
 .logo { position: relative; width: 40px; top: 20px; left: 15px; }
@@ -303,8 +303,7 @@ img { height: auto; max-width: 100%; }
                   background: url('../images/hamburger-nav.png') 50% 0%/cover no-repeat; cursor: pointer; }
 #dropdownContent { padding: 0; background: none; transition: 0.8s all ease-in; }    
 #dropdownContent li { display: block; height: 0; padding-bottom: 0px; opacity: 0; transition: 0.8s all ease-in; }
-#dropdownContent.show { padding: 15px; background-color: #eeee99; background-image: linear-gradient(#64460e, #ac8949, #64460e);
-                        transition: 0.8s all ease-in; }
+#dropdownContent.show { padding: 15px; transition: 0.8s all ease-in; }
 #dropdownContent.show li { height: auto; margin-top: 20px; margin-bottom: 20px; opacity: 1; transition: 0.8s all ease-in; }
 #dropdownContent.show > li:last-of-type { margin-bottom: 0; } 
 
@@ -552,7 +551,7 @@ img { height: auto; max-width: 100%; }
     
     /* Header styles */
     .header { min-height: 240px; }
-    .main-title { padding-top: 70px; text-align: left; margin-left: 180px; }
+    .main-title { padding-top: 70px; text-align: left; margin-left: 180px; margin-right: 0; }
     .header__subtitle { text-align: left; margin-left: 220px; }
     .header__phone { position: absolute; right: 20px; top: 200px; padding-top: 0; text-align: left;  }
     
