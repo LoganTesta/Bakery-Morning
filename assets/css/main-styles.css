@@ -395,6 +395,9 @@ img { height: auto; max-width: 100%; }
 
 
 /*General styles*/
+.content__body { }
+.content__the-content { }
+.content__the-content::after { content: ""; display: block; clear: both; }
 .content__featured-image { width: 100%; height: 240px; margin-bottom: 15px; background-repeat: no-repeat; background-position: 50% 50%; }
 .content__featured-image.hide { display: none; }
 

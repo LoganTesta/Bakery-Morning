@@ -13,8 +13,8 @@ get_header();
                                 if ( is_home() === false ){ 
                                     while ( have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
                                         <div class="content__featured-image <?php if ( esc_url( trim( the_post_thumbnail_url() ) ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo esc_url( the_post_thumbnail_url() ); ?>')"></div>    
-                                        <?php the_content(); 
-                                        if ( is_front_page() === false ) {
+                                        <div class="content__the-content"><?php the_content(); ?></div>
+                                        <?php if ( is_front_page() === false ) {
                                             wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
                                             if ( comments_open() && is_front_page() === false ) {
                                                 comments_template();
@@ -30,9 +30,8 @@ get_header();
                                         ?>
                                         <div class="blog-page-intro">
                                             <div class="content__featured-image <?php if ( esc_url( trim( the_post_thumbnail_url() ) ) === "" ) { echo "hide"; } ?>" style="background-image: url('<?php echo esc_url( the_post_thumbnail_url() ); ?>')"></div>    
-                                            <?php
-                                            the_content();
-                                            wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
+                                            <div class="content__the-content"><?php the_content(); ?></div>
+                                            <?php wp_link_pages( array( 'before' => '<div class="post-nav-links"><span class="post-page-numbers">' . __( 'Pages:', 'bakery-morning') . '</span>', 'after' => '</div>' ) );
                                             if ( comments_open() ) {
                                                 comments_template();
                                             } 
@@ -113,7 +112,7 @@ get_header();
                         </div>
                     </div>  
                     <?php 
-                    //Index page only: show most recent blog posts.
+                    //Index page only: show most recent blog posts afterwards.
                     if ( is_front_page() ) {  
                         if ( get_theme_mod( 'index_show_blog_code' ) ) { //Index page only: show most recent blog posts. ?>  
                             <div class="content-row">
