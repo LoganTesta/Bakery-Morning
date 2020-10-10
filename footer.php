@@ -10,7 +10,9 @@
             <footer class="footer">
                 <div class="inner-wrapper">   
                     <div class="content-row">
-                        <div class="footer__copyright col-sma-12">&copy; <?php echo esc_html( date("Y") ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>. All Rights Reserved.</div>
+                        <div class="footer__copyright col-sma-12">
+                            <p>&copy; <?php echo esc_html( date("Y") ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>. All Rights Reserved.</p>
+                        </div>
                     </div>
                     <?php if ( is_active_sidebar( 'widgetized-area' ) ) : ?>
                     <div class="content-row">                   

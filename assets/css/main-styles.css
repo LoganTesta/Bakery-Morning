@@ -384,6 +384,10 @@ img { height: auto; max-width: 100%; }
 .comments pre { display: block; }
 
 
+/*Search*/
+#searchsubmit { margin-left: 5px; background-color: #64460e; color: #fbe3b7; }
+
+
 /*General site-specific classes*/
 .item-container__background { height: 240px; }
 .no-padding-bottom { padding-bottom: 0; } /* Put on the last of a group of paragraphs where no padding bottom is desired. */
