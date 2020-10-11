@@ -188,7 +188,7 @@ Monochromatic color scheme.
 html, body, div, span, p, img, a, br, ul, li, ol, header, nav, footer, table, button, label, input, textarea, tr, td, th, h1, h2, h3, h4, h5, h6 {
    font-family: 'Lato', sans-serif;
 }
-html { word-wrap: break-word; -ms-word-wrap: break-word; }
+html { word-wrap: break-word; -ms-word-wrap: break-word; line-height: 1.4; }
 h1, h2, h3, h4, h5, h6 { color: #64460e; }
 h1, h2, h3, h4 { font-weight: bold; }
 h1 { font-size: 30px; padding: 0 0 15px 0; }
@@ -197,6 +197,7 @@ h3 { padding: 0 0 15px 0; }
 h4 { padding: 0 0 12px 0; }
 h5 { padding: 0 0 12px 0; }
 h6 { padding: 0 0 12px 0; }
+p { line-height: 1.4; }
 input, textarea { width: auto; padding: 10px; margin-bottom: 5px; border: 1px solid #000000; border-radius: 15px; }
 a:link, a:visited { color: #64460e; }
 a:hover { color: #ac8949; }
@@ -206,7 +207,7 @@ ul { padding-bottom: 30px; padding-left: 20px; }
 li > ul { padding-bottom: 0; }
 ol { padding-bottom: 30px; padding-left: 20px; }
 li > ol { padding-bottom: 0; }
-li { line-height: 22.4px; }
+li { }
 ul > li { list-style-type: disc; }
 ol > li { list-style-type: var; }
 dl { }
