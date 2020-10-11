@@ -198,7 +198,7 @@ h4 { padding: 0 0 12px 0; }
 h5 { padding: 0 0 12px 0; }
 h6 { padding: 0 0 12px 0; }
 p { line-height: 1.4; }
-input, textarea { width: auto; padding: 10px; margin-bottom: 5px; border: 1px solid #000000; border-radius: 15px; }
+input, textarea, button { width: auto; padding: 10px; margin-bottom: 5px; border: 1px solid #000000; border-radius: 15px; }
 a:link, a:visited { color: #64460e; }
 a:hover { color: #ac8949; }
 input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s; }
@@ -239,8 +239,6 @@ img { height: auto; max-width: 100%; }
 .screen-reader-text { display: none; }
 
 .wp-block-button { padding-bottom: 15px; }
-.wp-block-button a:link, .wp-block-button a:visited { background-color: #64460e; color: #fbe3b7; }
-.wp-block-button__link { background-color: #64460e; color: #fbe3b7; }
 .is-style-outline .wp-block-button__link, 
 .wp-block-button__link.is-style-outline { color: #64460e; }
 .is-style-squared .wp-block-button__link, 
@@ -368,7 +366,6 @@ img { height: auto; max-width: 100%; }
 .comment-form-url { }
 .comment-form-cookies-consent { }
 #wp-comment-cookies-consent { width: auto; margin-right: 4px; }
-.comment-form .submit { width: auto; background-color: #64460e; color: #fbe3b7; cursor: pointer; }
 
 .comments { }
 .comments__header { font-size: 19px; }
@@ -404,6 +401,12 @@ img { height: auto; max-width: 100%; }
 
 .body-wrapper .read-more { display: inline-block; width: auto; padding: 10px; border: 1px solid #000000; border-radius: 15px; background-color: #64460e; color: #fbe3b7; cursor: pointer; transition: 0.4s ease-in; }
 .body-wrapper .read-more:hover { background-color: #8b6928; transition: 0.4s ease-in; }
+
+button, 
+.comment-form .submit,
+.wp-block-button a:link, 
+.wp-block-button a:visited, 
+.wp-block-button__link { width: auto; background-color: #64460e; color: #fbe3b7; cursor: pointer; }
 
 
 /*Index page*/
