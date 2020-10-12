@@ -316,7 +316,7 @@ img { height: auto; max-width: 100%; }
 
 /*Message styles*/
 .message { padding: 25px 10px; text-align: center; background-color: #ac8949; transition: 0.4s ease-in; }
-.message__text { font-size: 22px; font-weight: bold; color: #f9f9f9; }
+.message__text { display: inline-block; font-size: 22px; color: #f9f9f9; }
 
 
 /*Footer Styles*/
@@ -409,7 +409,7 @@ input[type="submit"],
 .wp-block-button a:visited, 
 .wp-block-button__link { width: auto; background-color: #64460e; color: #fbe3b7; cursor: pointer; transition: 0.4s ease-in; }
 button:hover,  
-input[type="submit"]:hover,
+input[type="submit"]#searchsubmit:hover,
 .comment-form .submit:hover,
 .wp-block-button a:hover, 
 .wp-block-button__link:hover {  background-color: #8b6928; transition: 0.4s ease-in; }
