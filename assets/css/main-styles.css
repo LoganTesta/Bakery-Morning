@@ -402,12 +402,17 @@ img { height: auto; max-width: 100%; }
 .body-wrapper .read-more { display: inline-block; width: auto; padding: 10px; border: 1px solid #000000; border-radius: 15px; background-color: #64460e; color: #fbe3b7; cursor: pointer; transition: 0.4s ease-in; }
 .body-wrapper .read-more:hover { background-color: #8b6928; transition: 0.4s ease-in; }
 
-button, 
+button,  
+input[type="submit"],
 .comment-form .submit,
 .wp-block-button a:link, 
 .wp-block-button a:visited, 
-.wp-block-button__link { width: auto; background-color: #64460e; color: #fbe3b7; cursor: pointer; }
-
+.wp-block-button__link { width: auto; background-color: #64460e; color: #fbe3b7; cursor: pointer; transition: 0.4s ease-in; }
+button:hover,  
+input[type="submit"]:hover,
+.comment-form .submit:hover,
+.wp-block-button a:hover, 
+.wp-block-button__link:hover {  background-color: #8b6928; transition: 0.4s ease-in; }
 
 /*Index page*/
 .index-content__subheading { padding-bottom: 18px; text-align: center; }
