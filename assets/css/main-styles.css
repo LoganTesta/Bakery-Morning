@@ -472,16 +472,18 @@ input[type="submit"]:hover,
 .post_format-post-format-video video { }
 .post_format-post-format-video .blog__image { float: right; margin-top: 30px; margin-bottom: 30px; }
 
+
+/*Posts*/
 .posts__navigation { }
 .nav-links { font-size: 0; }
-.posts__navigation a { display: inline-block; padding-right: 10px; }
-.posts__navigation span { display: inline-block; padding-right: 10px; }
+.posts__navigation a,
+.posts__navigation span { display: inline-block; padding-right: 30px; padding-bottom: 20px; }
 
 
 /*Comments*/
 .comments-pagination { }
-.comments-pagination a { display: inline-block; padding-right: 10px; }
-.comments-pagination span { display: inline-block; padding-right: 10px; }
+.comments-pagination a, 
+.comments-pagination span { display: inline-block; padding-right: 30px; padding-bottom: 20px; }
 
 
 /*Single post pages*/
@@ -614,7 +616,14 @@ input[type="submit"]:hover,
     .blog__content:after { content: ""; display: block; clear: both; }
     
     
+    /*Posts*/
+    .posts__navigation a,
+    .posts__navigation span { padding-bottom: 0; }
+
+    
     /*Comments*/
     .comment-form { max-width: 500px; }
+    .comments-pagination a, 
+    .comments-pagination span { padding-bottom: 0; }
   
 }
