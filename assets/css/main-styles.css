@@ -528,7 +528,7 @@ input[type="submit"]:hover,
     
     
     /*Additional WordPress generated classes.*/
-    #gallery-1.gallery .gallery-item { padding-left: 0; padding-right: 0; }
+    .gallery-item { padding-left: 12px; padding-right: 12px; }
     
     
     /*Footer Styles*/
