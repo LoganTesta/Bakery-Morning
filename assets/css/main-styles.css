@@ -479,14 +479,14 @@ input[type="submit"]:hover,
 
 
 /*Posts*/
-.posts__navigation { }
+.posts__navigation { padding-top: 60px; }
 .nav-links { font-size: 0; }
 .posts__navigation a,
 .posts__navigation span { display: inline-block; padding-right: 30px; padding-bottom: 20px; }
 
 
 /*Comments*/
-.comments-pagination { }
+.comments-pagination { padding-top: 60px; }
 .comments-pagination a, 
 .comments-pagination span { display: inline-block; padding-right: 30px; padding-bottom: 20px; }
 
