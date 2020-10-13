@@ -68,7 +68,7 @@ get_header();
                                                     ?>
                                                 </div>
                                                 <div class="blog__tags"><?php the_tags(); ?></div>
-                                                <div class="blog__author">By: <?php the_author(); ?></div>
+                                                <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
                                                 <div class="blog__date">
                                                     <a class="blog__date__link" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>">
                                                         <?php echo get_the_date(); ?>

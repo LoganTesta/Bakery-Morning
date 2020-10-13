@@ -450,6 +450,7 @@ input[type="submit"]#searchsubmit:hover,
 .blog__categories { padding-bottom: 5px; font-size: 16px; color: #64460e; }
 .blog__tags { padding-bottom: 5px; font-size: 16px; color: #64460e; }
 .blog__author { padding-bottom: 5px; font-weight: bold; color: #64460e; }
+.blog__author a { font-weight: bold; color: #64460e; }
 .blog__date { padding-bottom: 10px; font-style: italic; color: #64460e; }
 .blog__date__link { }
 .blog__image { width: 100%; height: auto; }
