@@ -16,6 +16,7 @@ $format = get_post_format();
                                     <div class="blog__title"><?php the_title(); ?></div>
                                     <div class="blog__categories">
                                         <?php
+                                        if ( has_category() ) { echo "Categories: "; }
                                         $categories = get_the_category();
                                         $h = 0;
                                         foreach ( $categories as $category ) {
@@ -36,7 +37,7 @@ $format = get_post_format();
                                     ?>
                                     </div>
                                     <div class="blog__tags"><?php the_tags(); ?></div>
-                                    <div class="blog__author">By: <?php the_author(); ?></div>
+                                    <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__content"><?php the_content(); ?></div>
                                     <?php if ( has_post_thumbnail() ) { 
@@ -64,10 +65,11 @@ $format = get_post_format();
                                             echo "<div class='clear-both'></div>";
                                         echo "</div>";
                                     } ?>
-                                    <div class="blog__author">By: <?php the_author(); ?></div>
+                                    <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__categories">
                                         <?php
+                                        if ( has_category() ) { echo "Categories: "; }
                                         $categories = get_the_category();
                                         $h = 0;
                                         foreach ( $categories as $category ) {
@@ -99,10 +101,11 @@ $format = get_post_format();
                                 <div class="blog">
                                     <div class="blog__title"><?php the_title(); ?></div>
                                     <div class="blog__content"><?php the_content(); ?></div>  
-                                    <div class="blog__author">By: <?php the_author(); ?></div>
+                                    <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__categories">
                                         <?php
+                                        if ( has_category() ) { echo "Categories: "; }
                                         $categories = get_the_category();
                                         $h = 0;
                                         foreach ( $categories as $category ) {
