@@ -542,11 +542,14 @@ input[type="submit"]#searchsubmit:hover,
     
      /*General styles*/
     .content__body {width: 100%; }
-    .content__featured-image { float: right; width: 50%; height: 280px; }
+    .content__featured-image, 
+    .home .content__featured-image { height: 280px; }
     
     
     /*Index*/
     .item-container__background { height: 300px; }
+    
+    .home .content__featured-image { float: right; width: 50%; }
     
     .index__blog { padding-bottom: 0; }
      
