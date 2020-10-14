@@ -50,6 +50,12 @@ get_header();
                                         <div class="clear-both"></div>
                                     </div>
                                 <?php endwhile; ?>
+                                <div class="posts__navigation">
+                                    <?php the_posts_pagination( 
+                                        array( 
+                                            'mid_size' => 2, 'prev_text' => __( '<< Prev', 'bakery-morning' ), 'next_text' => __( 'Next >>', 'bakery-morning' ) )
+                                        ); ?>
+                                </div>
                             </div>  
                         </div>
                     </div>  
