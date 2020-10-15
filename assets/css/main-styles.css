@@ -448,7 +448,9 @@ input[type="submit"]#searchsubmit:hover,
 .blog__title { padding-bottom: 12px; font-size: 20px; font-weight: bold; color: #64460e; }
 .blog__title__link { font-size: inherit; font-weight: inherit; color: inherit; }
 .blog__categories { padding-bottom: 5px; font-size: 16px; color: #64460e; }
+.blog .folder { display: inline-block; padding-right: 7px; }
 .blog__tags { padding-bottom: 5px; font-size: 16px; color: #64460e; }
+.blog .tags { display: inline-block; padding-right: 5px; }
 .blog__author { padding-bottom: 5px; font-weight: bold; color: #64460e; }
 .blog__author a { font-weight: bold; color: #64460e; }
 .blog__date { padding-bottom: 10px; font-style: italic; color: #64460e; }

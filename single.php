@@ -16,7 +16,7 @@ $format = get_post_format();
                                     <div class="blog__title"><?php the_title(); ?></div>
                                     <div class="blog__categories">
                                         <?php
-                                        if ( has_category() ) { echo "Categories: "; }
+                                        if ( has_category() ) { echo "<i class=\"folder fa fa-folder-open\"></i>"; }
                                         $categories = get_the_category();
                                         $h = 0;
                                         foreach ( $categories as $category ) {
@@ -36,7 +36,10 @@ $format = get_post_format();
                                         }
                                     ?>
                                     </div>
-                                    <div class="blog__tags"><?php the_tags(); ?></div>
+                                    <div class="blog__tags">
+                                        <i class="tags fa fa-tag"></i>
+                                        <?php the_tags(""); ?>
+                                    </div>
                                     <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__content"><?php the_content(); ?></div>
@@ -69,7 +72,7 @@ $format = get_post_format();
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__categories">
                                         <?php
-                                        if ( has_category() ) { echo "Categories: "; }
+                                        if ( has_category() ) { echo "<i class=\"folder fa fa-folder-open\"></i>"; }
                                         $categories = get_the_category();
                                         $h = 0;
                                         foreach ( $categories as $category ) {
@@ -89,7 +92,10 @@ $format = get_post_format();
                                         }
                                     ?>
                                     </div>
-                                    <div class="blog__tags"><?php the_tags(); ?></div>
+                                    <div class="blog__tags">
+                                        <i class="tags fa fa-tag"></i>
+                                        <?php the_tags(""); ?>
+                                    </div>
                                     <div class="blog__content"><?php the_content(); ?></div>                           
                                     <?php 
                                         if ( comments_open() ) {
@@ -105,7 +111,7 @@ $format = get_post_format();
                                     <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__categories">
                                         <?php
-                                        if ( has_category() ) { echo "Categories: "; }
+                                        if ( has_category() ) { echo "<i class=\"folder fa fa-folder-open\"></i>"; }
                                         $categories = get_the_category();
                                         $h = 0;
                                         foreach ( $categories as $category ) {
@@ -125,7 +131,10 @@ $format = get_post_format();
                                         }
                                     ?>
                                     </div>
-                                    <div class="blog__tags"><?php the_tags(); ?></div>
+                                    <div class="blog__tags">
+                                        <i class="tags fa fa-tag"></i>
+                                        <?php the_tags(""); ?>
+                                    </div>
                                     <?php if ( has_post_thumbnail() ) { 
                                         echo "<div class='blog__image'>";
                                             echo "<div class='blog__image__background' style=\"background-image: url('" . esc_url( get_the_post_thumbnail_url() ) . "')\"></div>"; 
