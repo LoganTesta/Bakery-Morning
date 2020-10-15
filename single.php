@@ -14,6 +14,8 @@ $format = get_post_format();
                                 <?php if ( $format === "standard" || ( $format !== "image" && $format !== "video" ) ) { ?>
                                 <div class="blog">
                                     <div class="blog__title"><?php the_title(); ?></div>
+                                    <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
+                                    <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__categories">
                                         <?php
                                         if ( has_category() ) { echo "<i class=\"folder fa fa-folder-open\"></i>"; }
@@ -42,8 +44,6 @@ $format = get_post_format();
                                         <i class="tags fa fa-tag"></i>
                                         <?php the_tags("<div class=\"blog__tags__names\">", ", ", "</div>"); ?>
                                     </div>
-                                    <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
-                                    <div class="blog__date"><?php echo get_the_date(); ?></div>
                                     <div class="blog__content"><?php the_content(); ?></div>
                                     <?php if ( has_post_thumbnail() ) { 
                                         echo "<div class='blog__image'>";
