@@ -45,9 +45,15 @@ get_header();
                                                     echo "<div class='blog__featured'>" . esc_html( _x( "Featured ", "post", "bakery-morning" ) ) . "</div>";
                                                 } ?>
                                                 <div class="blog__title"><a class="blog__title__link" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>"><?php the_title(); ?></a></div>
+                                                <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
+                                                <div class="blog__date">
+                                                    <a class="blog__date__link" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>">
+                                                        <?php echo get_the_date(); ?>
+                                                    </a>
+                                                </div>
                                                 <div class="blog__categories">
                                                     <?php
-                                                    if ( has_category() ) { echo "Categories: "; }
+                                                    if ( has_category() ) { echo "<i class=\"folder fa fa-folder-open\"></i>"; }
                                                     $categories = get_the_category();
                                                     $h = 0;
                                                     foreach ( $categories as $category ) {
@@ -55,6 +61,7 @@ get_header();
                                                     }
                                                     $h = $h - 1;
                                                     $i = 0;
+                                                    echo "<div class=\"category__names\">";
                                                     foreach ( $categories as $category ) {
                                                         echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                                         if ( $i < $h ) {
@@ -65,14 +72,12 @@ get_header();
                                                         echo "</a>";
                                                         $i++;
                                                     }
+                                                    echo "</div>";
                                                     ?>
                                                 </div>
-                                                <div class="blog__tags"><?php the_tags(); ?></div>
-                                                <div class="blog__author">By: <?php the_author_posts_link(); ?></div>
-                                                <div class="blog__date">
-                                                    <a class="blog__date__link" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>">
-                                                        <?php echo get_the_date(); ?>
-                                                    </a>
+                                                <div class="blog__tags">
+                                                    <i class="tags fa fa-tag"></i>
+                                                    <?php the_tags("<div class=\"tag__names\">", ", ", "</div>"); ?>
                                                 </div>
                                                 <?php if ( has_post_thumbnail() ) { 
                                                     echo "<div class='blog__image'>";

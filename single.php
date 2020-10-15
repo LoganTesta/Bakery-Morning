@@ -26,7 +26,7 @@ $format = get_post_format();
                                         }
                                         $h = $h - 1;
                                         $i = 0;
-                                        echo "<div class=\"blog__categories__names\">";
+                                        echo "<div class=\"category__names\">";
                                         foreach ( $categories as $category ) {
                                             echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                             if ( $i < $h ) {
@@ -42,7 +42,7 @@ $format = get_post_format();
                                     </div>
                                     <div class="blog__tags">
                                         <i class="tags fa fa-tag"></i>
-                                        <?php the_tags("<div class=\"blog__tags__names\">", ", ", "</div>"); ?>
+                                        <?php the_tags("<div class=\"tag__names\">", ", ", "</div>"); ?>
                                     </div>
                                     <div class="blog__content"><?php the_content(); ?></div>
                                     <?php if ( has_post_thumbnail() ) { 
@@ -82,7 +82,7 @@ $format = get_post_format();
                                         }
                                         $h = $h - 1;
                                         $i = 0;
-                                        echo "<div class=\"blog__categories__names\">";
+                                        echo "<div class=\"category__names\">";
                                         foreach ( $categories as $category ) {
                                             echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                             if ( $i < $h ) {
@@ -98,7 +98,7 @@ $format = get_post_format();
                                     </div>
                                     <div class="blog__tags">
                                         <i class="tags fa fa-tag"></i>
-                                        <?php the_tags("<div class=\"blog__tags__names\">", ", ", "</div>"); ?>
+                                        <?php the_tags("<div class=\"tag__names\">", ", ", "</div>"); ?>
                                     </div>
                                     <div class="blog__content"><?php the_content(); ?></div>                           
                                     <?php 
@@ -123,7 +123,7 @@ $format = get_post_format();
                                         }
                                         $h = $h - 1;
                                         $i = 0;
-                                        echo "<div class=\"blog__categories__names\">";
+                                        echo "<div class=\"category__names\">";
                                         foreach ( $categories as $category ) {
                                             echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                             if ( $i < $h ) {
@@ -138,8 +138,8 @@ $format = get_post_format();
                                     ?>
                                     </div>
                                     <div class="blog__tags">
-                                        <?php the_tags("<div class=\"blog__tags__names\">", ", ", "</div>"); ?>
-                                        <?php the_tags(""); ?>
+                                        <i class="tags fa fa-tag"></i>
+                                        <?php the_tags("<div class=\"tag__names\">", ", ", "</div>"); ?>
                                     </div>
                                     <?php if ( has_post_thumbnail() ) { 
                                         echo "<div class='blog__image'>";
