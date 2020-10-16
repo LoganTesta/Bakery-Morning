@@ -76,8 +76,10 @@ get_header();
                                                     ?>
                                                 </div>
                                                 <div class="blog__tags">
-                                                    <i class="tags fa fa-tag"></i>
-                                                    <?php the_tags("<div class=\"tag__names\">", ", ", "</div>"); ?>
+                                                    <?php if ( has_tag() ) { ?>
+                                                        <i class="tags fa fa-tag"></i>
+                                                        <?php the_tags("<div class=\"tag__names\">", ", ", "</div>"); ?>
+                                                    <?php } ?>
                                                 </div>
                                                 <?php if ( has_post_thumbnail() ) { 
                                                     echo "<div class='blog__image'>";
