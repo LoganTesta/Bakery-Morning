@@ -372,9 +372,11 @@ img { height: auto; max-width: 100%; }
 
 .comment-form input, 
 .comment-form textarea { width: 100%; }
-.comments .comment { padding: 10px; margin-bottom: 30px; line-height: normal; list-style-type: none; background-color: rgba(172, 137, 73, 0.15); }
+.comments .comment { position: relative; padding: 10px; margin-bottom: 30px; line-height: normal; list-style-type: none; background-color: rgba(172, 137, 73, 0.15); }
 .comments .comment:last-of-type { margin-bottom: 0; }
-.comments .fn { display: inline-block; padding-left: 5px; padding-bottom: 2px; font-weight: bold; color: #64460e; }
+.comment-body { padding-left: 80px; }
+.comments .avatar { position: absolute; top: 10px; left: 10px; border-radius: 8px; }
+.comments .fn { display: inline-block; padding-bottom: 2px; font-weight: bold; color: #64460e; }
 .comments .says { display: inline-block; padding-bottom: 2px; }
 .comments .commentmetadata { padding-bottom: 10px; }
 .comments .reply { }
