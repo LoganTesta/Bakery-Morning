@@ -284,6 +284,8 @@ img { height: auto; max-width: 100%; }
 .logo { position: relative; width: 40px; top: 20px; left: 15px; }
 .header__phone { padding-top: 10px; text-align: center; font-size: 17px; font-weight: 600; color: #64460e; }
 
+.searchform { display: flex; flex-wrap: wrap; justify-content: center; }
+
 
 /* Nav styles */
 .mobile-nav { display: block; }
@@ -585,7 +587,9 @@ input[type="submit"]#searchsubmit:hover,
     .header { min-height: 240px; }
     .main-title { padding-top: 70px; text-align: left; margin-left: 180px; margin-right: 0; }
     .header__subtitle { text-align: left; margin-left: 220px; }
-    .header__phone { position: absolute; right: 20px; top: 200px; padding-top: 0; text-align: left;  }
+    .header__phone { position: absolute; right: 20px; top: 200px; padding-top: 0; text-align: left; }
+    
+    .searchform { display: block; position: absolute; top: 20px; right: 20px; margin-left: 0; margin-right: 0; }
     
     
     /* Nav styles */
