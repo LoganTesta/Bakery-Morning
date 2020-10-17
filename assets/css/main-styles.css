@@ -517,6 +517,11 @@ input[type="submit"]#searchsubmit:hover,
 .post-categories { display: inline-block; }
 
 
+/*Search page*/
+.search-results-statement { padding-bottom: 30px; font-size: 20px; }
+.search-query { font-size: inherit; font-weight: bold; }
+
+
 
 @media only screen and (min-width: 500px){   
     
