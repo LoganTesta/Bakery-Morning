@@ -7,7 +7,10 @@ get_header();
                     <div class="content-row">
                         <div class="col-sma-12">
                             <div class="content__body">
-                                <div class="search-results-statement">Search results for: <span class="search-query"><?php echo get_search_query(); ?></span></div> 
+                                <div class="search-results-statement">
+                                    <?php echo __( 'Search results for: ', 'bakery-morning' ); ?>
+                                    <span class="search-query"><?php echo get_search_query(); ?></span>
+                                </div> 
                                 <div class="blog-posts">
                                     <?php while ( have_posts()) : the_post(); //You need a while loop to call the_content(). ?>
                                         <div id="<?php the_title(); ?>" <?php echo esc_attr( post_class( "blog" ) ); ?>>
@@ -78,6 +81,12 @@ get_header();
                                         </div>
                                     <?php endwhile; ?>
                                 </div> 
+                                <div class="posts__navigation">
+                                    <?php the_posts_pagination( 
+                                        array( 'mid_size' => 2, 'prev_text' => __( '<< Prev', 'bakery-morning' ), 'next_text' => __( 'Next >>', 'bakery-morning' ) )
+                                    ); ?>
+                                </div>    
+                                <?php wp_reset_query(); //Reset the page query ?>
                             </div>  
                         </div>
                     </div>  
