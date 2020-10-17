@@ -1,6 +1,10 @@
 <?php
-//The default page layout and template.  
+//This template is for the search results page.
 get_header();
+
+global $wp_query;
+$number_of_results = $wp_query->found_posts;
+
 ?>
             <div class="inner-wrapper">
                 <div class="content page-content">
@@ -8,7 +12,7 @@ get_header();
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <div class="search-results-statement">
-                                    <?php echo __( 'Search results for: ', 'bakery-morning' ); ?>
+                                    <?php echo __( 'Search results', 'bakery-morning' ) . " (" . $number_of_results . ") " . __( 'for: ', 'bakery-morning' ); ?>
                                     <span class="search-query"><?php echo get_search_query(); ?></span>
                                 </div> 
                                 <div class="blog-posts">
