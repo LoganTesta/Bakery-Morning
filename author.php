@@ -1,5 +1,5 @@
 <?php
-//This is a special page just for showing all posts with a given tag.
+//This is the template for author pages.
 get_header();
 ?>
             <div class="inner-wrapper">
