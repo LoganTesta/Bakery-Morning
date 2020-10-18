@@ -1,5 +1,5 @@
 <?php
-//This is a special page just for showing all posts with a given category.
+//This is the template for archive pages.
 get_header();
 ?>
             <div class="inner-wrapper">
@@ -8,7 +8,8 @@ get_header();
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <?php
-                                echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>Show all posts for the category: <span class='archive-page-heading__name'>" . esc_attr( get_queried_object()->slug ) . "</span></h3></div>";
+                                echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>" . __( 'Show all posts for: ') . 
+                                        "<span class='archive-page-heading__name'>" . esc_html( get_queried_object()->slug ) . ".</span></h3></div>";
                                 while (have_posts()) : the_post(); ?>
                                     <div class="blog">
                                         <div class="blog__header">
@@ -26,7 +27,7 @@ get_header();
                                             }
                                             $h = $h - 1;
                                             $i = 0;
-                                            foreach ( $categories as $category ) {                                               
+                                            foreach ( $categories as $category ) {
                                                 echo "<a href='" . esc_url( get_category_link( $category ) ) . "'>";
                                                 if ( $i < $h ) {
                                                     echo "" . esc_html( $category->name ) . ", ";
