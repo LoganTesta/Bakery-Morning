@@ -138,6 +138,23 @@ function bakery_morning_customize_register( $wp_customize ){
         )
     )); 
     
+    //Show/hide search button and input in header.
+    $wp_customize->add_setting( "index_show_search_code", array(
+        "default" => "unchecked",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_control(
+        $wp_customize,
+        "index_show_search_code",
+        array(
+            "label" =>__( "Show search button and input in header.", "bakery-morning" ),
+            "section" => "GeneralSettings",
+            "settings" => "index_show_search_code",
+            "type" => "checkbox",
+        )
+    ));
+    
    //Index Blog Heading text control.
     $wp_customize->add_setting( "index_blog_heading_code", array(
         "default" => "Recent Blog Posts",

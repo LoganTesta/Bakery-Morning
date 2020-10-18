@@ -38,10 +38,12 @@
                     <?php } ?>
                     <h1 class="main-title"><a class="main-title__title" href="<?php echo esc_url( get_home_url() ); ?>" style="<?php if ( esc_attr( get_header_image() ) ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
                     <h2 class="header__subtitle" style="<?php if ( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php if ( !is_404() ) { single_post_title(); } else { echo "404 Error"; } ?></h2>
-                    <?php get_search_form(); ?>
-                        <?php if ( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
-                        <div class="header__phone" style="<?php if ( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
-                    <?php } ?>
+                    <?php if ( esc_html( get_theme_mod( 'index_show_search_code' ) ) !== "" ) { 
+                        get_search_form(); ?>
+                            <?php if ( trim( get_theme_mod ( 'phone_code' ) ) !== "" ){ ?>
+                            <div class="header__phone" style="<?php if ( get_header_image() ) { echo "color: #ffffff;"; } ?>"><?php echo esc_html( get_theme_mod( 'phone_code' ) ); ?></div>
+                        <?php } 
+                    } ?>
                 </div>
             </header>
             <nav class="nav desktop-nav" id="desktop-nav">
