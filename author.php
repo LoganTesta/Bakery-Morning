@@ -1,5 +1,5 @@
 <?php
-//This is the template for archive pages.
+//This is a special page just for showing all posts with a given tag.
 get_header();
 ?>
             <div class="inner-wrapper">
@@ -8,8 +8,8 @@ get_header();
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <?php
-                                echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>" . __( 'Show all posts for: ') 
-                                        . "<span class='archive-page-heading__name'>" . esc_html( get_queried_object()->slug ) . ".</span></h3></div>";
+                                    echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>" . __( 'Show all posts written by: ') 
+                                        . "<span class='archive-page-heading__name'>" . esc_html( get_the_author() ) . ".</span></h3></div>";
                                 while (have_posts()) : the_post(); ?>
                                     <div class="blog">
                                         <div class="blog__header">
@@ -32,7 +32,7 @@ get_header();
                                                 if ( $i < $h ) {
                                                     echo "" . esc_html( $category->name ) . ", ";
                                                 } else {
-                                                    echo "" . esc_html( $category->name );
+                                                   echo "" . esc_html( $category->name );
                                                 }
                                                 echo "</a>";
                                                 $i++;
@@ -50,14 +50,14 @@ get_header();
                                         <div class="blog__content"><?php the_excerpt(); ?><a class="read-more" href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>">Read More</a></div>
                                         <div class="clear-both"></div>
                                     </div>
-                                <?php endwhile; ?>  
+                                <?php endwhile; ?>
                                 <div class="posts__navigation">
                                     <?php the_posts_pagination( 
                                         array( 
                                             'mid_size' => 2, 'prev_text' => __( '<< Prev', 'bakery-morning' ), 'next_text' => __( 'Next >>', 'bakery-morning' ) )
                                         ); ?>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
                     </div>  
                 </div>
