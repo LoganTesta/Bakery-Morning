@@ -140,7 +140,7 @@ function bakery_morning_customize_register( $wp_customize ){
     
     //Show/hide search button and input in header.
     $wp_customize->add_setting( "index_show_search_code", array(
-        "default" => "unchecked",
+        "default" => false,
         "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
         "transport" => "refresh",
     ));
