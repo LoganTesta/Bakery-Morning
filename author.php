@@ -8,7 +8,7 @@ get_header();
                         <div class="col-sma-12">
                             <div class="content__body">
                                 <?php
-                                    echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>" . __( 'Show all posts written by: ') 
+                                    echo "<div class='archive-page-heading'><h3 class='archive-page-heading__title'>" . __( 'Show all posts written by: ', 'bakery-morning' ) 
                                         . "<span class='archive-page-heading__name'>" . esc_html( get_the_author() ) . ".</span></h3></div>";
                                 while (have_posts()) : the_post(); ?>
                                     <div class="blog">
