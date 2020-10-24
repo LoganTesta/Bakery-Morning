@@ -17,6 +17,7 @@
                     background: linear-gradient(#fbe3b7, #f3f3f3);    
                 <?php } ?>
             }
+            .body-wrapper .nav { background-color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
         </style>
         <?php wp_head(); ?>
     </head>

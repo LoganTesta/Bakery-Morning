@@ -316,7 +316,7 @@ function bakery_morning_customize_register( $wp_customize ){
     )); 
     
     
-    //Scoial Links
+    //Social Links
     $wp_customize->add_section( "SocialLinks", array(
         "title" => __("Social Links", "bakery-morning"),
         "priority" => 30,
@@ -404,6 +404,58 @@ function bakery_morning_customize_register( $wp_customize ){
             "section" => "SocialLinks",
             "settings" => "youtube_code",
             "type" => "text",
+        )
+    ));
+    
+       
+    //Add additional control to Colors section.
+    $wp_customize->add_setting( "theme_color_0", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control(
+        $wp_customize,
+        "theme_color_0",
+        array(
+            "label" =>__( "First Theme Color:", "bakery-morning" ),
+            "section" => "colors",
+            "settings" => "theme_color_0",
+            "default" => "#ac8949",
+        )
+    ));
+    
+    //Add additional control to Colors section.
+    $wp_customize->add_setting( "theme_color_1", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control(
+        $wp_customize,
+        "theme_color_1",
+        array(
+            "label" =>__( "Second Theme Color:", "bakery-morning" ),
+            "section" => "colors",
+            "settings" => "theme_color_1",
+            "default" => "#64460e",
+        )
+    ));
+    
+    //Add additional control to Colors section.
+    $wp_customize->add_setting( "theme_color_2", array(
+        "default" => "",
+        "sanitize_callback" => "wp_filter_nohtml_kses", //Remove any user provided HTML tags
+        "transport" => "refresh",
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control(
+        $wp_customize,
+        "theme_color_2",
+        array(
+            "label" =>__( "Third Theme Color:", "bakery-morning" ),
+            "section" => "colors",
+            "settings" => "theme_color_2",
+            "default" => "#fbe3b7",
         )
     ));
     
