@@ -20,7 +20,7 @@
             ?>
             
             h1, h2, h3, h4, h5, h6 { color: <?php echo $themeColor1; ?>; }
-            a:link, a:visited { color: <?php echo $themeColor1; ?>; }
+            .body-wrapper a:link, .body-wrapper a:visited { color: <?php echo $themeColor1; ?>; }
             input::placeholder, textarea::placeholder { color: <?php echo $themeColor1; ?>; }
             th { color: <?php echo $themeColor1; ?>; }
                 

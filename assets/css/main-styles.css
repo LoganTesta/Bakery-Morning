@@ -296,7 +296,7 @@ img { height: auto; max-width: 100%; }
 .nav { }
 .nav ul { padding-left: 0; padding-bottom: 0; font-size: 0; }
 .nav li { display: block; position: relative; text-align: left; }
-.nav a { color: #f9f9f9; }
+.nav .menu-main-nav-container a { color: #f9f9f9; }
 .nav a:hover { color: #fbe3b7; }
 
 .nav li ul { display: none; }
