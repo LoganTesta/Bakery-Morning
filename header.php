@@ -12,7 +12,7 @@
         <style type="text/css">
          
             h1, h2, h3, h4, h5, h6 { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
-            .body-wrapper a:link, .body-wrapper a:visited { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            a:link, a:visited { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
             input::placeholder, textarea::placeholder { <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
             th { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
                 
@@ -31,10 +31,37 @@
              
             /*Additional WordPress generated classes.*/
             .wp-block-button__link.is-style-outline { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
-            
+
             
             /* Nav styles */
             .nav { background-color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            
+            /*Footer Styles*/
+            .footer__subheader { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            .footer__social a { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            .footer__location-phone__phone { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            
+            /*Comments*/
+            .comment-form label { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            .comments .fn { color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            
+            /*Search*/
+            #searchsubmit { background-color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            
+            /*General styles*/
+            
+            .body-wrapper .read-more { background-color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            .wp-block-button__link { background-color: <?php echo esc_html( get_theme_mod( 'theme_color_1', '#64460e' ) ); ?>; }
+            
+            
+            /*Index page*/
             
         </style>
         <?php wp_head(); ?>
