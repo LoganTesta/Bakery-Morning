@@ -70,7 +70,29 @@
             
             
             /*Index page*/
+            .index__blog__categories { color: <?php echo $themeColor1; ?>; }
+            .index__blog__author { color: <?php echo $themeColor1; ?>; }
+            .index__blog__date { color: <?php echo $themeColor1; ?>; } 
+                 
+                                 
+            /*Blog*/
             
+            .blog__featured { background-color: <?php echo $themeColor1; ?>; }
+            .blog__title { color: <?php echo $themeColor1; ?>; }
+            .blog__author { color: <?php echo $themeColor1; ?>; }
+            .blog__author a { color: <?php echo $themeColor1; ?>; }
+            .blog__date { color: <?php echo $themeColor1; ?>; }
+            .blog__categories { color: <?php echo $themeColor1; ?>; }
+            .blog__tags { color: <?php echo $themeColor1; ?>; }
+            .blog__number-of-comments { color: <?php echo $themeColor1; ?>; }
+
+
+
+            @media only screen and (min-width: 1200px){ 
+                /* Nav styles */
+                 .nav li:hover > ul { background-color: #64460e; }
+            }
+
         </style>
         <?php wp_head(); ?>
     </head>
