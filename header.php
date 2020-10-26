@@ -13,17 +13,24 @@
             <?php
             $themeColor0;
             $themeColor1;
-            
-            if ( get_theme_mod( 'theme_color_0' ) !== "" ) { 
-                $themeColor0 = esc_html ( get_theme_mod( 'theme_color_0' ) );
+            $themeColor2;
+               
+            if ( trim( get_theme_mod( 'theme_color_0' ) ) !== "" ) { 
+                $themeColor0 = esc_html( trim( get_theme_mod( 'theme_color_0' ) ) );
             } else {
                 $themeColor0 = "#ac8949";
             }
             
-            if ( get_theme_mod( 'theme_color_1' ) !== "" ) { 
-                $themeColor1 = esc_html ( get_theme_mod( 'theme_color_1' ) );
+            if ( trim( get_theme_mod( 'theme_color_1' ) ) !== "" ) { 
+                $themeColor1 = esc_html( trim( get_theme_mod( 'theme_color_1' ) ) );
             } else {
                 $themeColor1 = "#64460e";
+            }
+            
+            if ( trim( get_theme_mod( 'theme_color_2' ) ) !== "" ) { 
+                $themeColor2 = esc_html( trim( get_theme_mod( 'theme_color_2' ) ) );
+            } else {
+                $themeColor2 = "#fbe3b7";
             }
             ?>
             
@@ -39,7 +46,7 @@
                 <?php if ( get_header_image() ) { ?> 
                     background: url('<?php echo esc_url( header_image() ); ?>') 50% 50%/cover no-repeat; 
                 <?php } else { ?> 
-                    background: linear-gradient(#fbe3b7, #f3f3f3);    
+                    background: linear-gradient(<?php echo $themeColor2; ?>, #f3f3f3);    
                 <?php } ?>
             }
             .main-title .main-title__title { color: <?php echo $themeColor0; ?>; }
@@ -57,9 +64,11 @@
             
             /* Nav styles */
             .nav { background-color: <?php echo $themeColor1; ?>; }
+            .nav a:hover { color: <?php echo $themeColor2; ?>; }
             
             
             /*Footer Styles*/
+            .footer { background-color: <?php echo $themeColor2; ?>; }
             .footer__subheader { color: <?php echo $themeColor1; ?>; }
             
             .footer__social a { color: <?php echo $themeColor1; ?>; }
@@ -73,14 +82,14 @@
             
             
             /*Search*/
-            #searchsubmit { background-color: <?php echo $themeColor1; ?>; }
+            #searchsubmit { background-color: <?php echo $themeColor1; ?>; color: <?php echo $themeColor2; ?>; }
             
             
             /*General styles*/
             
-            .body-wrapper .read-more { background-color: <?php echo $themeColor1; ?>; }
+            .body-wrapper .read-more { background-color: <?php echo $themeColor1; ?>; color: <?php echo $themeColor2; ?>; }
             
-            .wp-block-button__link { background-color: <?php echo $themeColor1; ?>; }
+            .wp-block-button__link { background-color: <?php echo $themeColor1; ?>; color: <?php echo $themeColor2; ?>; }
             
             
             /*Index page*/
