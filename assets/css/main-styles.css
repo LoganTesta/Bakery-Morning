@@ -200,7 +200,7 @@ h6 { padding: 0 0 12px 0; }
 p { line-height: 1.4; }
 input, textarea, button { width: auto; padding: 10px; margin-bottom: 5px; border: 1px solid #000000; border-radius: 15px; }
 a:link, a:visited { }
-a:hover { color: #ac8949; }
+a:hover { }
 input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(172, 137, 73, 0.6); transition: 0.2s; }
 input::placeholder, textarea::placeholder { opacity: 0.8; }
 ul { padding-bottom: 30px; padding-left: 20px; }
@@ -281,7 +281,7 @@ img { height: auto; max-width: 100%; }
 /* Header styles */
 .header { min-height: 200px; padding-bottom: 20px; }
 .main-title { padding-top: 65px; padding-bottom: 0; margin-left: 5px; margin-right: 5px; text-align: center; }
-.main-title .main-title__title { font-size: inherit; font-weight: inherit; color: #ac8949; font-family: 'Pacifico', cursive; }
+.main-title .main-title__title { font-size: inherit; font-weight: inherit; font-family: 'Pacifico', cursive; }
 .header__subtitle { padding-bottom: 0; text-align: center; font-family: 'Noto Serif', serif; }
 .logo { position: relative; width: 40px; top: 20px; left: 15px; }
 .header__phone { padding-top: 10px; text-align: center; font-size: 17px; font-weight: 600; }
@@ -318,7 +318,7 @@ img { height: auto; max-width: 100%; }
 
 
 /*Message styles*/
-.message { padding: 25px 10px; text-align: center; background-color: #ac8949; transition: 0.4s ease-in; }
+.message { padding: 25px 10px; text-align: center; transition: 0.4s ease-in; }
 .message__text { display: inline-block; font-size: 22px; color: #f9f9f9; }
 
 
