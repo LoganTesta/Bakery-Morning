@@ -14,32 +14,46 @@
             $themeColor0;
             $themeColor1;
             $themeColor2;
+            
+            $themeColor0RGB;
+            $themeColor1RGB;
+            $themeColor2RGB;
                
             if ( trim( get_theme_mod( 'theme_color_0' ) ) !== "" ) { 
-                $themeColor0 = esc_html( trim( get_theme_mod( 'theme_color_0' ) ) );
+                $themeColor0 = substr( esc_html( trim( get_theme_mod( 'theme_color_0' ) ) ), 1 );
+                $themeColor0Hex = str_split( $themeColor0, 2);
+                $themeColor0RGB = array( hexdec( $themeColor0Hex[0] ), hexdec( $themeColor0Hex[1] ), hexdec( $themeColor0Hex[2] ) );
             } else {
                 $themeColor0 = "#ac8949";
+                $themeColor0RGB = array(172, 137, 73);
             }
-            
+                           
             if ( trim( get_theme_mod( 'theme_color_1' ) ) !== "" ) { 
-                $themeColor1 = esc_html( trim( get_theme_mod( 'theme_color_1' ) ) );
+                $themeColor1 = substr( esc_html( trim( get_theme_mod( 'theme_color_1' ) ) ), 1 );
+                $themeColor1Hex = str_split( $themeColor1, 2);
+                $themeColor1RGB = array( hexdec( $themeColor1Hex[0] ), hexdec( $themeColor1Hex[1] ), hexdec( $themeColor1Hex[2] ) );
             } else {
                 $themeColor1 = "#64460e";
+                $themeColor1RGB = array(100, 74, 14); 
             }
             
             if ( trim( get_theme_mod( 'theme_color_2' ) ) !== "" ) { 
-                $themeColor2 = esc_html( trim( get_theme_mod( 'theme_color_2' ) ) );
+                $themeColor2 = substr( esc_html( trim( get_theme_mod( 'theme_color_2' ) ) ), 1 );
+                $themeColor2Hex = str_split( $themeColor2, 2);
+                $themeColor2RGB = array( hexdec( $themeColor2Hex[0] ), hexdec( $themeColor2Hex[1] ), hexdec( $themeColor2Hex[2] ) );
             } else {
                 $themeColor2 = "#fbe3b7";
+                $themeColor2RGB = array(251, 227, 183);
             }
             ?>
             
             h1, h2, h3, h4, h5, h6 { color: <?php echo $themeColor1; ?>; }
             .body-wrapper a:link, .body-wrapper a:visited { color: <?php echo $themeColor1; ?>; }
             a:hover { color: <?php echo $themeColor0; ?>; }
+            .body-wrapper input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.6); }
             input::placeholder, textarea::placeholder { color: <?php echo $themeColor1; ?>; }
             th { color: <?php echo $themeColor1; ?>; }
-                
+               
                 
             /* Header styles */
             .header { 
