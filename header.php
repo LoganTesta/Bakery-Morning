@@ -52,8 +52,9 @@
             a:hover { color: <?php echo $themeColor0; ?>; }
             .body-wrapper input:focus, textarea:focus { box-shadow: 0px 0px 3px 3px rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.6); }
             input::placeholder, textarea::placeholder { color: <?php echo $themeColor1; ?>; }
-            th { color: <?php echo $themeColor1; ?>; }
-               
+            th { border: 1px solid rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.4); color: <?php echo $themeColor1; ?>; }
+            td { border: 1px solid rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.4); }
+            
                 
             /* Header styles */
             .header { 
@@ -75,6 +76,8 @@
             /*Additional WordPress generated classes.*/
             .wp-block-button__link.is-style-outline { color: <?php echo $themeColor1; ?>; }
 
+            .wp-block-code { border: 1px solid rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.4); }
+            
             
             /* Nav styles */
             .nav { background-color: <?php echo $themeColor1; ?>; }
@@ -92,6 +95,7 @@
             /*Comments*/
             .comment-form label { color: <?php echo $themeColor1; ?>; }
             
+            .comments .comment { background-color: rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.15); } 
             .comments .fn { color: <?php echo $themeColor1; ?>; }
             
             
@@ -127,7 +131,7 @@
 
             @media only screen and (min-width: 1200px){ 
                 /* Nav styles */
-                 .nav li:hover > ul { background-color: #64460e; }
+                .nav li:hover > ul { border: 2px solid rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.8); background-color: <?php echo $themeColor1; ?>; }
             }
 
         </style>

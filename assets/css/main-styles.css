@@ -214,8 +214,8 @@ dl { }
 dt { font-weight: bold; }
 dd { padding-bottom: 25px; }
 table { margin-bottom: 30px; border-collapse: collapse; }
-th { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); font-weight: bold; }
-td { padding: 15px; border: 1px solid rgba(172, 137, 73, 0.4); }
+th { padding: 15px; font-weight: bold; }
+td { padding: 15px; }
 th a { font-weight: bold; }
 pre { display: inline-block; width: 100%; padding: 15px; overflow: auto; white-space: pre-wrap; }
 img { height: auto; max-width: 100%; }
@@ -258,7 +258,7 @@ img { height: auto; max-width: 100%; }
 
 .wp-block-group.has-background { padding: 15px 20px; }
 
-.wp-block-code { border: 1px solid rgba(172, 137, 73, 0.4); }
+.wp-block-code { }
 .wp-block-verse { background-color: #f3f3f3; }
 
 .editor-styles-wrapper .has-large-font-size, 
@@ -375,7 +375,7 @@ img { height: auto; max-width: 100%; }
 
 .comment-form input, 
 .comment-form textarea { width: 100%; }
-.comments .comment { position: relative; padding: 10px; margin-bottom: 30px; line-height: normal; list-style-type: none; background-color: rgba(172, 137, 73, 0.15); }
+.comments .comment { position: relative; padding: 10px; margin-bottom: 30px; line-height: normal; list-style-type: none; }
 .comments .comment:last-of-type { margin-bottom: 0; }
 .comment-body { padding-left: 80px; }
 .comments .avatar { position: absolute; top: 10px; left: 10px; border-radius: 8px; }
@@ -603,7 +603,7 @@ input[type="submit"]#searchsubmit:hover,
     .desktop-nav { display: block; }
     .nav li { display: inline-block; padding: 15px 32px 15px 15px; text-align: left; }
 
-    .nav li:hover > ul { display: block; position: absolute; top: 50px; left: 0; border: 2px solid rgba(172, 137, 73, 0.8); }
+    .nav li:hover > ul { display: block; position: absolute; top: 50px; left: 0; }
     .nav ul ul li:hover ul { top: -2px; left: 100%; padding-top: 0; padding-bottom: 0; }
        
     .nav li.page_item_has_children::after,
