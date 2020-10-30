@@ -162,9 +162,12 @@ input:focus, textarea:focus, select:focus { box-shadow: 0px 0px 3px 3px rgba(0, 
 
 /*
 Monochromatic color scheme.
-1:     #ac8949   mid light-brown   (172, 137, 73)
-2:     #64460e;  mid dark brown    (100, 74, 14)
-3:     #fbe3b7;  light brown       (251, 227, 183)
+1:     #ac8949    mid light-brown     (172, 137, 73)
+2:     #64460e;   dark brown          (100, 74, 14)
+3:     #fbe3b7;   light brown         (251, 227, 183)
+
+Additional colors:
+4:     #8d6b2b   slightly dark brown  (141, 107, 43);
 */
 
 @font-face {
@@ -235,7 +238,7 @@ img { height: auto; max-width: 100%; }
 
 /*Additional WordPress generated classes.*/
 .body-wrapper .submit { transition: 0.4s ease-in; }
-.body-wrapper .submit:hover { background-color: #8b6928; transition: 0.4s ease-in; }
+.body-wrapper .submit:hover { background-color: #8d6b2b; transition: 0.4s ease-in; }
 .screen-reader-text { display: none; }
 
 .wp-block-button { padding-bottom: 15px; }
@@ -340,7 +343,7 @@ img { height: auto; max-width: 100%; }
 .footer__nav li ul li { padding-left: 15px; }
 .footer__social { text-align: center; font-size: 0; }
 .footer__social a { transition: 0.3s; }
-.footer__social a:hover { color: #fff; transition: 0.3s; }
+.footer__social a:hover { color: #ffffff; transition: 0.3s; }
 .social-icon { font-size: 26px; }
 .footer__location-phone { text-align: center; }
 .footer__location-phone__location { padding-bottom: 15px; }
@@ -405,7 +408,7 @@ img { height: auto; max-width: 100%; }
 .content__featured-image.hide { display: none; }
 
 .body-wrapper .read-more { display: inline-block; width: auto; padding: 10px; border: 1px solid #000000; border-radius: 15px; cursor: pointer; transition: 0.4s ease-in; }
-.body-wrapper .read-more:hover { background-color: #8b6928; transition: 0.4s ease-in; }
+.body-wrapper .read-more:hover { background-color: #8d6b2b; transition: 0.4s ease-in; }
 
 button,  
 input[type="submit"],
@@ -417,7 +420,7 @@ button:hover,
 input[type="submit"]#searchsubmit:hover,
 .comment-form .submit:hover,
 .wp-block-button a:hover, 
-.wp-block-button__link:hover {  background-color: #8b6928; transition: 0.4s ease-in; }
+.wp-block-button__link:hover {  background-color: #8d6b2b; transition: 0.4s ease-in; }
 
 .wp-caption-text,
 .wp-block-image figcaption,
