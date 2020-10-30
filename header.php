@@ -14,10 +14,12 @@
             $themeColor0;
             $themeColor1;
             $themeColor2;
+            $themeColor3;
             
             $themeColor0RGB;
             $themeColor1RGB;
             $themeColor2RGB;
+            $themeColor3RGB;
                
             if ( trim( get_theme_mod( 'theme_color_0' ) ) !== "" ) { 
                 $themeColor0 = esc_html( trim( get_theme_mod( 'theme_color_0' ) ) );
@@ -25,16 +27,30 @@
                 $themeColor0RGB = array( hexdec( $themeColor0Hex[0] ), hexdec( $themeColor0Hex[1] ), hexdec( $themeColor0Hex[2] ) );
             } else {
                 $themeColor0 = "#ac8949";
-                $themeColor0RGB = array(172, 137, 73);
+                $themeColor0RGB = array(172, 137, 73);                
             }
                            
             if ( trim( get_theme_mod( 'theme_color_1' ) ) !== "" ) { 
                 $themeColor1 = esc_html( trim( get_theme_mod( 'theme_color_1' ) ) );
                 $themeColor1Hex = str_split( substr( $themeColor1, 1 ), 2 );
                 $themeColor1RGB = array( hexdec( $themeColor1Hex[0] ), hexdec( $themeColor1Hex[1] ), hexdec( $themeColor1Hex[2] ) );
+                
+                $themeColor3RGB = array( 1.5 * hexdec( $themeColor1Hex[0] ), 1.5 * hexdec( $themeColor1Hex[1] ), 1.5 * hexdec( $themeColor1Hex[2] ) );
+                if ( $themeColor3RGB[0] > 255 ) {
+                    $themeColor3RGB[0] = 255;
+                }
+                if ( $themeColor3RGB[1] > 255 ) {
+                    $themeColor3RGB[1] = 255;
+                }
+                if ( $themeColor3RGB[2] > 255 ) {
+                    $themeColor3RGB[2] = 255;
+                }
             } else {
                 $themeColor1 = "#64460e";
                 $themeColor1RGB = array(100, 74, 14); 
+                
+                $themeColor3 = "#8d6b2b";
+                $themeColor3RGB = array(141, 107, 43);
             }
             
             if ( trim( get_theme_mod( 'theme_color_2' ) ) !== "" ) { 
@@ -74,6 +90,7 @@
             
              
             /*Additional WordPress generated classes.*/
+            .body-wrapper .submit:hover { background-color: rgba(<?php echo $themeColor3RGB[0]; ?>, <?php echo $themeColor3RGB[1]; ?>, <?php echo $themeColor3RGB[2]; ?>, 1); }
             .wp-block-button__link.is-style-outline { color: <?php echo $themeColor1; ?>; }
 
             .wp-block-code { border: 1px solid rgba(<?php echo $themeColor0RGB[0]; ?>, <?php echo $themeColor0RGB[1]; ?>, <?php echo $themeColor0RGB[2]; ?>, 0.4); }
@@ -106,8 +123,14 @@
             /*General styles*/
             
             .body-wrapper .read-more { background-color: <?php echo $themeColor1; ?>; color: <?php echo $themeColor2; ?>; }
+            .body-wrapper .read-more:hover { background-color: rgba(<?php echo $themeColor3RGB[0]; ?>, <?php echo $themeColor3RGB[1]; ?>, <?php echo $themeColor3RGB[2]; ?>, 1); }
             
             .wp-block-button__link { background-color: <?php echo $themeColor1; ?>; color: <?php echo $themeColor2; ?>; }
+            button:hover,  
+            input[type="submit"]#searchsubmit:hover,
+            .comment-form .submit:hover,
+            .wp-block-button a:hover, 
+            .wp-block-button__link:hover { background-color: rgba(<?php echo $themeColor3RGB[0]; ?>, <?php echo $themeColor3RGB[1]; ?>, <?php echo $themeColor3RGB[2]; ?>, 1);  }
             
             
             /*Index page*/

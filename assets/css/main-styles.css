@@ -167,7 +167,7 @@ Monochromatic color scheme.
 3:     #fbe3b7;   light brown         (251, 227, 183)
 
 Additional colors:
-4:     #8d6b2b   slightly dark brown  (141, 107, 43);
+4:     #8d6b2b   slightly dark brown  (141, 107, 43)
 */
 
 @font-face {
@@ -238,7 +238,7 @@ img { height: auto; max-width: 100%; }
 
 /*Additional WordPress generated classes.*/
 .body-wrapper .submit { transition: 0.4s ease-in; }
-.body-wrapper .submit:hover { background-color: #8d6b2b; transition: 0.4s ease-in; }
+.body-wrapper .submit:hover { transition: 0.4s ease-in; }
 .screen-reader-text { display: none; }
 
 .wp-block-button { padding-bottom: 15px; }
@@ -408,7 +408,7 @@ img { height: auto; max-width: 100%; }
 .content__featured-image.hide { display: none; }
 
 .body-wrapper .read-more { display: inline-block; width: auto; padding: 10px; border: 1px solid #000000; border-radius: 15px; cursor: pointer; transition: 0.4s ease-in; }
-.body-wrapper .read-more:hover { background-color: #8d6b2b; transition: 0.4s ease-in; }
+.body-wrapper .read-more:hover { transition: 0.4s ease-in; }
 
 button,  
 input[type="submit"],
@@ -420,7 +420,7 @@ button:hover,
 input[type="submit"]#searchsubmit:hover,
 .comment-form .submit:hover,
 .wp-block-button a:hover, 
-.wp-block-button__link:hover {  background-color: #8d6b2b; transition: 0.4s ease-in; }
+.wp-block-button__link:hover { transition: 0.4s ease-in; }
 
 .wp-caption-text,
 .wp-block-image figcaption,
