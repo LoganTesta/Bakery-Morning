@@ -128,11 +128,11 @@ get_header();
                                 $index_page_query;
                                 if ( get_theme_mod( 'index_blog_order_code' ) === 'desc' ) {
                                     $index_page_query = new WP_Query( 
-                                        array( 'posts_per_page' => 4, 'offset' => 0, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
+                                        array( 'ignore_sticky_posts' => '1', 'posts_per_page' => 4, 'offset' => 0, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
                                     ) ); 
                                 } else {
                                     $index_page_query = new WP_Query( 
-                                        array( 'posts_per_page' => 4, 'offset' => wp_count_posts( 'post' )->publish - 4, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
+                                        array( 'ignore_sticky_posts' => '1' , 'posts_per_page' => 4, 'offset' => wp_count_posts( 'post' )->publish - 4, 'orderBy' => 'date', 'order' => get_theme_mod( 'index_blog_order_code' ) 
                                     ) );     
                                 }
                                 if ( $index_page_query->have_posts() ) {
