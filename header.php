@@ -49,8 +49,8 @@
                 $themeColor1 = "#64460e";
                 $themeColor1RGB = array(100, 74, 14); 
                 
-                $themeColor3 = "#8d6b2b";
-                $themeColor3RGB = array(141, 107, 43);
+                $themeColor3 = "#8c6f15";
+                $themeColor3RGB = array(140, 111, 21);
             }
             
             if ( trim( get_theme_mod( 'theme_color_2' ) ) !== "" ) { 
