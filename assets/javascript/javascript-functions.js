@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
     
     var theArrows = document.querySelectorAll("li.page_item_has_children, li.menu-item-has-children"); 
     for(let i = 0; i < theArrows.length; i++) {
-        theArrows[i].addEventListener("click", function(){
+        theArrows[i].addEventListener("click", function() {
             showMenu(i);
         }, "false");
     }
